@@ -97,8 +97,8 @@ export default function ContactPage() {
             <div
               className="lg:col-span-3 rounded-3xl p-8 md:p-10"
               style={{
-                background: "rgba(15,25,41,0.7)",
-                border: "1px solid rgba(255,140,0,0.15)",
+                background: "rgba(30,41,59,0.85)",
+                border: "1px solid rgba(255,140,0,0.25)",
                 backdropFilter: "blur(20px)",
               }}
             >
@@ -132,9 +132,9 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="John Smith"
-                        className={`w-full px-4 py-3 rounded-xl bg-[rgba(255,255,255,0.05)] border ${
-                          errors.name ? "border-[#ef4444]" : "border-[rgba(255,140,0,0.2)]"
-                        } text-white placeholder-[#64748b] focus:border-[#ff8c00] focus:outline-none transition-colors`}
+                        className={`w-full px-4 py-3 rounded-xl bg-[rgba(255,255,255,0.12)] border ${
+                          errors.name ? "border-[#ef4444]" : "border-[rgba(255,140,0,0.3)]"
+                        } text-white placeholder-[#94a3b8] focus:border-[#ff8c00] focus:outline-none transition-colors`}
                       />
                       {errors.name && <p className="text-[#ef4444] text-xs mt-1">{errors.name}</p>}
                     </div>
@@ -146,7 +146,7 @@ export default function ContactPage() {
                         value={formData.company}
                         onChange={handleChange}
                         placeholder="Smith Concrete Solutions"
-                        className="w-full px-4 py-3 rounded-xl bg-[rgba(255,255,255,0.05)] border border-[rgba(255,140,0,0.2)] text-white placeholder-[#64748b] focus:border-[#ff8c00] focus:outline-none transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-[rgba(255,255,255,0.12)] border border-[rgba(255,140,0,0.3)] text-white placeholder-[#94a3b8] focus:border-[#ff8c00] focus:outline-none transition-colors"
                       />
                     </div>
                   </div>
@@ -162,9 +162,9 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="john@smithconcrete.com"
-                        className={`w-full px-4 py-3 rounded-xl bg-[rgba(255,255,255,0.05)] border ${
-                          errors.email ? "border-[#ef4444]" : "border-[rgba(255,140,0,0.2)]"
-                        } text-white placeholder-[#64748b] focus:border-[#ff8c00] focus:outline-none transition-colors`}
+                        className={`w-full px-4 py-3 rounded-xl bg-[rgba(255,255,255,0.12)] border ${
+                          errors.email ? "border-[#ef4444]" : "border-[rgba(255,140,0,0.3)]"
+                        } text-white placeholder-[#94a3b8] focus:border-[#ff8c00] focus:outline-none transition-colors`}
                       />
                       {errors.email && <p className="text-[#ef4444] text-xs mt-1">{errors.email}</p>}
                     </div>
@@ -178,9 +178,9 @@ export default function ContactPage() {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="(555) 123-4567"
-                        className={`w-full px-4 py-3 rounded-xl bg-[rgba(255,255,255,0.05)] border ${
-                          errors.phone ? "border-[#ef4444]" : "border-[rgba(255,140,0,0.2)]"
-                        } text-white placeholder-[#64748b] focus:border-[#ff8c00] focus:outline-none transition-colors`}
+                        className={`w-full px-4 py-3 rounded-xl bg-[rgba(255,255,255,0.12)] border ${
+                          errors.phone ? "border-[#ef4444]" : "border-[rgba(255,140,0,0.3)]"
+                        } text-white placeholder-[#94a3b8] focus:border-[#ff8c00] focus:outline-none transition-colors`}
                       />
                       {errors.phone && <p className="text-[#ef4444] text-xs mt-1">{errors.phone}</p>}
                     </div>
@@ -194,13 +194,13 @@ export default function ContactPage() {
                       name="insuranceType"
                       value={formData.insuranceType}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 rounded-xl bg-[rgba(255,255,255,0.05)] border ${
-                        errors.insuranceType ? "border-[#ef4444]" : "border-[rgba(255,140,0,0.2)]"
+                      className={`w-full px-4 py-3 rounded-xl bg-[rgba(255,255,255,0.12)] border ${
+                        errors.insuranceType ? "border-[#ef4444]" : "border-[rgba(255,140,0,0.3)]"
                       } text-white focus:border-[#ff8c00] focus:outline-none transition-colors`}
                     >
-                      <option value="" className="bg-[#0f1929]">Select insurance type...</option>
+                      <option value="" className="bg-[#1e293b]">Select insurance type...</option>
                       {insuranceTypes.map((type) => (
-                        <option key={type} value={type} className="bg-[#0f1929]">
+                        <option key={type} value={type} className="bg-[#1e293b]">
                           {type}
                         </option>
                       ))}
@@ -216,7 +216,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       rows={4}
                       placeholder="Tell us about your business—annual revenue, years in business, current coverage, any specific questions..."
-                      className="w-full px-4 py-3 rounded-xl bg-[rgba(255,255,255,0.05)] border border-[rgba(255,140,0,0.2)] text-white placeholder-[#64748b] focus:border-[#ff8c00] focus:outline-none transition-colors resize-none"
+                      className="w-full px-4 py-3 rounded-xl bg-[rgba(255,255,255,0.12)] border border-[rgba(255,140,0,0.3)] text-white placeholder-[#94a3b8] focus:border-[#ff8c00] focus:outline-none transition-colors resize-none"
                     />
                   </div>
 
