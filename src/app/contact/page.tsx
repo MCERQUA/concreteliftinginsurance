@@ -21,6 +21,7 @@ export default function ContactPage() {
     email: "",
     phone: "",
     insuranceType: "",
+    grossSales: "",
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
@@ -206,6 +207,20 @@ export default function ContactPage() {
                       ))}
                     </select>
                     {errors.insuranceType && <p className="text-[#ef4444] text-xs mt-1">{errors.insuranceType}</p>}
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-white mb-2">
+                      Annual Gross Sales <span className="text-[#64748b] font-normal">(for last 12 months)</span>
+                    </label>
+                    <input
+                      type="text"
+                      name="grossSales"
+                      value={formData.grossSales}
+                      onChange={handleChange}
+                      placeholder="$0 — $500,000"
+                      className="w-full px-4 py-3 rounded-xl bg-[rgba(255,255,255,0.12)] border border-[rgba(255,140,0,0.3)] text-white placeholder-[#94a3b8] focus:border-[#ff8c00] focus:outline-none transition-colors"
+                    />
                   </div>
 
                   <div>
