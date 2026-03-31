@@ -26,7 +26,7 @@ export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Validate
     const newErrors: Record<string, string> = {};
@@ -40,8 +40,21 @@ export default function ContactPage() {
       return;
     }
 
-    // Submit
-    setSubmitted(true);
+    // Submit to API (which forwards to Jambot)
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setErrors({ submit: "Something went wrong. Please try again." });
+      }
+    } catch {
+      setErrors({ submit: "Something went wrong. Please try again." });
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
