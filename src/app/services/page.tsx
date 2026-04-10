@@ -318,11 +318,11 @@ export default function ServicesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+18005433843"
+              href="tel:+18449675247"
               className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-[#ff8c00] to-[#ffb347] text-white font-black text-lg rounded-2xl shadow-2xl shadow-[#ff8c00]/40 hover:shadow-[#ff8c00]/60 hover:scale-[1.02] transition-all"
             >
               <Phone className="w-6 h-6" />
-              Call 1-800-543-3843
+              Call 844-967-5247
             </a>
             <Link
               href="/contact"

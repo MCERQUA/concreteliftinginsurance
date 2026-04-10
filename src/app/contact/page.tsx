@@ -342,11 +342,7 @@ export default function ContactPage() {
                       </div>
                       <div className="flex items-center gap-2">
                         <CheckCircle className="w-4 h-4 text-[#10b981]" />
-                        <span className="text-xs text-[#94a3b8]">BBB Accredited: A+ Rating</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-[#10b981]" />
-                        <span className="text-xs text-[#94a3b8]">NPN #12345678</span>
+                        <span className="text-xs text-[#94a3b8]">NPN #8608479</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <CheckCircle className="w-4 h-4 text-[#10b981]" />

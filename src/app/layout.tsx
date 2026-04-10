@@ -94,8 +94,8 @@ export default function RootLayout({
               description:
                 "Specialized insurance for concrete lifting contractors including spray foam lifting and mud jacking.",
               url: baseUrl,
-              telephone: "+1-800-543-3843",
-              email: "quotes@concreteliftinginsurance.com",
+              telephone: "+1-844-967-5247",
+              email: "josh@contractorschoiceagency.com",
               areaServed: "United States",
               knowsAbout: [
                 "Spray Foam Lifting Insurance",
