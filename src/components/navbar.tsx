@@ -58,9 +58,9 @@ export function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
-            <a href="tel:+18005433843" className="flex items-center gap-2 text-sm font-semibold text-[#94a3b8] hover:text-[#ff8c00] transition-colors">
+            <a href="tel:+18449675247" className="flex items-center gap-2 text-sm font-semibold text-[#94a3b8] hover:text-[#ff8c00] transition-colors">
               <Phone className="w-4 h-4" />
-              <span>1-800-543-3843</span>
+              <span>844-967-5247</span>
             </a>
             <Link
               href="/contact"
@@ -94,9 +94,9 @@ export function Navbar() {
               </Link>
             ))}
             <div className="pt-4 border-t border-[rgba(255,140,0,0.15)]">
-              <a href="tel:+18005433843" className="flex items-center gap-2 text-sm font-semibold text-[#94a3b8] mb-4">
+              <a href="tel:+18449675247" className="flex items-center gap-2 text-sm font-semibold text-[#94a3b8] mb-4">
                 <Phone className="w-4 h-4" />
-                1-800-543-3843
+                844-967-5247
               </a>
               <Link
                 href="/contact"

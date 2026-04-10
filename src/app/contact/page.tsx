@@ -115,8 +115,8 @@ export default function ContactPage() {
                   </p>
                   <p className="text-[#64748b] text-sm">
                     Need immediate help? Call us at{" "}
-                    <a href="tel:+18005433843" className="text-[#ff8c00] font-semibold">
-                      1-800-543-3843
+                    <a href="tel:+18449675247" className="text-[#ff8c00] font-semibold">
+                      844-967-5247
                     </a>
                   </p>
                 </div>
@@ -268,8 +268,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-sm font-bold text-white mb-1">Call Us</p>
-                    <a href="tel:+18005433843" className="text-xl font-black text-[#ff8c00] hover:underline">
-                      1-800-543-3843
+                    <a href="tel:+18449675247" className="text-xl font-black text-[#ff8c00] hover:underline">
+                      844-967-5247
                     </a>
                     <p className="text-xs text-[#64748b] mt-1">Toll-free, no obligation</p>
                   </div>
@@ -291,8 +291,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-sm font-bold text-white mb-1">Email Us</p>
-                    <a href="mailto:quotes@concreteliftinginsurance.com" className="text-[#94a3b8] hover:text-[#ff8c00] transition-colors text-sm">
-                      quotes@concreteliftinginsurance.com
+                    <a href="mailto:josh@contractorschoiceagency.com" className="text-[#94a3b8] hover:text-[#ff8c00] transition-colors text-sm">
+                      josh@contractorschoiceagency.com
                     </a>
                     <p className="text-xs text-[#64748b] mt-1">Responded within 1 business day</p>
                   </div>
@@ -314,8 +314,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-sm font-bold text-white mb-1">Business Hours</p>
-                    <p className="text-[#94a3b8] text-sm">Mon-Fri: 8am - 6pm EST</p>
-                    <p className="text-[#94a3b8] text-sm">Sat: 9am - 2pm EST</p>
+                    <p className="text-[#94a3b8] text-sm">Mon-Fri: 8am - 5pm Arizona (MST)</p>
                     <p className="text-[#64748b] text-xs mt-2">24/7 claims hotline available</p>
                   </div>
                 </div>

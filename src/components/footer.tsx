@@ -45,15 +45,15 @@ export function Footer() {
             <div className="space-y-3 text-sm text-[#94a3b8]">
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[#ff8c00]" />
-                <a href="tel:+18005433843" className="hover:text-[#ff8c00] transition-colors">1-800-543-3843</a>
+                <a href="tel:+18449675247" className="hover:text-[#ff8c00] transition-colors">844-967-5247</a>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#ff8c00]" />
-                <a href="mailto:quotes@concreteliftinginsurance.com" className="hover:text-[#ff8c00] transition-colors">quotes@concreteliftinginsurance.com</a>
+                <a href="mailto:josh@contractorschoiceagency.com" className="hover:text-[#ff8c00] transition-colors">josh@contractorschoiceagency.com</a>
               </div>
               <div className="flex items-center gap-3">
                 <Clock className="w-4 h-4 text-[#ff8c00]" />
-                <span>Mon-Fri 8am-6pm EST</span>
+                <span>Mon-Fri 8am-5pm Arizona (MST)</span>
               </div>
             </div>
           </div>
@@ -107,9 +107,9 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Concrete Lifting Insurance. All rights reserved. Licensed in all 50 states.
           </p>
           <div className="flex items-center gap-4">
-            <span className="text-xs text-[#64748b]">BBB Rating: A+</span>
+            <span className="text-xs text-[#64748b]">Licensed in all 50 states</span>
             <span className="text-xs text-[#64748b]">|</span>
-            <span className="text-xs text-[#64748b]">NPN #12345678</span>
+            <span className="text-xs text-[#64748b]">NPN #8608479</span>
           </div>
         </div>
       </div>
