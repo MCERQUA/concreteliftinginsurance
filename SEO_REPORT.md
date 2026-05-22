@@ -194,3 +194,35 @@ export default nextConfig;
 **Quick Wins:** Update sitemap (2 min), optimize meta descriptions (2 min), add custom 404 (10 min). Total: ~14 min for 3 medium-impact fixes.
 
 **High-Impact Recommendations:** Add Service and FAQ schemas, improve internal linking strategy, and regenerate sitemap dynamically.
+
+## Round 3 — repaired 2026-05-22
+
+Closed out Round 1 issues #1, #3, #4, #5 (incomplete sitemap, blog meta descriptions too short, no custom 404, stale sitemap). Partial progress on #2 (Article/BlogPosting schema on blog posts now in; Service schema on coverage products still deferred).
+
+### Tier 2 polish results
+
+| Item | Status | Details |
+|---|---|---|
+| Sitemap refresh + complete (Round 1 issues #1, #5) | ✅ applied | `public/sitemap.xml` rewritten: lastmod dates refreshed (main pages → 2026-05-22; blog posts → their actual publish dates), and the 4 missing blog posts added (`osha-safety-standards-foam-lifting`, `equipment-breakdown-coverage`, `workers-comp-concrete-lifting`, `pollution-liability-foam-contractors`). Total URLs now 11 (was 7). |
+| Blog meta descriptions (Round 1 issue #3) | ✅ applied | `generateMetadata` in `src/app/blog/[slug]/page.tsx` now uses a `buildExcerpt` helper that skips markdown headings and clips the first substantive paragraph to ~155 chars. Was 55 chars (Round 1); now in the 150-160 range. Also added `alternates.canonical`, `openGraph` (article type), and `twitter` per-post. |
+| Custom 404 page (Round 1 issue #4) | ✅ applied | Created `src/app/not-found.tsx` — branded with theme colors, "This slab won't level" headline, 4 CTAs (Home, Services, Blog, Get Quote). Next.js automatically serves this with HTTP 404 status. |
+| Article / BlogPosting schema (Round 1 issue #2 partial) | ✅ applied | `BlogPosting` JSON-LD now rendered server-side in the blog post page component, with headline, description, datePublished, dateModified, author (Organization), publisher with logo ImageObject, articleSection (category), and mainEntityOfPage. Plus a `BreadcrumbList` (Home → Blog → Post Title). |
+| Service schema (Round 1 issue #2 remainder) | ⏭️ deferred | Round 4: would need a per-service-type `Service` schema for spray foam lifting, mud jacking, GL, workers comp, commercial auto, equipment breakdown. Lower-leverage than Article schema; defer. |
+| FAQ schema on /services (Round 1 issue #2 remainder) | ⏭️ deferred | Audit said FAQ section exists at lines 290-307; not extracted in this polish pass to keep within the 8-10 min budget. |
+
+### Files changed
+
+- `public/sitemap.xml` — 7 → 11 URLs; lastmod refreshed
+- `src/app/blog/[slug]/page.tsx` — improved `generateMetadata` (longer descriptions, canonical, OG, Twitter) + injected `BlogPosting` and `BreadcrumbList` JSON-LD
+- `src/app/not-found.tsx` (**new**) — branded 404 page
+
+### Verification
+
+- `npm run build` ✅ clean. 8 routes built (`/`, `/_not-found`, `/about`, `/api/contact`, `/blog`, `/blog/[slug]`, `/contact`, `/services`). Blog post route is `ƒ` (server-rendered on demand) because of generateMetadata; rest are static.
+
+### Round 4 deferrals
+
+- Service schema per coverage product (spray foam, mud jacking, GL, workers comp, commercial auto, equipment breakdown)
+- FAQ schema on /services FAQ section
+- Internal linking strategy (low density: blog posts not linked from service pages)
+- Replace placeholder background gradient divs with actual images (no `<img>` tags currently)
