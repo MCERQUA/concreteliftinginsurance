@@ -63,13 +63,33 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
+function buildExcerpt(content: string[]): string {
+  const firstPara = content.find((p) => !p.startsWith("##") && p.trim().length > 60) ?? content[0] ?? "";
+  return firstPara.replace(/\s+/g, " ").slice(0, 155).trim();
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = posts[slug];
   if (!post) return { title: "Post Not Found" };
+  const url = `https://concreteliftinginsurance.com/blog/${slug}`;
+  const description = buildExcerpt(post.content);
   return {
     title: post.title,
-    description: post.content[0],
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      type: "article",
+      url,
+      title: post.title,
+      description,
+      siteName: "Concrete Lifting Insurance",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description,
+    },
   };
 }
 
@@ -81,8 +101,47 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
+  const url = `https://concreteliftinginsurance.com/blog/${slug}`;
+  const description = buildExcerpt(post.content);
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: { "@type": "Organization", name: "Concrete Lifting Insurance" },
+    publisher: {
+      "@type": "Organization",
+      name: "Concrete Lifting Insurance",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://concreteliftinginsurance.com/logo.png",
+      },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    articleSection: post.category,
+  };
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://concreteliftinginsurance.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://concreteliftinginsurance.com/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: url },
+    ],
+  };
+
   return (
     <div className="relative min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <AnimatedBackground />
       <Navbar />
 
