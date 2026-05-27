@@ -75,8 +75,8 @@ export default function ContactPage() {
       <section className="relative pt-32 pb-16 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(255,140,0,0.1)] border border-[rgba(255,140,0,0.3)] mb-6">
-              <span className="text-xs font-bold text-[#ff8c00] uppercase tracking-wider">Get Started</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(30,64,175,0.1)] border border-[rgba(30,64,175,0.3)] mb-6">
+              <span className="text-xs font-bold text-[#1e40af] uppercase tracking-wider">Get Started</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-black text-white mb-6">
               Get Your{" "}
@@ -99,7 +99,7 @@ export default function ContactPage() {
               className="lg:col-span-3 rounded-3xl p-8 md:p-10"
               style={{
                 background: "rgba(30,41,59,0.85)",
-                border: "1px solid rgba(255,140,0,0.25)",
+                border: "1px solid rgba(30,64,175,0.25)",
                 backdropFilter: "blur(20px)",
               }}
             >
@@ -115,7 +115,7 @@ export default function ContactPage() {
                   </p>
                   <p className="text-[#64748b] text-sm">
                     Need immediate help? Call us at{" "}
-                    <a href="tel:+18449675247" className="text-[#ff8c00] font-semibold">
+                    <a href="tel:+18449675247" className="text-[#1e40af] font-semibold">
                       844-967-5247
                     </a>
                   </p>
@@ -125,7 +125,7 @@ export default function ContactPage() {
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-semibold text-white mb-2">
-                        Full Name <span className="text-[#ff8c00]">*</span>
+                        Full Name <span className="text-[#1e40af]">*</span>
                       </label>
                       <input
                         type="text"
@@ -134,8 +134,8 @@ export default function ContactPage() {
                         onChange={handleChange}
                         placeholder="John Smith"
                         className={`w-full px-4 py-3 rounded-xl bg-[rgba(255,255,255,0.12)] border ${
-                          errors.name ? "border-[#ef4444]" : "border-[rgba(255,140,0,0.3)]"
-                        } text-white placeholder-[#94a3b8] focus:border-[#ff8c00] focus:outline-none transition-colors`}
+                          errors.name ? "border-[#ef4444]" : "border-[rgba(30,64,175,0.3)]"
+                        } text-white placeholder-[#94a3b8] focus:border-[#1e40af] focus:outline-none transition-colors`}
                       />
                       {errors.name && <p className="text-[#ef4444] text-xs mt-1">{errors.name}</p>}
                     </div>
@@ -147,7 +147,7 @@ export default function ContactPage() {
                         value={formData.company}
                         onChange={handleChange}
                         placeholder="Smith Concrete Solutions"
-                        className="w-full px-4 py-3 rounded-xl bg-[rgba(255,255,255,0.12)] border border-[rgba(255,140,0,0.3)] text-white placeholder-[#94a3b8] focus:border-[#ff8c00] focus:outline-none transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-[rgba(255,255,255,0.12)] border border-[rgba(30,64,175,0.3)] text-white placeholder-[#94a3b8] focus:border-[#1e40af] focus:outline-none transition-colors"
                       />
                     </div>
                   </div>
@@ -155,7 +155,7 @@ export default function ContactPage() {
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-semibold text-white mb-2">
-                        Email <span className="text-[#ff8c00]">*</span>
+                        Email <span className="text-[#1e40af]">*</span>
                       </label>
                       <input
                         type="email"
@@ -164,14 +164,14 @@ export default function ContactPage() {
                         onChange={handleChange}
                         placeholder="john@smithconcrete.com"
                         className={`w-full px-4 py-3 rounded-xl bg-[rgba(255,255,255,0.12)] border ${
-                          errors.email ? "border-[#ef4444]" : "border-[rgba(255,140,0,0.3)]"
-                        } text-white placeholder-[#94a3b8] focus:border-[#ff8c00] focus:outline-none transition-colors`}
+                          errors.email ? "border-[#ef4444]" : "border-[rgba(30,64,175,0.3)]"
+                        } text-white placeholder-[#94a3b8] focus:border-[#1e40af] focus:outline-none transition-colors`}
                       />
                       {errors.email && <p className="text-[#ef4444] text-xs mt-1">{errors.email}</p>}
                     </div>
                     <div>
                       <label className="block text-sm font-semibold text-white mb-2">
-                        Phone <span className="text-[#ff8c00]">*</span>
+                        Phone <span className="text-[#1e40af]">*</span>
                       </label>
                       <input
                         type="tel"
@@ -180,8 +180,8 @@ export default function ContactPage() {
                         onChange={handleChange}
                         placeholder="(555) 123-4567"
                         className={`w-full px-4 py-3 rounded-xl bg-[rgba(255,255,255,0.12)] border ${
-                          errors.phone ? "border-[#ef4444]" : "border-[rgba(255,140,0,0.3)]"
-                        } text-white placeholder-[#94a3b8] focus:border-[#ff8c00] focus:outline-none transition-colors`}
+                          errors.phone ? "border-[#ef4444]" : "border-[rgba(30,64,175,0.3)]"
+                        } text-white placeholder-[#94a3b8] focus:border-[#1e40af] focus:outline-none transition-colors`}
                       />
                       {errors.phone && <p className="text-[#ef4444] text-xs mt-1">{errors.phone}</p>}
                     </div>
@@ -189,15 +189,15 @@ export default function ContactPage() {
 
                   <div>
                     <label className="block text-sm font-semibold text-white mb-2">
-                      Insurance Type <span className="text-[#ff8c00]">*</span>
+                      Insurance Type <span className="text-[#1e40af]">*</span>
                     </label>
                     <select
                       name="insuranceType"
                       value={formData.insuranceType}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 rounded-xl bg-[rgba(255,255,255,0.12)] border ${
-                        errors.insuranceType ? "border-[#ef4444]" : "border-[rgba(255,140,0,0.3)]"
-                      } text-white focus:border-[#ff8c00] focus:outline-none transition-colors`}
+                        errors.insuranceType ? "border-[#ef4444]" : "border-[rgba(30,64,175,0.3)]"
+                      } text-white focus:border-[#1e40af] focus:outline-none transition-colors`}
                     >
                       <option value="" className="bg-[#1e293b]">Select insurance type...</option>
                       {insuranceTypes.map((type) => (
@@ -219,7 +219,7 @@ export default function ContactPage() {
                       value={formData.grossSales}
                       onChange={handleChange}
                       placeholder="$0 — $500,000"
-                      className="w-full px-4 py-3 rounded-xl bg-[rgba(255,255,255,0.12)] border border-[rgba(255,140,0,0.3)] text-white placeholder-[#94a3b8] focus:border-[#ff8c00] focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-[rgba(255,255,255,0.12)] border border-[rgba(30,64,175,0.3)] text-white placeholder-[#94a3b8] focus:border-[#1e40af] focus:outline-none transition-colors"
                     />
                   </div>
 
@@ -231,13 +231,13 @@ export default function ContactPage() {
                       onChange={handleChange}
                       rows={4}
                       placeholder="Tell us about your business—annual revenue, years in business, current coverage, any specific questions..."
-                      className="w-full px-4 py-3 rounded-xl bg-[rgba(255,255,255,0.12)] border border-[rgba(255,140,0,0.3)] text-white placeholder-[#94a3b8] focus:border-[#ff8c00] focus:outline-none transition-colors resize-none"
+                      className="w-full px-4 py-3 rounded-xl bg-[rgba(255,255,255,0.12)] border border-[rgba(30,64,175,0.3)] text-white placeholder-[#94a3b8] focus:border-[#1e40af] focus:outline-none transition-colors resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#ff8c00] to-[#ffb347] text-white font-bold text-lg rounded-xl shadow-2xl shadow-[#ff8c00]/40 hover:shadow-[#ff8c00]/60 hover:scale-[1.01] transition-all"
+                    className="w-full inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#1e40af] to-[#3b82f6] text-white font-bold text-lg rounded-xl shadow-2xl shadow-[#1e40af]/40 hover:shadow-[#1e40af]/60 hover:scale-[1.01] transition-all"
                   >
                     <Send className="w-5 h-5" />
                     Request Free Quote
@@ -258,17 +258,17 @@ export default function ContactPage() {
                 className="p-6 rounded-2xl"
                 style={{
                   background: "rgba(15,25,41,0.6)",
-                  border: "1px solid rgba(255,140,0,0.12)",
+                  border: "1px solid rgba(30,64,175,0.12)",
                   backdropFilter: "blur(10px)",
                 }}
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-[rgba(255,140,0,0.1)] flex items-center justify-center shrink-0">
-                    <Phone className="w-6 h-6 text-[#ff8c00]" />
+                  <div className="w-12 h-12 rounded-xl bg-[rgba(30,64,175,0.1)] flex items-center justify-center shrink-0">
+                    <Phone className="w-6 h-6 text-[#1e40af]" />
                   </div>
                   <div>
                     <p className="text-sm font-bold text-white mb-1">Call Us</p>
-                    <a href="tel:+18449675247" className="text-xl font-black text-[#ff8c00] hover:underline">
+                    <a href="tel:+18449675247" className="text-xl font-black text-[#1e40af] hover:underline">
                       844-967-5247
                     </a>
                     <p className="text-xs text-[#64748b] mt-1">Toll-free, no obligation</p>
@@ -281,17 +281,17 @@ export default function ContactPage() {
                 className="p-6 rounded-2xl"
                 style={{
                   background: "rgba(15,25,41,0.6)",
-                  border: "1px solid rgba(255,140,0,0.12)",
+                  border: "1px solid rgba(30,64,175,0.12)",
                   backdropFilter: "blur(10px)",
                 }}
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-[rgba(255,140,0,0.1)] flex items-center justify-center shrink-0">
-                    <Mail className="w-6 h-6 text-[#ff8c00]" />
+                  <div className="w-12 h-12 rounded-xl bg-[rgba(30,64,175,0.1)] flex items-center justify-center shrink-0">
+                    <Mail className="w-6 h-6 text-[#1e40af]" />
                   </div>
                   <div>
                     <p className="text-sm font-bold text-white mb-1">Email Us</p>
-                    <a href="mailto:josh@contractorschoiceagency.com" className="text-[#94a3b8] hover:text-[#ff8c00] transition-colors text-sm">
+                    <a href="mailto:josh@contractorschoiceagency.com" className="text-[#94a3b8] hover:text-[#1e40af] transition-colors text-sm">
                       josh@contractorschoiceagency.com
                     </a>
                     <p className="text-xs text-[#64748b] mt-1">Responded within 1 business day</p>
@@ -304,13 +304,13 @@ export default function ContactPage() {
                 className="p-6 rounded-2xl"
                 style={{
                   background: "rgba(15,25,41,0.6)",
-                  border: "1px solid rgba(255,140,0,0.12)",
+                  border: "1px solid rgba(30,64,175,0.12)",
                   backdropFilter: "blur(10px)",
                 }}
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-[rgba(255,140,0,0.1)] flex items-center justify-center shrink-0">
-                    <Clock className="w-6 h-6 text-[#ff8c00]" />
+                  <div className="w-12 h-12 rounded-xl bg-[rgba(30,64,175,0.1)] flex items-center justify-center shrink-0">
+                    <Clock className="w-6 h-6 text-[#1e40af]" />
                   </div>
                   <div>
                     <p className="text-sm font-bold text-white mb-1">Business Hours</p>
@@ -325,13 +325,13 @@ export default function ContactPage() {
                 className="p-6 rounded-2xl"
                 style={{
                   background: "rgba(15,25,41,0.6)",
-                  border: "1px solid rgba(255,140,0,0.12)",
+                  border: "1px solid rgba(30,64,175,0.12)",
                   backdropFilter: "blur(10px)",
                 }}
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-[rgba(255,140,0,0.1)] flex items-center justify-center shrink-0">
-                    <Shield className="w-6 h-6 text-[#ff8c00]" />
+                  <div className="w-12 h-12 rounded-xl bg-[rgba(30,64,175,0.1)] flex items-center justify-center shrink-0">
+                    <Shield className="w-6 h-6 text-[#1e40af]" />
                   </div>
                   <div>
                     <p className="text-sm font-bold text-white mb-2">Trust Signals</p>

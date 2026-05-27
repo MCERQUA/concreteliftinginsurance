@@ -69,8 +69,8 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left: Story */}
             <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(255,140,0,0.1)] border border-[rgba(255,140,0,0.3)] mb-6">
-                <span className="text-xs font-bold text-[#ff8c00] uppercase tracking-wider">Our Story</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(30,64,175,0.1)] border border-[rgba(30,64,175,0.3)] mb-6">
+                <span className="text-xs font-bold text-[#1e40af] uppercase tracking-wider">Our Story</span>
               </div>
               <h1 className="text-5xl md:text-6xl font-black text-white mb-6">
                 Built for Concrete{" "}
@@ -106,13 +106,13 @@ export default function AboutPage() {
               <div
                 className="rounded-3xl overflow-hidden aspect-[4/3]"
                 style={{
-                  background: "linear-gradient(135deg, rgba(255,140,0,0.1) 0%, rgba(59,130,246,0.1) 100%)",
-                  border: "1px solid rgba(255,140,0,0.2)",
+                  background: "linear-gradient(135deg, rgba(30,64,175,0.1) 0%, rgba(59,130,246,0.1) 100%)",
+                  border: "1px solid rgba(30,64,175,0.2)",
                 }}
               >
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
-                    <Shield className="w-24 h-24 text-[#ff8c00]/30 mx-auto mb-4" />
+                    <Shield className="w-24 h-24 text-[#1e40af]/30 mx-auto mb-4" />
                     <p className="text-[#64748b] text-sm">Serving Contractors Since 2009</p>
                   </div>
                 </div>
@@ -122,12 +122,12 @@ export default function AboutPage() {
                 className="absolute -bottom-6 -left-6 px-6 py-4 rounded-2xl"
                 style={{
                   background: "rgba(15,25,41,0.95)",
-                  border: "1px solid rgba(255,140,0,0.3)",
+                  border: "1px solid rgba(30,64,175,0.3)",
                   backdropFilter: "blur(20px)",
                   boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
                 }}
               >
-                <p className="text-3xl font-black text-[#ff8c00]">2,400+</p>
+                <p className="text-3xl font-black text-[#1e40af]">2,400+</p>
                 <p className="text-sm text-[#64748b]">Contractors Insured</p>
               </div>
             </div>
@@ -136,12 +136,12 @@ export default function AboutPage() {
       </section>
 
       {/* Stats */}
-      <section className="relative py-16 border-y border-[rgba(255,140,0,0.1)]" style={{ background: "rgba(15,25,41,0.5)" }}>
+      <section className="relative py-16 border-y border-[rgba(30,64,175,0.1)]" style={{ background: "rgba(15,25,41,0.5)" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, i) => (
               <div key={i} className="text-center">
-                <p className="text-4xl md:text-5xl font-black text-[#ff8c00] mb-2">{stat.value}</p>
+                <p className="text-4xl md:text-5xl font-black text-[#1e40af] mb-2">{stat.value}</p>
                 <p className="text-[#64748b] text-sm">{stat.label}</p>
               </div>
             ))}
@@ -168,12 +168,12 @@ export default function AboutPage() {
                   className="p-8 rounded-3xl text-center"
                   style={{
                     background: "rgba(15,25,41,0.6)",
-                    border: "1px solid rgba(255,140,0,0.12)",
+                    border: "1px solid rgba(30,64,175,0.12)",
                     backdropFilter: "blur(10px)",
                   }}
                 >
-                  <div className="w-16 h-16 rounded-2xl bg-[rgba(255,140,0,0.1)] border border-[rgba(255,140,0,0.2)] flex items-center justify-center mx-auto mb-6">
-                    <Icon className="w-8 h-8 text-[#ff8c00]" />
+                  <div className="w-16 h-16 rounded-2xl bg-[rgba(30,64,175,0.1)] border border-[rgba(30,64,175,0.2)] flex items-center justify-center mx-auto mb-6">
+                    <Icon className="w-8 h-8 text-[#1e40af]" />
                   </div>
                   <h3 className="text-xl font-black text-white mb-4">{value.title}</h3>
                   <p className="text-[#94a3b8] text-sm leading-relaxed">{value.description}</p>
@@ -185,7 +185,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="relative py-24 border-t border-[rgba(255,140,0,0.08)]">
+      <section className="relative py-24 border-t border-[rgba(30,64,175,0.08)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
@@ -205,15 +205,15 @@ export default function AboutPage() {
                 className="p-8 rounded-3xl"
                 style={{
                   background: "rgba(15,25,41,0.6)",
-                  border: "1px solid rgba(255,140,0,0.12)",
+                  border: "1px solid rgba(30,64,175,0.12)",
                   backdropFilter: "blur(10px)",
                 }}
               >
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#ff8c00]/30 to-[#ffb347]/20 flex items-center justify-center mx-auto mb-6 border border-[rgba(255,140,0,0.2)]">
-                  <Users className="w-10 h-10 text-[#ff8c00]" />
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#1e40af]/30 to-[#3b82f6]/20 flex items-center justify-center mx-auto mb-6 border border-[rgba(30,64,175,0.2)]">
+                  <Users className="w-10 h-10 text-[#1e40af]" />
                 </div>
                 <h3 className="text-xl font-black text-white text-center mb-1">{member.name}</h3>
-                <p className="text-[#ff8c00] font-semibold text-sm text-center mb-4">{member.role}</p>
+                <p className="text-[#1e40af] font-semibold text-sm text-center mb-4">{member.role}</p>
                 <p className="text-[#94a3b8] text-sm text-center leading-relaxed">{member.background}</p>
               </div>
             ))}
@@ -234,14 +234,14 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+18449675247"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-[#ff8c00] to-[#ffb347] text-white font-black text-lg rounded-2xl shadow-2xl shadow-[#ff8c00]/40 hover:shadow-[#ff8c00]/60 hover:scale-[1.02] transition-all"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-[#1e40af] to-[#3b82f6] text-white font-black text-lg rounded-2xl shadow-2xl shadow-[#1e40af]/40 hover:shadow-[#1e40af]/60 hover:scale-[1.02] transition-all"
             >
               <Phone className="w-6 h-6" />
               Call 844-967-5247
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[rgba(255,255,255,0.05)] border-2 border-[rgba(255,140,0,0.4)] text-white font-black text-lg rounded-2xl hover:bg-[rgba(255,140,0,0.1)] transition-all"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[rgba(255,255,255,0.05)] border-2 border-[rgba(30,64,175,0.4)] text-white font-black text-lg rounded-2xl hover:bg-[rgba(30,64,175,0.1)] transition-all"
             >
               Get Free Quote
             </Link>

@@ -89,8 +89,8 @@ export default function BlogPage() {
       <section className="relative pt-32 pb-16 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(255,140,0,0.1)] border border-[rgba(255,140,0,0.3)] mb-6">
-              <span className="text-xs font-bold text-[#ff8c00] uppercase tracking-wider">Resources</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(30,64,175,0.1)] border border-[rgba(30,64,175,0.3)] mb-6">
+              <span className="text-xs font-bold text-[#1e40af] uppercase tracking-wider">Resources</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-black text-white mb-6">
               Concrete Lifting{" "}
@@ -113,7 +113,7 @@ export default function BlogPage() {
               className="group block rounded-3xl overflow-hidden"
               style={{
                 background: "rgba(15,25,41,0.7)",
-                border: "1px solid rgba(255,140,0,0.2)",
+                border: "1px solid rgba(30,64,175,0.2)",
                 backdropFilter: "blur(20px)",
               }}
             >
@@ -122,18 +122,18 @@ export default function BlogPage() {
                 <div
                   className="aspect-[16/10] md:aspect-auto relative"
                   style={{
-                    background: "linear-gradient(135deg, rgba(255,140,0,0.15) 0%, rgba(59,130,246,0.1) 100%)",
+                    background: "linear-gradient(135deg, rgba(30,64,175,0.15) 0%, rgba(59,130,246,0.1) 100%)",
                   }}
                 >
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-[#ff8c00]/20 text-6xl font-black">Featured</span>
+                    <span className="text-[#1e40af]/20 text-6xl font-black">Featured</span>
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className="p-8 md:p-10 flex flex-col justify-center">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="px-3 py-1 bg-[#ff8c00]/20 text-[#ff8c00] text-xs font-bold rounded-full">
+                    <span className="px-3 py-1 bg-[#1e40af]/20 text-[#1e40af] text-xs font-bold rounded-full">
                       {featuredPost.category}
                     </span>
                     <span className="text-[#64748b] text-xs flex items-center gap-1">
@@ -141,11 +141,11 @@ export default function BlogPage() {
                       {featuredPost.readTime}
                     </span>
                   </div>
-                  <h2 className="text-2xl md:text-3xl font-black text-white mb-4 group-hover:text-[#ff8c00] transition-colors">
+                  <h2 className="text-2xl md:text-3xl font-black text-white mb-4 group-hover:text-[#1e40af] transition-colors">
                     {featuredPost.title}
                   </h2>
                   <p className="text-[#94a3b8] leading-relaxed mb-6">{featuredPost.excerpt}</p>
-                  <div className="flex items-center gap-2 text-[#ff8c00] font-bold text-sm group-hover:gap-3 transition-all">
+                  <div className="flex items-center gap-2 text-[#1e40af] font-bold text-sm group-hover:gap-3 transition-all">
                     Read Article
                     <ArrowRight className="w-4 h-4" />
                   </div>
@@ -167,7 +167,7 @@ export default function BlogPage() {
                 className="group rounded-2xl overflow-hidden"
                 style={{
                   background: "rgba(15,25,41,0.6)",
-                  border: "1px solid rgba(255,140,0,0.12)",
+                  border: "1px solid rgba(30,64,175,0.12)",
                   backdropFilter: "blur(10px)",
                 }}
               >
@@ -175,17 +175,17 @@ export default function BlogPage() {
                 <div
                   className="aspect-[16/9] relative"
                   style={{
-                    background: "linear-gradient(135deg, rgba(255,140,0,0.08) 0%, rgba(59,130,246,0.05) 100%)",
+                    background: "linear-gradient(135deg, rgba(30,64,175,0.08) 0%, rgba(59,130,246,0.05) 100%)",
                   }}
                 >
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <Tag className="w-8 h-8 text-[#ff8c00]/20" />
+                    <Tag className="w-8 h-8 text-[#1e40af]/20" />
                   </div>
                 </div>
 
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="px-2 py-1 bg-[rgba(255,140,0,0.1)] text-[#ff8c00] text-xs font-bold rounded-md">
+                    <span className="px-2 py-1 bg-[rgba(30,64,175,0.1)] text-[#1e40af] text-xs font-bold rounded-md">
                       {post.category}
                     </span>
                     <span className="text-[#64748b] text-xs flex items-center gap-1">
@@ -193,7 +193,7 @@ export default function BlogPage() {
                       {post.readTime}
                     </span>
                   </div>
-                  <h3 className="text-lg font-black text-white mb-2 group-hover:text-[#ff8c00] transition-colors line-clamp-2">
+                  <h3 className="text-lg font-black text-white mb-2 group-hover:text-[#1e40af] transition-colors line-clamp-2">
                     {post.title}
                   </h3>
                   <p className="text-[#94a3b8] text-sm leading-relaxed mb-4 line-clamp-2">

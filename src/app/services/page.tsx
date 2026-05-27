@@ -42,8 +42,8 @@ const services = [
       "Chemical liability coverage",
       "Subcontractor coverage options",
     ],
-    gradient: "from-[#ff8c00]/20 via-[#ffb347]/10 to-transparent",
-    iconColor: "text-[#ff8c00]",
+    gradient: "from-[#1e40af]/20 via-[#3b82f6]/10 to-transparent",
+    iconColor: "text-[#1e40af]",
     popular: true,
   },
   {
@@ -182,8 +182,8 @@ export default function ServicesPage() {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(255,140,0,0.1)] border border-[rgba(255,140,0,0.3)] mb-6">
-              <span className="text-xs font-bold text-[#ff8c00] uppercase tracking-wider">Our Coverage</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(30,64,175,0.1)] border border-[rgba(30,64,175,0.3)] mb-6">
+              <span className="text-xs font-bold text-[#1e40af] uppercase tracking-wider">Our Coverage</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-black text-white mb-6">
               Insurance Built for{" "}
@@ -210,7 +210,7 @@ export default function ServicesPage() {
                   className="rounded-3xl overflow-hidden"
                   style={{
                     background: "rgba(15,25,41,0.7)",
-                    border: "1px solid rgba(255,140,0,0.15)",
+                    border: "1px solid rgba(30,64,175,0.15)",
                     backdropFilter: "blur(20px)",
                   }}
                 >
@@ -219,19 +219,19 @@ export default function ServicesPage() {
                     <div
                       className="p-8 md:p-10"
                       style={{
-                        background: `linear-gradient(135deg, ${service.gradient.includes("from-[#ff8c00]") ? "rgba(255,140,0,0.1)" : service.gradient.includes("from-[#3b82f6]") ? "rgba(59,130,246,0.1)" : service.gradient.includes("from-[#10b981]") ? "rgba(16,185,129,0.1)" : service.gradient.includes("from-[#8b5cf6]") ? "rgba(139,92,246,0.1)" : service.gradient.includes("from-[#f59e0b]") ? "rgba(245,158,11,0.1)" : "rgba(239,68,68,0.1)"} 0%, transparent 100%)`,
-                        borderRight: "1px solid rgba(255,140,0,0.1)",
+                        background: `linear-gradient(135deg, ${service.gradient.includes("from-[#1e40af]") ? "rgba(30,64,175,0.1)" : service.gradient.includes("from-[#3b82f6]") ? "rgba(59,130,246,0.1)" : service.gradient.includes("from-[#10b981]") ? "rgba(16,185,129,0.1)" : service.gradient.includes("from-[#8b5cf6]") ? "rgba(139,92,246,0.1)" : service.gradient.includes("from-[#f59e0b]") ? "rgba(245,158,11,0.1)" : "rgba(239,68,68,0.1)"} 0%, transparent 100%)`,
+                        borderRight: "1px solid rgba(30,64,175,0.1)",
                       }}
                     >
                       {service.popular && (
-                        <div className="inline-block px-3 py-1 bg-[#ff8c00] text-white text-xs font-bold rounded-full mb-4 shadow-lg shadow-[#ff8c00]/30">
+                        <div className="inline-block px-3 py-1 bg-[#1e40af] text-white text-xs font-bold rounded-full mb-4 shadow-lg shadow-[#1e40af]/30">
                           MOST POPULAR
                         </div>
                       )}
                       <div
                         className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
                         style={{
-                          background: `linear-gradient(135deg, ${service.gradient.includes("from-[#ff8c00]") ? "rgba(255,140,0,0.2)" : service.gradient.includes("from-[#3b82f6]") ? "rgba(59,130,246,0.2)" : service.gradient.includes("from-[#10b981]") ? "rgba(16,185,129,0.2)" : "rgba(139,92,246,0.2)"} 0%, transparent 100%)`,
+                          background: `linear-gradient(135deg, ${service.gradient.includes("from-[#1e40af]") ? "rgba(30,64,175,0.2)" : service.gradient.includes("from-[#3b82f6]") ? "rgba(59,130,246,0.2)" : service.gradient.includes("from-[#10b981]") ? "rgba(16,185,129,0.2)" : "rgba(139,92,246,0.2)"} 0%, transparent 100%)`,
                           border: "1px solid rgba(255,255,255,0.1)",
                         }}
                       >
@@ -239,7 +239,7 @@ export default function ServicesPage() {
                       </div>
                       <h2 className="text-2xl font-black text-white mb-2">{service.title}</h2>
                       <p className={`font-semibold text-sm mb-4 ${service.iconColor}`}>{service.shortDesc}</p>
-                      <p className="text-2xl font-black text-[#ff8c00] mb-1">{service.price}</p>
+                      <p className="text-2xl font-black text-[#1e40af] mb-1">{service.price}</p>
                       <p className="text-xs text-[#64748b]">Typical cost for small contractors</p>
                     </div>
 
@@ -263,7 +263,7 @@ export default function ServicesPage() {
 
                       <Link
                         href="/contact"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#ff8c00] to-[#ffb347] text-white font-bold text-sm rounded-xl shadow-lg shadow-[#ff8c00]/30 hover:shadow-[#ff8c00]/50 transition-all"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#1e40af] to-[#3b82f6] text-white font-bold text-sm rounded-xl shadow-lg shadow-[#1e40af]/30 hover:shadow-[#1e40af]/50 transition-all"
                       >
                         Get Quote for This Coverage
                         <ArrowRight className="w-4 h-4" />
@@ -278,7 +278,7 @@ export default function ServicesPage() {
       </section>
 
       {/* FAQ */}
-      <section className="relative py-24 border-t border-[rgba(255,140,0,0.08)]">
+      <section className="relative py-24 border-t border-[rgba(30,64,175,0.08)]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-black text-white mb-4">
@@ -294,7 +294,7 @@ export default function ServicesPage() {
                 className="p-6 rounded-2xl"
                 style={{
                   background: "rgba(15,25,41,0.6)",
-                  border: "1px solid rgba(255,140,0,0.12)",
+                  border: "1px solid rgba(30,64,175,0.12)",
                   backdropFilter: "blur(10px)",
                 }}
               >
@@ -319,14 +319,14 @@ export default function ServicesPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+18449675247"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-[#ff8c00] to-[#ffb347] text-white font-black text-lg rounded-2xl shadow-2xl shadow-[#ff8c00]/40 hover:shadow-[#ff8c00]/60 hover:scale-[1.02] transition-all"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-[#1e40af] to-[#3b82f6] text-white font-black text-lg rounded-2xl shadow-2xl shadow-[#1e40af]/40 hover:shadow-[#1e40af]/60 hover:scale-[1.02] transition-all"
             >
               <Phone className="w-6 h-6" />
               Call 844-967-5247
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[rgba(255,255,255,0.05)] border-2 border-[rgba(255,140,0,0.4)] text-white font-black text-lg rounded-2xl hover:bg-[rgba(255,140,0,0.1)] transition-all"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[rgba(255,255,255,0.05)] border-2 border-[rgba(30,64,175,0.4)] text-white font-black text-lg rounded-2xl hover:bg-[rgba(30,64,175,0.1)] transition-all"
             >
               Get Free Quote Online
               <ArrowRight className="w-5 h-5" />

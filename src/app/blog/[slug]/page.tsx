@@ -151,7 +151,7 @@ export default async function BlogPostPage({ params }: Props) {
           {/* Back link */}
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-sm text-[#94a3b8] hover:text-[#ff8c00] transition-colors mb-8"
+            className="inline-flex items-center gap-2 text-sm text-[#94a3b8] hover:text-[#1e40af] transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Resources
@@ -160,7 +160,7 @@ export default async function BlogPostPage({ params }: Props) {
           {/* Header */}
           <div className="mb-10">
             <div className="flex items-center gap-3 mb-4">
-              <span className="px-3 py-1 bg-[#ff8c00]/20 text-[#ff8c00] text-xs font-bold rounded-full">
+              <span className="px-3 py-1 bg-[#1e40af]/20 text-[#1e40af] text-xs font-bold rounded-full">
                 {post.category}
               </span>
               <span className="text-[#64748b] text-sm flex items-center gap-1">
@@ -177,7 +177,7 @@ export default async function BlogPostPage({ params }: Props) {
             className="rounded-3xl p-8 md:p-12"
             style={{
               background: "rgba(15,25,41,0.6)",
-              border: "1px solid rgba(255,140,0,0.12)",
+              border: "1px solid rgba(30,64,175,0.12)",
               backdropFilter: "blur(10px)",
             }}
           >
@@ -199,7 +199,7 @@ export default async function BlogPostPage({ params }: Props) {
                 }
                 if (paragraph.startsWith("1. ") || paragraph.startsWith("2. ") || paragraph.startsWith("3. ") || paragraph.startsWith("4. ") || paragraph.startsWith("5. ")) {
                   return (
-                    <p key={i} className="text-[#94a3b8] leading-relaxed pl-4 border-l-2 border-[#ff8c00]/30">
+                    <p key={i} className="text-[#94a3b8] leading-relaxed pl-4 border-l-2 border-[#1e40af]/30">
                       {paragraph}
                     </p>
                   );
@@ -217,8 +217,8 @@ export default async function BlogPostPage({ params }: Props) {
           <div
             className="mt-12 p-8 rounded-3xl text-center"
             style={{
-              background: "linear-gradient(135deg, rgba(255,140,0,0.1) 0%, rgba(255,140,0,0.05) 100%)",
-              border: "1px solid rgba(255,140,0,0.2)",
+              background: "linear-gradient(135deg, rgba(30,64,175,0.1) 0%, rgba(30,64,175,0.05) 100%)",
+              border: "1px solid rgba(30,64,175,0.2)",
             }}
           >
             <h3 className="text-2xl font-black text-white mb-3">Ready to Review Your Coverage?</h3>
@@ -227,7 +227,7 @@ export default async function BlogPostPage({ params }: Props) {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#ff8c00] to-[#ffb347] text-white font-bold rounded-xl shadow-lg shadow-[#ff8c00]/30 hover:shadow-[#ff8c00]/50 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#1e40af] to-[#3b82f6] text-white font-bold rounded-xl shadow-lg shadow-[#1e40af]/30 hover:shadow-[#1e40af]/50 transition-all"
             >
               Get Free Quote
               <ArrowRight className="w-5 h-5" />
