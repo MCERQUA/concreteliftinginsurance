@@ -39,10 +39,10 @@ export function Footer() {
                 <span className="text-[10px] font-bold tracking-[0.2em] text-[#1e40af] leading-tight">LIFTING INSURANCE</span>
               </div>
             </Link>
-            <p className="text-[#94a3b8] text-sm leading-relaxed mb-6 max-w-sm">
+            <p className="text-[#475569] text-sm leading-relaxed mb-6 max-w-sm">
               Specialized insurance coverage for concrete lifting contractors. Whether you use spray foam injection or traditional mud jacking, we have you covered.
             </p>
-            <div className="space-y-3 text-sm text-[#94a3b8]">
+            <div className="space-y-3 text-sm text-[#475569]">
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[#1e40af]" />
                 <a href="tel:+18449675247" className="hover:text-[#1e40af] transition-colors">844-967-5247</a>
@@ -60,11 +60,11 @@ export function Footer() {
 
           {/* Coverage Links */}
           <div>
-            <h3 className="text-white font-bold text-sm uppercase tracking-wider mb-4">Coverage</h3>
+            <h3 className="text-[#0f172a] font-bold text-sm uppercase tracking-wider mb-4">Coverage</h3>
             <ul className="space-y-3">
               {footerLinks.coverage.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-[#94a3b8] hover:text-[#1e40af] transition-colors">
+                  <Link href={link.href} className="text-sm text-[#475569] hover:text-[#1e40af] transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -74,11 +74,11 @@ export function Footer() {
 
           {/* Company Links */}
           <div>
-            <h3 className="text-white font-bold text-sm uppercase tracking-wider mb-4">Company</h3>
+            <h3 className="text-[#0f172a] font-bold text-sm uppercase tracking-wider mb-4">Company</h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-[#94a3b8] hover:text-[#1e40af] transition-colors">
+                  <Link href={link.href} className="text-sm text-[#475569] hover:text-[#1e40af] transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -88,11 +88,11 @@ export function Footer() {
 
           {/* Legal Links */}
           <div>
-            <h3 className="text-white font-bold text-sm uppercase tracking-wider mb-4">Legal</h3>
+            <h3 className="text-[#0f172a] font-bold text-sm uppercase tracking-wider mb-4">Legal</h3>
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-[#94a3b8] hover:text-[#1e40af] transition-colors">
+                  <Link href={link.href} className="text-sm text-[#475569] hover:text-[#1e40af] transition-colors">
                     {link.label}
                   </Link>
                 </li>

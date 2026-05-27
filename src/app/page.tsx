@@ -172,13 +172,13 @@ export default function HomePage() {
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05]">
                 <span className="gradient-text">Insurance Built</span>
                 <br />
-                <span className="text-white">for Concrete</span>
+                <span className="text-[#0f172a]">for Concrete</span>
                 <br />
-                <span className="text-white">Lifting Pros</span>
+                <span className="text-[#0f172a]">Lifting Pros</span>
               </h1>
 
               {/* Subheadline */}
-              <p className="text-lg md:text-xl text-[#94a3b8] leading-relaxed max-w-xl">
+              <p className="text-lg md:text-xl text-[#475569] leading-relaxed max-w-xl">
                 Whether you use{" "}
                 <span className="text-[#1e40af] font-semibold">spray foam injection</span> or{" "}
                 <span className="text-[#3b82f6] font-semibold">mud jacking</span>, we have
@@ -197,7 +197,7 @@ export default function HomePage() {
                 </Link>
                 <Link
                   href="/services"
-                  className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-[rgba(255,255,255,0.05)] border border-[rgba(30,64,175,0.3)] text-white font-bold text-lg rounded-2xl hover:bg-[rgba(30,64,175,0.1)] transition-all"
+                  className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-[rgba(30,64,175,0.05)] border border-[rgba(30,64,175,0.3)] text-[#1e40af] font-bold text-lg rounded-2xl hover:bg-[rgba(30,64,175,0.1)] transition-all"
                 >
                   View Coverage Options
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -240,13 +240,13 @@ export default function HomePage() {
                         <Truck className="w-6 h-6 text-[#3b82f6]" />
                       </div>
                       <div>
-                        <p className="text-white font-bold">Commercial Auto</p>
+                        <p className="text-[#0f172a] font-bold">Commercial Auto</p>
                         <p className="text-[#64748b] text-sm">Fleet & contractor vehicles</p>
                       </div>
                     </div>
                     <div className="flex items-end justify-between">
                       <div>
-                        <p className="text-3xl font-black text-white">$2.5M</p>
+                        <p className="text-3xl font-black text-[#0f172a]">$2.5M</p>
                         <p className="text-[#64748b] text-sm">Coverage limit</p>
                       </div>
                       <Check className="w-8 h-8 text-[#3b82f6]" />
@@ -269,13 +269,13 @@ export default function HomePage() {
                         <Wrench className="w-6 h-6 text-[#1e40af]" />
                       </div>
                       <div>
-                        <p className="text-white font-bold">Spray Foam Lifting</p>
+                        <p className="text-[#0f172a] font-bold">Spray Foam Lifting</p>
                         <p className="text-[#64748b] text-sm">Polyurethane injection</p>
                       </div>
                     </div>
                     <div className="flex items-end justify-between">
                       <div>
-                        <p className="text-3xl font-black text-white">$1M+</p>
+                        <p className="text-3xl font-black text-[#0f172a]">$1M+</p>
                         <p className="text-[#64748b] text-sm">Starting coverage</p>
                       </div>
                       <div className="px-3 py-1 bg-[#10b981]/20 text-[#10b981] text-xs font-bold rounded-full">
@@ -300,7 +300,7 @@ export default function HomePage() {
                       <Shield className="w-7 h-7 text-white" />
                     </div>
                     <div>
-                      <p className="text-white font-black text-lg">Your Business Protected</p>
+                      <p className="text-[#0f172a] font-black text-lg">Your Business Protected</p>
                       <p className="text-[#64748b] text-sm">Active policy</p>
                     </div>
                   </div>
@@ -308,19 +308,19 @@ export default function HomePage() {
                   <div className="space-y-4 mb-6">
                     <div className="flex items-center gap-3">
                       <Check className="w-5 h-5 text-[#10b981]" />
-                      <span className="text-[#94a3b8] text-sm">General Liability Coverage</span>
+                      <span className="text-[#475569] text-sm">General Liability Coverage</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Check className="w-5 h-5 text-[#10b981]" />
-                      <span className="text-[#94a3b8] text-sm">Workers Compensation</span>
+                      <span className="text-[#475569] text-sm">Workers Compensation</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Check className="w-5 h-5 text-[#10b981]" />
-                      <span className="text-[#94a3b8] text-sm">Equipment Breakdown</span>
+                      <span className="text-[#475569] text-sm">Equipment Breakdown</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Check className="w-5 h-5 text-[#10b981]" />
-                      <span className="text-[#94a3b8] text-sm">24/7 Claims Support</span>
+                      <span className="text-[#475569] text-sm">24/7 Claims Support</span>
                     </div>
                   </div>
 
@@ -360,11 +360,11 @@ export default function HomePage() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(30,64,175,0.1)] border border-[rgba(30,64,175,0.3)] mb-6">
               <span className="text-xs font-bold text-[#1e40af] uppercase tracking-wider">Our Coverage</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-black text-[#0f172a] mb-4">
               Protection for Every Aspect of{" "}
               <span className="gradient-text">Your Business</span>
             </h2>
-            <p className="text-lg text-[#94a3b8] max-w-2xl mx-auto">
+            <p className="text-lg text-[#475569] max-w-2xl mx-auto">
               From spray foam injection to mud jacking, we understand the unique risks concrete lifting
               contractors face. Get coverage that actually fits your work.
             </p>
@@ -396,22 +396,22 @@ export default function HomePage() {
                     className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6`}
                     style={{
                       background: `linear-gradient(135deg, ${service.gradient.includes("from-[#1e40af]") ? "rgba(30,64,175,0.2)" : service.gradient.includes("from-[#3b82f6]") ? "rgba(59,130,246,0.2)" : service.gradient.includes("from-[#10b981]") ? "rgba(16,185,129,0.2)" : "rgba(139,92,246,0.2)"} 0%, transparent 100%)`,
-                      border: "1px solid rgba(255,255,255,0.1)",
+                      border: "1px solid rgba(30,64,175,0.2)",
                     }}
                   >
                     <Icon className={`w-8 h-8 ${service.iconColor}`} />
                   </div>
 
-                  <h3 className="text-2xl font-black text-white mb-2">{service.title}</h3>
+                  <h3 className="text-2xl font-black text-[#0f172a] mb-2">{service.title}</h3>
                   <p className="text-[#1e40af] font-semibold text-sm mb-4">{service.shortDesc}</p>
-                  <p className="text-[#94a3b8] text-sm leading-relaxed mb-6">{service.description}</p>
+                  <p className="text-[#475569] text-sm leading-relaxed mb-6">{service.description}</p>
 
                   {/* Features */}
                   <div className="space-y-2">
                     {service.features.map((feature, i) => (
                       <div key={i} className="flex items-center gap-2">
                         <Check className="w-4 h-4 text-[#10b981]" />
-                        <span className="text-sm text-[#94a3b8]">{feature}</span>
+                        <span className="text-sm text-[#475569]">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -431,7 +431,7 @@ export default function HomePage() {
       <section className="relative py-24 border-t border-[rgba(30,64,175,0.08)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-black text-[#0f172a] mb-4">
               Why Contractors{" "}
               <span className="gradient-text">Choose Us</span>
             </h2>
