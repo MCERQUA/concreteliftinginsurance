@@ -472,7 +472,7 @@ export default function HomePage() {
                 What Contractors Say
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-white">
+            <h2 className="text-4xl md:text-5xl font-black text-[#0f172a]">
               Trusted by Pros{" "}
               <span className="gradient-text">Nationwide</span>
             </h2>
@@ -525,11 +525,11 @@ export default function HomePage() {
               backdropFilter: "blur(20px)",
             }}
           >
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-black text-[#0f172a] mb-6">
               Ready to Get{" "}
               <span className="gradient-text">Protected?</span>
             </h2>
-            <p className="text-lg text-[#94a3b8] mb-10 max-w-2xl mx-auto">
+            <p className="text-lg text-[#475569] mb-10 max-w-2xl mx-auto">
               Get your free, no-obligation quote in under 15 minutes. We&apos;ll have you covered before
               your next job starts.
             </p>
@@ -544,7 +544,7 @@ export default function HomePage() {
               </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[rgba(255,255,255,0.05)] border-2 border-[rgba(30,64,175,0.4)] text-white font-black text-lg rounded-2xl hover:bg-[rgba(30,64,175,0.1)] transition-all"
+                className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[rgba(30,64,175,0.05)] border-2 border-[rgba(30,64,175,0.4)] text-[#1e40af] font-black text-lg rounded-2xl hover:bg-[rgba(30,64,175,0.1)] transition-all"
               >
                 Get Free Quote Online
                 <ArrowRight className="w-5 h-5" />
