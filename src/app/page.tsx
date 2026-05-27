@@ -39,8 +39,8 @@ const services = [
       "Completed operations",
       "Tools and equipment",
     ],
-    gradient: "from-[#ff8c00]/20 via-[#ffb347]/10 to-transparent",
-    iconColor: "text-[#ff8c00]",
+    gradient: "from-[#1e40af]/20 via-[#3b82f6]/10 to-transparent",
+    iconColor: "text-[#1e40af]",
     popular: true,
   },
   {
@@ -161,9 +161,9 @@ export default function HomePage() {
             {/* Left Column */}
             <div className="space-y-8">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(255,140,0,0.1)] border border-[rgba(255,140,0,0.3)] backdrop-blur-sm">
-                <span className="w-2 h-2 rounded-full bg-[#ff8c00] animate-pulse" />
-                <span className="text-xs font-bold text-[#ff8c00] uppercase tracking-wider">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(30,64,175,0.1)] border border-[rgba(30,64,175,0.3)] backdrop-blur-sm">
+                <span className="w-2 h-2 rounded-full bg-[#1e40af] animate-pulse" />
+                <span className="text-xs font-bold text-[#1e40af] uppercase tracking-wider">
                   Trusted by 2,400+ Contractors
                 </span>
               </div>
@@ -180,7 +180,7 @@ export default function HomePage() {
               {/* Subheadline */}
               <p className="text-lg md:text-xl text-[#94a3b8] leading-relaxed max-w-xl">
                 Whether you use{" "}
-                <span className="text-[#ff8c00] font-semibold">spray foam injection</span> or{" "}
+                <span className="text-[#1e40af] font-semibold">spray foam injection</span> or{" "}
                 <span className="text-[#3b82f6] font-semibold">mud jacking</span>, we have
                 specialized coverage that actually makes sense for your work.
               </p>
@@ -189,7 +189,7 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact"
-                  className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#ff8c00] to-[#ffb347] text-white font-bold text-lg rounded-2xl shadow-2xl shadow-[#ff8c00]/30 hover:shadow-[#ff8c00]/50 hover:scale-[1.02] transition-all"
+                  className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#1e40af] to-[#3b82f6] text-white font-bold text-lg rounded-2xl shadow-2xl shadow-[#1e40af]/30 hover:shadow-[#1e40af]/50 hover:scale-[1.02] transition-all"
                 >
                   <Phone className="w-5 h-5" />
                   Get Free Quote
@@ -197,7 +197,7 @@ export default function HomePage() {
                 </Link>
                 <Link
                   href="/services"
-                  className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-[rgba(255,255,255,0.05)] border border-[rgba(255,140,0,0.3)] text-white font-bold text-lg rounded-2xl hover:bg-[rgba(255,140,0,0.1)] transition-all"
+                  className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-[rgba(255,255,255,0.05)] border border-[rgba(30,64,175,0.3)] text-white font-bold text-lg rounded-2xl hover:bg-[rgba(30,64,175,0.1)] transition-all"
                 >
                   View Coverage Options
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -258,15 +258,15 @@ export default function HomePage() {
                 <div
                   className="absolute top-6 right-12 w-[420px] h-[280px] rounded-3xl"
                   style={{
-                    background: "linear-gradient(135deg, rgba(255,140,0,0.15) 0%, rgba(255,140,0,0.05) 100%)",
-                    border: "1px solid rgba(255,140,0,0.25)",
+                    background: "linear-gradient(135deg, rgba(30,64,175,0.15) 0%, rgba(30,64,175,0.05) 100%)",
+                    border: "1px solid rgba(30,64,175,0.25)",
                     backdropFilter: "blur(20px)",
                   }}
                 >
                   <div className="p-8 h-full flex flex-col justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-xl bg-[rgba(255,140,0,0.2)] flex items-center justify-center">
-                        <Wrench className="w-6 h-6 text-[#ff8c00]" />
+                      <div className="w-12 h-12 rounded-xl bg-[rgba(30,64,175,0.2)] flex items-center justify-center">
+                        <Wrench className="w-6 h-6 text-[#1e40af]" />
                       </div>
                       <div>
                         <p className="text-white font-bold">Spray Foam Lifting</p>
@@ -289,14 +289,14 @@ export default function HomePage() {
                 <div
                   className="absolute top-0 right-4 w-[420px] h-[320px] rounded-3xl p-8"
                   style={{
-                    background: "rgba(15,25,41,0.95)",
-                    border: "1px solid rgba(255,140,0,0.35)",
+                    background: "rgba(248,250,252,0.98)",
+                    border: "1px solid rgba(30,64,175,0.35)",
                     backdropFilter: "blur(20px)",
-                    boxShadow: "0 40px 80px rgba(0,0,0,0.4), 0 0 60px rgba(255,140,0,0.1)",
+                    boxShadow: "0 40px 80px rgba(0,0,0,0.4), 0 0 60px rgba(30,64,175,0.1)",
                   }}
                 >
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#ff8c00] to-[#ffb347] flex items-center justify-center shadow-lg shadow-[#ff8c00]/30">
+                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#1e40af] to-[#3b82f6] flex items-center justify-center shadow-lg shadow-[#1e40af]/30">
                       <Shield className="w-7 h-7 text-white" />
                     </div>
                     <div>
@@ -324,9 +324,9 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  <div className="pt-4 border-t border-[rgba(255,140,0,0.15)]">
+                  <div className="pt-4 border-t border-[rgba(30,64,175,0.15)]">
                     <p className="text-xs text-[#64748b] mb-1">Quote valid for 30 days</p>
-                    <p className="text-sm text-[#ff8c00] font-bold">Terms and conditions apply</p>
+                    <p className="text-sm text-[#1e40af] font-bold">Terms and conditions apply</p>
                   </div>
                 </div>
               </div>
@@ -335,16 +335,16 @@ export default function HomePage() {
         </div>
 
         {/* Bottom fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#030d1a] to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
       </section>
 
       {/* Trust Stats Bar */}
-      <section className="relative py-12 border-y border-[rgba(255,140,0,0.1)]" style={{ background: "rgba(15,25,41,0.5)" }}>
+      <section className="relative py-12 border-y border-[rgba(30,64,175,0.1)]" style={{ background: "rgba(248,250,252,0.7)" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {trustStats.map((stat, i) => (
               <div key={i} className="text-center">
-                <p className="text-3xl md:text-4xl font-black text-[#ff8c00] mb-1">{stat.value}</p>
+                <p className="text-3xl md:text-4xl font-black text-[#1e40af] mb-1">{stat.value}</p>
                 <p className="text-sm text-[#64748b]">{stat.label}</p>
               </div>
             ))}
@@ -357,8 +357,8 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(255,140,0,0.1)] border border-[rgba(255,140,0,0.3)] mb-6">
-              <span className="text-xs font-bold text-[#ff8c00] uppercase tracking-wider">Our Coverage</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(30,64,175,0.1)] border border-[rgba(30,64,175,0.3)] mb-6">
+              <span className="text-xs font-bold text-[#1e40af] uppercase tracking-wider">Our Coverage</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
               Protection for Every Aspect of{" "}
@@ -380,13 +380,13 @@ export default function HomePage() {
                   href={`/services#${service.id}`}
                   className="group relative rounded-3xl overflow-hidden p-8 md:p-10 transition-all duration-500 hover:scale-[1.02] hover:z-10"
                   style={{
-                    background: `linear-gradient(135deg, ${service.gradient.includes("from-[#ff8c00]") ? "rgba(255,140,0,0.08)" : service.gradient.includes("from-[#3b82f6]") ? "rgba(59,130,246,0.08)" : service.gradient.includes("from-[#10b981]") ? "rgba(16,185,129,0.08)" : "rgba(139,92,246,0.08)"} 0%, transparent 100%)`,
-                    border: "1px solid rgba(255,140,0,0.15)",
+                    background: `linear-gradient(135deg, ${service.gradient.includes("from-[#1e40af]") ? "rgba(30,64,175,0.08)" : service.gradient.includes("from-[#3b82f6]") ? "rgba(59,130,246,0.08)" : service.gradient.includes("from-[#10b981]") ? "rgba(16,185,129,0.08)" : "rgba(139,92,246,0.08)"} 0%, transparent 100%)`,
+                    border: "1px solid rgba(30,64,175,0.15)",
                   }}
                 >
                   {/* Popular badge */}
                   {service.popular && (
-                    <div className="absolute top-6 right-6 px-3 py-1 bg-[#ff8c00] text-white text-xs font-bold rounded-full shadow-lg shadow-[#ff8c00]/30">
+                    <div className="absolute top-6 right-6 px-3 py-1 bg-[#1e40af] text-white text-xs font-bold rounded-full shadow-lg shadow-[#1e40af]/30">
                       MOST POPULAR
                     </div>
                   )}
@@ -395,7 +395,7 @@ export default function HomePage() {
                   <div
                     className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6`}
                     style={{
-                      background: `linear-gradient(135deg, ${service.gradient.includes("from-[#ff8c00]") ? "rgba(255,140,0,0.2)" : service.gradient.includes("from-[#3b82f6]") ? "rgba(59,130,246,0.2)" : service.gradient.includes("from-[#10b981]") ? "rgba(16,185,129,0.2)" : "rgba(139,92,246,0.2)"} 0%, transparent 100%)`,
+                      background: `linear-gradient(135deg, ${service.gradient.includes("from-[#1e40af]") ? "rgba(30,64,175,0.2)" : service.gradient.includes("from-[#3b82f6]") ? "rgba(59,130,246,0.2)" : service.gradient.includes("from-[#10b981]") ? "rgba(16,185,129,0.2)" : "rgba(139,92,246,0.2)"} 0%, transparent 100%)`,
                       border: "1px solid rgba(255,255,255,0.1)",
                     }}
                   >
@@ -403,7 +403,7 @@ export default function HomePage() {
                   </div>
 
                   <h3 className="text-2xl font-black text-white mb-2">{service.title}</h3>
-                  <p className="text-[#ff8c00] font-semibold text-sm mb-4">{service.shortDesc}</p>
+                  <p className="text-[#1e40af] font-semibold text-sm mb-4">{service.shortDesc}</p>
                   <p className="text-[#94a3b8] text-sm leading-relaxed mb-6">{service.description}</p>
 
                   {/* Features */}
@@ -418,7 +418,7 @@ export default function HomePage() {
 
                   {/* Arrow */}
                   <div className="absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <ArrowRight className="w-5 h-5 text-[#ff8c00]" />
+                    <ArrowRight className="w-5 h-5 text-[#1e40af]" />
                   </div>
                 </Link>
               );
@@ -428,7 +428,7 @@ export default function HomePage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="relative py-24 border-t border-[rgba(255,140,0,0.08)]">
+      <section className="relative py-24 border-t border-[rgba(30,64,175,0.08)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
@@ -446,12 +446,12 @@ export default function HomePage() {
                   className="text-center p-8 rounded-3xl"
                   style={{
                     background: "rgba(15,25,41,0.6)",
-                    border: "1px solid rgba(255,140,0,0.12)",
+                    border: "1px solid rgba(30,64,175,0.12)",
                     backdropFilter: "blur(10px)",
                   }}
                 >
-                  <div className="w-16 h-16 rounded-2xl bg-[rgba(255,140,0,0.1)] border border-[rgba(255,140,0,0.2)] flex items-center justify-center mx-auto mb-6">
-                    <Icon className="w-8 h-8 text-[#ff8c00]" />
+                  <div className="w-16 h-16 rounded-2xl bg-[rgba(30,64,175,0.1)] border border-[rgba(30,64,175,0.2)] flex items-center justify-center mx-auto mb-6">
+                    <Icon className="w-8 h-8 text-[#1e40af]" />
                   </div>
                   <h3 className="text-xl font-black text-white mb-3">{item.title}</h3>
                   <p className="text-[#94a3b8] text-sm leading-relaxed">{item.description}</p>
@@ -466,9 +466,9 @@ export default function HomePage() {
       <section className="relative py-24 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(255,140,0,0.1)] border border-[rgba(255,140,0,0.3)] mb-6">
-              <Star className="w-4 h-4 text-[#ffb347]" />
-              <span className="text-xs font-bold text-[#ff8c00] uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(30,64,175,0.1)] border border-[rgba(30,64,175,0.3)] mb-6">
+              <Star className="w-4 h-4 text-[#3b82f6]" />
+              <span className="text-xs font-bold text-[#1e40af] uppercase tracking-wider">
                 What Contractors Say
               </span>
             </div>
@@ -485,14 +485,14 @@ export default function HomePage() {
                 className="p-8 rounded-3xl"
                 style={{
                   background: "rgba(15,25,41,0.7)",
-                  border: "1px solid rgba(255,140,0,0.15)",
+                  border: "1px solid rgba(30,64,175,0.15)",
                   backdropFilter: "blur(20px)",
                 }}
               >
                 {/* Stars */}
                 <div className="flex gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, j) => (
-                    <Star key={j} className="w-4 h-4 text-[#ffb347] fill-[#ffb347]" />
+                    <Star key={j} className="w-4 h-4 text-[#3b82f6] fill-[#3b82f6]" />
                   ))}
                 </div>
 
@@ -502,7 +502,7 @@ export default function HomePage() {
                 </p>
 
                 {/* Author */}
-                <div className="pt-4 border-t border-[rgba(255,140,0,0.1)]">
+                <div className="pt-4 border-t border-[rgba(30,64,175,0.1)]">
                   <p className="text-white font-bold">{testimonial.author}</p>
                   <p className="text-[#64748b] text-sm">
                     {testimonial.company} &middot; {testimonial.location}
@@ -520,8 +520,8 @@ export default function HomePage() {
           <div
             className="rounded-3xl p-12 md:p-16"
             style={{
-              background: "linear-gradient(135deg, rgba(255,140,0,0.1) 0%, rgba(255,140,0,0.05) 50%, rgba(59,130,246,0.05) 100%)",
-              border: "1px solid rgba(255,140,0,0.25)",
+              background: "linear-gradient(135deg, rgba(30,64,175,0.1) 0%, rgba(30,64,175,0.05) 50%, rgba(59,130,246,0.05) 100%)",
+              border: "1px solid rgba(30,64,175,0.25)",
               backdropFilter: "blur(20px)",
             }}
           >
@@ -537,14 +537,14 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+18449675247"
-                className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-[#ff8c00] to-[#ffb347] text-white font-black text-lg rounded-2xl shadow-2xl shadow-[#ff8c00]/40 hover:shadow-[#ff8c00]/60 hover:scale-[1.02] transition-all"
+                className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-[#1e40af] to-[#3b82f6] text-white font-black text-lg rounded-2xl shadow-2xl shadow-[#1e40af]/40 hover:shadow-[#1e40af]/60 hover:scale-[1.02] transition-all"
               >
                 <Phone className="w-6 h-6" />
                 Call 844-967-5247
               </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[rgba(255,255,255,0.05)] border-2 border-[rgba(255,140,0,0.4)] text-white font-black text-lg rounded-2xl hover:bg-[rgba(255,140,0,0.1)] transition-all"
+                className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[rgba(255,255,255,0.05)] border-2 border-[rgba(30,64,175,0.4)] text-white font-black text-lg rounded-2xl hover:bg-[rgba(30,64,175,0.1)] transition-all"
               >
                 Get Free Quote Online
                 <ArrowRight className="w-5 h-5" />
@@ -553,7 +553,7 @@ export default function HomePage() {
 
             <p className="mt-8 text-sm text-[#64748b]">
               Or email{" "}
-              <a href="mailto:josh@contractorschoiceagency.com" className="text-[#ff8c00] hover:underline">
+              <a href="mailto:josh@contractorschoiceagency.com" className="text-[#1e40af] hover:underline">
                 josh@contractorschoiceagency.com
               </a>
             </p>
