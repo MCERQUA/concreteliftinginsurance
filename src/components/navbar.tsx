@@ -37,7 +37,7 @@ export function Navbar() {
               <Shield className="w-6 h-6 text-white" />
             </div>
             <div className="flex flex-col">
-              <span className="text-lg font-black text-white leading-tight">CONCRETE</span>
+              <span className="text-lg font-black text-[#0f172a] leading-tight">CONCRETE</span>
               <span className="text-[10px] font-bold tracking-[0.2em] text-[#1e40af] leading-tight">LIFTING INSURANCE</span>
             </div>
           </Link>

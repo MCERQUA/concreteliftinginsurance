@@ -4,7 +4,7 @@ export function AnimatedBackground() {
   return (
     <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
       {/* Base gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#ffffff] via-[#0a1628] to-[#ffffff]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#f8fafc] via-[#eff6ff] to-[#f8fafc]" />
 
       {/* Animated orbs */}
       <div
