@@ -151,7 +151,7 @@ export default async function BlogPostPage({ params }: Props) {
           {/* Back link */}
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-sm text-[#94a3b8] hover:text-[#1e40af] transition-colors mb-8"
+            className="inline-flex items-center gap-2 text-sm text-[#475569] hover:text-[#1e40af] transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Resources
@@ -168,7 +168,7 @@ export default async function BlogPostPage({ params }: Props) {
                 {post.readTime}
               </span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-black text-white mb-6">{post.title}</h1>
+            <h1 className="text-4xl md:text-5xl font-black text-[#0f172a] mb-6">{post.title}</h1>
             <p className="text-[#64748b] text-sm">{post.date}</p>
           </div>
 
@@ -176,7 +176,7 @@ export default async function BlogPostPage({ params }: Props) {
           <div
             className="rounded-3xl p-8 md:p-12"
             style={{
-              background: "rgba(15,25,41,0.6)",
+              background: "rgba(248,250,252,0.95)",
               border: "1px solid rgba(30,64,175,0.12)",
               backdropFilter: "blur(10px)",
             }}
@@ -185,27 +185,27 @@ export default async function BlogPostPage({ params }: Props) {
               {post.content.map((paragraph, i) => {
                 if (paragraph.startsWith("## ")) {
                   return (
-                    <h2 key={i} className="text-2xl font-black text-white mt-10 mb-4">
+                    <h2 key={i} className="text-2xl font-black text-[#0f172a] mt-10 mb-4">
                       {paragraph.replace("## ", "")}
                     </h2>
                   );
                 }
                 if (paragraph.startsWith("**") && paragraph.endsWith("**")) {
                   return (
-                    <p key={i} className="text-white font-bold">
+                    <p key={i} className="text-[#0f172a] font-bold">
                       {paragraph.replace(/\*\*/g, "")}
                     </p>
                   );
                 }
                 if (paragraph.startsWith("1. ") || paragraph.startsWith("2. ") || paragraph.startsWith("3. ") || paragraph.startsWith("4. ") || paragraph.startsWith("5. ")) {
                   return (
-                    <p key={i} className="text-[#94a3b8] leading-relaxed pl-4 border-l-2 border-[#1e40af]/30">
+                    <p key={i} className="text-[#475569] leading-relaxed pl-4 border-l-2 border-[#1e40af]/30">
                       {paragraph}
                     </p>
                   );
                 }
                 return (
-                  <p key={i} className="text-[#94a3b8] leading-relaxed">
+                  <p key={i} className="text-[#475569] leading-relaxed">
                     {paragraph}
                   </p>
                 );
@@ -221,8 +221,8 @@ export default async function BlogPostPage({ params }: Props) {
               border: "1px solid rgba(30,64,175,0.2)",
             }}
           >
-            <h3 className="text-2xl font-black text-white mb-3">Ready to Review Your Coverage?</h3>
-            <p className="text-[#94a3b8] mb-6">
+            <h3 className="text-2xl font-black text-[#0f172a] mb-3">Ready to Review Your Coverage?</h3>
+            <p className="text-[#475569] mb-6">
               Get a free quote from our concrete lifting insurance specialists.
             </p>
             <Link

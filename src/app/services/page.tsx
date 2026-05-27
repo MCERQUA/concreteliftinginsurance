@@ -185,11 +185,11 @@ export default function ServicesPage() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(30,64,175,0.1)] border border-[rgba(30,64,175,0.3)] mb-6">
               <span className="text-xs font-bold text-[#1e40af] uppercase tracking-wider">Our Coverage</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-black text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-black text-[#0f172a] mb-6">
               Insurance Built for{" "}
               <span className="gradient-text">Concrete Lifters</span>
             </h1>
-            <p className="text-xl text-[#94a3b8] leading-relaxed">
+            <p className="text-xl text-[#475569] leading-relaxed">
               Whether you use spray foam injection or mud jacking, we have specialized coverage that
               actually fits your work. No gaps. No guesswork.
             </p>
@@ -209,7 +209,7 @@ export default function ServicesPage() {
                   id={service.id}
                   className="rounded-3xl overflow-hidden"
                   style={{
-                    background: "rgba(15,25,41,0.7)",
+                    background: "rgba(248,250,252,0.95)",
                     border: "1px solid rgba(30,64,175,0.15)",
                     backdropFilter: "blur(20px)",
                   }}
@@ -237,7 +237,7 @@ export default function ServicesPage() {
                       >
                         <Icon className={`w-8 h-8 ${service.iconColor}`} />
                       </div>
-                      <h2 className="text-2xl font-black text-white mb-2">{service.title}</h2>
+                      <h2 className="text-2xl font-black text-[#0f172a] mb-2">{service.title}</h2>
                       <p className={`font-semibold text-sm mb-4 ${service.iconColor}`}>{service.shortDesc}</p>
                       <p className="text-2xl font-black text-[#1e40af] mb-1">{service.price}</p>
                       <p className="text-xs text-[#64748b]">Typical cost for small contractors</p>
@@ -245,18 +245,18 @@ export default function ServicesPage() {
 
                     {/* Middle: Description & Features */}
                     <div className="lg:col-span-2 p-8 md:p-10">
-                      <p className="text-[#94a3b8] leading-relaxed mb-6">{service.description}</p>
+                      <p className="text-[#475569] leading-relaxed mb-6">{service.description}</p>
 
                       <div className="mb-6">
-                        <p className="text-sm font-bold text-white uppercase tracking-wider mb-2">Who This Is For</p>
-                        <p className="text-sm text-[#94a3b8]">{service.whoFor}</p>
+                        <p className="text-sm font-bold text-[#0f172a] uppercase tracking-wider mb-2">Who This Is For</p>
+                        <p className="text-sm text-[#475569]">{service.whoFor}</p>
                       </div>
 
                       <div className="grid sm:grid-cols-2 gap-3 mb-8">
                         {service.features.map((feature, i) => (
                           <div key={i} className="flex items-start gap-3">
                             <Check className="w-5 h-5 text-[#10b981] shrink-0 mt-0.5" />
-                            <span className="text-sm text-[#e2e8f0]">{feature}</span>
+                            <span className="text-sm text-[#334155]">{feature}</span>
                           </div>
                         ))}
                       </div>
@@ -281,7 +281,7 @@ export default function ServicesPage() {
       <section className="relative py-24 border-t border-[rgba(30,64,175,0.08)]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-black text-white mb-4">
+            <h2 className="text-4xl font-black text-[#0f172a] mb-4">
               Frequently Asked{" "}
               <span className="gradient-text">Questions</span>
             </h2>
@@ -293,13 +293,13 @@ export default function ServicesPage() {
                 key={i}
                 className="p-6 rounded-2xl"
                 style={{
-                  background: "rgba(15,25,41,0.6)",
+                  background: "rgba(248,250,252,0.95)",
                   border: "1px solid rgba(30,64,175,0.12)",
                   backdropFilter: "blur(10px)",
                 }}
               >
-                <h3 className="text-lg font-bold text-white mb-3">{faq.q}</h3>
-                <p className="text-[#94a3b8] text-sm leading-relaxed">{faq.a}</p>
+                <h3 className="text-lg font-bold text-[#0f172a] mb-3">{faq.q}</h3>
+                <p className="text-[#475569] text-sm leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>
@@ -309,11 +309,11 @@ export default function ServicesPage() {
       {/* CTA */}
       <section className="relative py-24 overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <h2 className="text-4xl font-black text-white mb-6">
+          <h2 className="text-4xl font-black text-[#0f172a] mb-6">
             Ready to Get a{" "}
             <span className="gradient-text">Custom Quote?</span>
           </h2>
-          <p className="text-lg text-[#94a3b8] mb-10">
+          <p className="text-lg text-[#475569] mb-10">
             Our insurance specialists understand concrete lifting. Get coverage that actually fits.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -326,7 +326,7 @@ export default function ServicesPage() {
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[rgba(255,255,255,0.05)] border-2 border-[rgba(30,64,175,0.4)] text-white font-black text-lg rounded-2xl hover:bg-[rgba(30,64,175,0.1)] transition-all"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[rgba(30,64,175,0.05)] border-2 border-[rgba(30,64,175,0.4)] text-[#1e40af] font-black text-lg rounded-2xl hover:bg-[rgba(30,64,175,0.1)] transition-all"
             >
               Get Free Quote Online
               <ArrowRight className="w-5 h-5" />

@@ -445,7 +445,7 @@ export default function HomePage() {
                   key={i}
                   className="text-center p-8 rounded-3xl"
                   style={{
-                    background: "rgba(15,25,41,0.6)",
+                    background: "rgba(248,250,252,0.95)",
                     border: "1px solid rgba(30,64,175,0.12)",
                     backdropFilter: "blur(10px)",
                   }}
@@ -453,8 +453,8 @@ export default function HomePage() {
                   <div className="w-16 h-16 rounded-2xl bg-[rgba(30,64,175,0.1)] border border-[rgba(30,64,175,0.2)] flex items-center justify-center mx-auto mb-6">
                     <Icon className="w-8 h-8 text-[#1e40af]" />
                   </div>
-                  <h3 className="text-xl font-black text-white mb-3">{item.title}</h3>
-                  <p className="text-[#94a3b8] text-sm leading-relaxed">{item.description}</p>
+                  <h3 className="text-xl font-black text-[#0f172a] mb-3">{item.title}</h3>
+                  <p className="text-[#475569] text-sm leading-relaxed">{item.description}</p>
                 </div>
               );
             })}
@@ -484,7 +484,7 @@ export default function HomePage() {
                 key={i}
                 className="p-8 rounded-3xl"
                 style={{
-                  background: "rgba(15,25,41,0.7)",
+                  background: "rgba(248,250,252,0.95)",
                   border: "1px solid rgba(30,64,175,0.15)",
                   backdropFilter: "blur(20px)",
                 }}
@@ -497,13 +497,13 @@ export default function HomePage() {
                 </div>
 
                 {/* Quote */}
-                <p className="text-[#e2e8f0] leading-relaxed mb-6 italic">
+                <p className="text-[#334155] leading-relaxed mb-6 italic">
                   &ldquo;{testimonial.quote}&rdquo;
                 </p>
 
                 {/* Author */}
                 <div className="pt-4 border-t border-[rgba(30,64,175,0.1)]">
-                  <p className="text-white font-bold">{testimonial.author}</p>
+                  <p className="text-[#0f172a] font-bold">{testimonial.author}</p>
                   <p className="text-[#64748b] text-sm">
                     {testimonial.company} &middot; {testimonial.location}
                   </p>

@@ -72,12 +72,12 @@ export default function AboutPage() {
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(30,64,175,0.1)] border border-[rgba(30,64,175,0.3)] mb-6">
                 <span className="text-xs font-bold text-[#1e40af] uppercase tracking-wider">Our Story</span>
               </div>
-              <h1 className="text-5xl md:text-6xl font-black text-white mb-6">
+              <h1 className="text-5xl md:text-6xl font-black text-[#0f172a] mb-6">
                 Built for Concrete{" "}
                 <span className="gradient-text">Lifters</span>{" "}
                 By Insurance Experts
               </h1>
-              <div className="space-y-4 text-[#94a3b8] leading-relaxed">
+              <div className="space-y-4 text-[#475569] leading-relaxed">
                 <p>
                   Concrete Lifting Insurance was founded in 2009 after our founder, Robert Chen, spent
                   15 years watching concrete lifting contractors get stuck with inadequate insurance
@@ -121,7 +121,7 @@ export default function AboutPage() {
               <div
                 className="absolute -bottom-6 -left-6 px-6 py-4 rounded-2xl"
                 style={{
-                  background: "rgba(15,25,41,0.95)",
+                  background: "rgba(248,250,252,0.98)",
                   border: "1px solid rgba(30,64,175,0.3)",
                   backdropFilter: "blur(20px)",
                   boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
@@ -136,7 +136,7 @@ export default function AboutPage() {
       </section>
 
       {/* Stats */}
-      <section className="relative py-16 border-y border-[rgba(30,64,175,0.1)]" style={{ background: "rgba(15,25,41,0.5)" }}>
+      <section className="relative py-16 border-y border-[rgba(30,64,175,0.1)]" style={{ background: "rgba(248,250,252,0.8)" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, i) => (
@@ -153,7 +153,7 @@ export default function AboutPage() {
       <section className="relative py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-black text-[#0f172a] mb-4">
               What We{" "}
               <span className="gradient-text">Stand For</span>
             </h2>
@@ -167,7 +167,7 @@ export default function AboutPage() {
                   key={i}
                   className="p-8 rounded-3xl text-center"
                   style={{
-                    background: "rgba(15,25,41,0.6)",
+                    background: "rgba(248,250,252,0.95)",
                     border: "1px solid rgba(30,64,175,0.12)",
                     backdropFilter: "blur(10px)",
                   }}
@@ -175,8 +175,8 @@ export default function AboutPage() {
                   <div className="w-16 h-16 rounded-2xl bg-[rgba(30,64,175,0.1)] border border-[rgba(30,64,175,0.2)] flex items-center justify-center mx-auto mb-6">
                     <Icon className="w-8 h-8 text-[#1e40af]" />
                   </div>
-                  <h3 className="text-xl font-black text-white mb-4">{value.title}</h3>
-                  <p className="text-[#94a3b8] text-sm leading-relaxed">{value.description}</p>
+                  <h3 className="text-xl font-black text-[#0f172a] mb-4">{value.title}</h3>
+                  <p className="text-[#475569] text-sm leading-relaxed">{value.description}</p>
                 </div>
               );
             })}
@@ -188,11 +188,11 @@ export default function AboutPage() {
       <section className="relative py-24 border-t border-[rgba(30,64,175,0.08)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-black text-[#0f172a] mb-4">
               The{" "}
               <span className="gradient-text">Team</span>
             </h2>
-            <p className="text-lg text-[#94a3b8] max-w-2xl mx-auto">
+            <p className="text-lg text-[#475569] max-w-2xl mx-auto">
               Former contractors, underwriters, and claims specialists who know the concrete lifting
               industry inside and out.
             </p>
@@ -204,7 +204,7 @@ export default function AboutPage() {
                 key={i}
                 className="p-8 rounded-3xl"
                 style={{
-                  background: "rgba(15,25,41,0.6)",
+                  background: "rgba(248,250,252,0.95)",
                   border: "1px solid rgba(30,64,175,0.12)",
                   backdropFilter: "blur(10px)",
                 }}
@@ -212,9 +212,9 @@ export default function AboutPage() {
                 <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#1e40af]/30 to-[#3b82f6]/20 flex items-center justify-center mx-auto mb-6 border border-[rgba(30,64,175,0.2)]">
                   <Users className="w-10 h-10 text-[#1e40af]" />
                 </div>
-                <h3 className="text-xl font-black text-white text-center mb-1">{member.name}</h3>
+                <h3 className="text-xl font-black text-[#0f172a] text-center mb-1">{member.name}</h3>
                 <p className="text-[#1e40af] font-semibold text-sm text-center mb-4">{member.role}</p>
-                <p className="text-[#94a3b8] text-sm text-center leading-relaxed">{member.background}</p>
+                <p className="text-[#475569] text-sm text-center leading-relaxed">{member.background}</p>
               </div>
             ))}
           </div>
@@ -224,11 +224,11 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="relative py-24 overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <h2 className="text-4xl font-black text-white mb-6">
+          <h2 className="text-4xl font-black text-[#0f172a] mb-6">
             Want to Work{" "}
             <span className="gradient-text">With Us?</span>
           </h2>
-          <p className="text-lg text-[#94a3b8] mb-10">
+          <p className="text-lg text-[#475569] mb-10">
             Whether you need a quote or want to talk about your current coverage, we're here.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -241,7 +241,7 @@ export default function AboutPage() {
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[rgba(255,255,255,0.05)] border-2 border-[rgba(30,64,175,0.4)] text-white font-black text-lg rounded-2xl hover:bg-[rgba(30,64,175,0.1)] transition-all"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[rgba(30,64,175,0.05)] border-2 border-[rgba(30,64,175,0.4)] text-[#1e40af] font-black text-lg rounded-2xl hover:bg-[rgba(30,64,175,0.1)] transition-all"
             >
               Get Free Quote
             </Link>
