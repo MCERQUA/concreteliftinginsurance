@@ -90,12 +90,26 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "InsuranceAgency",
-              name: "Concrete Lifting Insurance",
+              "@id": "https://concreteliftinginsurance.com/#organization",
+              name: "Contractors Choice Agency",
+              alternateName: "Concrete Lifting Insurance",
               description:
                 "Specialized insurance for concrete lifting contractors including spray foam lifting and mud jacking.",
               url: baseUrl,
-              telephone: "+1-844-967-5247",
+              telephone: "+18449675247",
               email: "josh@contractorschoiceagency.com",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "12220 E Riggs Road Suite #105",
+                addressLocality: "Chandler",
+                addressRegion: "AZ",
+                postalCode: "85249",
+                addressCountry: "US",
+              },
+              founder: {
+                "@type": "Person",
+                name: "Josh Cotner",
+              },
               areaServed: "United States",
               knowsAbout: [
                 "Spray Foam Lifting Insurance",
@@ -103,6 +117,7 @@ export default function RootLayout({
                 "Concrete Leveling Coverage",
                 "Workers Compensation",
                 "Equipment Breakdown Insurance",
+                "Pollution Liability Insurance",
               ],
             }),
           }}

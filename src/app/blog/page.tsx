@@ -4,81 +4,18 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { AnimatedBackground } from "@/components/animated-background";
 import { ArrowRight, Clock, Tag } from "lucide-react";
+import { blogPosts } from "@/lib/blog-posts";
 
 export const metadata: Metadata = {
   title: "Concrete Lifting Insurance Resources & Blog",
   description:
     "Expert insights on concrete lifting insurance, risk management, OSHA compliance, and industry news for spray foam and mud jacking contractors.",
+  alternates: { canonical: "https://concreteliftinginsurance.com/blog/" },
 };
 
-const posts = [
-  {
-    slug: "spray-foam-vs-mud-jacking-insurance",
-    title: "Spray Foam vs. Mud Jacking: Insurance Requirements Explained",
-    excerpt:
-      "Understanding the insurance differences between spray foam lifting and mud jacking can save you from costly coverage gaps. Here's what you need to know.",
-    category: "Coverage Guide",
-    readTime: "8 min read",
-    date: "March 15, 2026",
-    featured: true,
-  },
-  {
-    slug: "reduce-insurance-premium",
-    title: "How to Reduce Your Concrete Lifting Insurance Premium by 20%",
-    excerpt:
-      "Practical steps concrete lifting contractors can take to lower their insurance costs without sacrificing coverage quality.",
-    category: "Cost Savings",
-    readTime: "6 min read",
-    date: "March 8, 2026",
-    featured: false,
-  },
-  {
-    slug: "osha-safety-standards-foam-lifting",
-    title: "OSHA Safety Standards Every Foam Lifting Contractor Must Follow",
-    excerpt:
-      "Stay compliant and reduce your claims risk. A comprehensive guide to OSHA requirements for polyurethane foam injection contractors.",
-    category: "Compliance",
-    readTime: "10 min read",
-    date: "February 28, 2026",
-    featured: false,
-  },
-  {
-    slug: "equipment-breakdown-coverage",
-    title: "Why Equipment Breakdown Coverage Is Non-Negotiable for Lifting Contractors",
-    excerpt:
-      "Your spray foam pump or mud jacking rig is your livelihood. Here's what equipment breakdown insurance actually covers and why you need it.",
-    category: "Coverage Guide",
-    readTime: "7 min read",
-    date: "February 20, 2026",
-    featured: false,
-  },
-  {
-    slug: "workers-comp-concrete-lifting",
-    title: "Workers Comp for Concrete Lifting Crews: What You're Probably Missing",
-    excerpt:
-      "Standard workers comp policies often miss injuries common in our industry. Learn how to make sure your crew is properly covered.",
-    category: "Workers Comp",
-    readTime: "9 min read",
-    date: "February 12, 2026",
-    featured: false,
-  },
-  {
-    slug: "pollution-liability-foam-contractors",
-    title: "Pollution Liability Insurance: Why Foam Lifting Contractors Can't Skip This",
-    excerpt:
-      "Polyurethane foam is classified as a pollutant by many insurers. Learn why pollution liability coverage is essential for foam jacking contractors.",
-    category: "Risk Management",
-    readTime: "8 min read",
-    date: "January 30, 2026",
-    featured: false,
-  },
-];
-
-const categories = ["All", "Coverage Guide", "Cost Savings", "Compliance", "Workers Comp", "Risk Management"];
-
 export default function BlogPage() {
-  const featuredPost = posts.find((p) => p.featured);
-  const otherPosts = posts.filter((p) => !p.featured);
+  const featuredPost = blogPosts.find((p) => p.featured);
+  const otherPosts = blogPosts.filter((p) => !p.featured);
 
   return (
     <div className="relative min-h-screen">
@@ -94,7 +31,12 @@ export default function BlogPage() {
             </div>
             <h1 className="text-5xl md:text-6xl font-black text-[#0f172a] mb-6">
               Concrete Lifting{" "}
-              <span className="gradient-text">Insurance Resources</span>
+              <span
+                className="bg-clip-text text-transparent"
+                style={{ backgroundImage: "linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)" }}
+              >
+                Insurance Resources
+              </span>
             </h1>
             <p className="text-xl text-[#475569] leading-relaxed">
               Expert insights, risk management strategies, and industry news for spray foam and mud
@@ -118,7 +60,6 @@ export default function BlogPage() {
               }}
             >
               <div className="grid md:grid-cols-2 gap-0">
-                {/* Image placeholder */}
                 <div
                   className="aspect-[16/10] md:aspect-auto relative"
                   style={{
@@ -129,8 +70,6 @@ export default function BlogPage() {
                     <span className="text-[#1e40af]/20 text-6xl font-black">Featured</span>
                   </div>
                 </div>
-
-                {/* Content */}
                 <div className="p-8 md:p-10 flex flex-col justify-center">
                   <div className="flex items-center gap-3 mb-4">
                     <span className="px-3 py-1 bg-[#1e40af]/20 text-[#1e40af] text-xs font-bold rounded-full">
@@ -171,7 +110,6 @@ export default function BlogPage() {
                   backdropFilter: "blur(10px)",
                 }}
               >
-                {/* Image placeholder */}
                 <div
                   className="aspect-[16/9] relative"
                   style={{
@@ -182,7 +120,6 @@ export default function BlogPage() {
                     <Tag className="w-8 h-8 text-[#1e40af]/20" />
                   </div>
                 </div>
-
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="px-2 py-1 bg-[rgba(30,64,175,0.1)] text-[#1e40af] text-xs font-bold rounded-md">
