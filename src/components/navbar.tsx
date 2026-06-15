@@ -5,7 +5,8 @@ import { useState, useEffect } from "react";
 import { Menu, X, Phone, Shield } from "lucide-react";
 
 const navLinks = [
-  { href: "/services", label: "Coverage" },
+  { href: "/coverages", label: "Coverages" },
+  { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Resources" },
   { href: "/contact", label: "Contact" },
