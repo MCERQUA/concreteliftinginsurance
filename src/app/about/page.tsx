@@ -8,11 +8,11 @@ import { Phone, Mail, Clock, Shield, Users, Award, Target, Heart } from "lucide-
 export const metadata: Metadata = {
   title: "About Us | Concrete Lifting Insurance",
   description:
-    "Learn about Concrete Lifting Insurance—built by insurance professionals who understand the concrete lifting industry. 15+ years serving spray foam and mud jacking contractors.",
+    "Learn about Concrete Lifting Insurance—backed by Josh Cotner and Contractors Choice Agency, specialists in contractor insurance since 2005. 20+ years serving spray foam and mud jacking contractors.",
 };
 
 const stats = [
-  { value: "15+", label: "Years in Business" },
+  { value: "20+", label: "Years in Business" },
   { value: "2,400+", label: "Contractors Insured" },
   { value: "$48M+", label: "Claims Paid Out" },
   { value: "24/7", label: "Claims Support" },

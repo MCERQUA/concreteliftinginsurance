@@ -52,6 +52,10 @@ export function Footer() {
                 <a href="mailto:josh@contractorschoiceagency.com" className="hover:text-[#1e40af] transition-colors">josh@contractorschoiceagency.com</a>
               </div>
               <div className="flex items-center gap-3">
+                <MapPin className="w-4 h-4 text-[#1e40af]" />
+                <span>12220 E Riggs Road, Suite #105, Chandler, AZ 85249</span>
+              </div>
+              <div className="flex items-center gap-3">
                 <Clock className="w-4 h-4 text-[#1e40af]" />
                 <span>Mon-Fri 8am-5pm Arizona (MST)</span>
               </div>

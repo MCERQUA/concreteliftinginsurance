@@ -97,7 +97,7 @@ const services = [
 ];
 
 const trustStats = [
-  { value: "15+", label: "Years in Business" },
+  { value: "20+", label: "Years in Business" },
   { value: "2,400+", label: "Contractors Insured" },
   { value: "$48M+", label: "Claims Paid Out" },
   { value: "24/7", label: "Claims Support" },
