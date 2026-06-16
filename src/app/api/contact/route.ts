@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const JAMBOT_WEBHOOK_URL = "https://josh.jam-bot.com/social-api/api/leads/webhook/netlify?tenant=josh&site=concreteliftinginsurance";
+const JAMBOT_WEBHOOK_URL = "https://josh.jam-bot.com/social-api/api/leads/webhook/netlify?tenant=josh&site=concreteliftinginsurance.com";
 
 export async function POST(request: Request) {
   try {

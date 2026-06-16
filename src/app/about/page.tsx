@@ -41,19 +41,9 @@ const values = [
 
 const team = [
   {
-    name: "Robert Chen",
-    role: "Founder & CEO",
-    background: "25 years in commercial insurance, former underwriter for contractor specialty programs",
-  },
-  {
-    name: "Maria Santos",
-    role: "VP of Claims",
-    background: "Former claims director at a national contractor insurance carrier, 18 years experience",
-  },
-  {
-    name: "David Park",
-    role: "Lead Underwriter",
-    background: "Specializes in concrete lifting risks, developed our spray foam pollution liability program",
+    name: "Josh Cotner",
+    role: "Founder & Principal Agent",
+    background: "Former contractor turned insurance specialist with 20+ years experience serving contractor trades. Founded Contractors Choice Agency to give contractors the coverage they actually need.",
   },
 ];
 
@@ -79,24 +69,23 @@ export default function AboutPage() {
               </h1>
               <div className="space-y-4 text-[#475569] leading-relaxed">
                 <p>
-                  Concrete Lifting Insurance was founded in 2009 after our founder, Robert Chen, spent
-                  15 years watching concrete lifting contractors get stuck with inadequate insurance
-                  coverage.
+                  Concrete Lifting Insurance is backed by Contractors Choice Agency, founded by Josh
+                  Cotner—a former contractor who spent years watching concrete lifting pros get stuck
+                  with inadequate insurance coverage.
                 </p>
                 <p>
-                  Generic commercial policies didn't understand spray foam injection or mud jacking.
-                  They'd exclude pollution liability, refuse equipment breakdown claims, or deny
-                  completed operations coverage when a lifted slab failed two years later.
+                  Generic commercial policies don&apos;t understand spray foam injection or mud jacking.
+                  They exclude pollution liability, refuse equipment breakdown claims, or deny
+                  completed operations coverage when a lifted slab fails two years later.
                 </p>
                 <p>
-                  So Robert built something different: an insurance agency that specializes exclusively
-                  in concrete lifting. We write policies endorsed specifically for spray foam and mud
+                  So Josh built something different: an insurance agency that specializes exclusively
+                  in contractor trades. We write policies endorsed specifically for spray foam and mud
                   jacking operations, with coverage limits that actually make sense for the work.
                 </p>
                 <p>
-                  Today we insure over 2,400 contractors across all 50 states and have paid out more
-                  than $48 million in claims. We're not the biggest insurance agency—but we're the
-                  most specialized.
+                  Today we insure contractors across all 50 states and have the claims expertise to
+                  back it up. We&apos;re not the biggest insurance agency—but we&apos;re the most specialized.
                 </p>
               </div>
             </div>
@@ -113,7 +102,7 @@ export default function AboutPage() {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
                     <Shield className="w-24 h-24 text-[#1e40af]/30 mx-auto mb-4" />
-                    <p className="text-[#64748b] text-sm">Serving Contractors Since 2009</p>
+                    <p className="text-[#64748b] text-sm">Serving Contractors Since 2005</p>
                   </div>
                 </div>
               </div>
@@ -193,12 +182,11 @@ export default function AboutPage() {
               <span className="gradient-text">Team</span>
             </h2>
             <p className="text-lg text-[#475569] max-w-2xl mx-auto">
-              Former contractors, underwriters, and claims specialists who know the concrete lifting
-              industry inside and out.
+              Led by a former contractor who knows the concrete lifting industry inside and out.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-1 max-w-md mx-auto gap-8">
             {team.map((member, i) => (
               <div
                 key={i}

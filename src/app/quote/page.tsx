@@ -35,7 +35,7 @@ const YEARS_OPTIONS = [
 ];
 
 const WEBHOOK_URL =
-  "https://josh.jam-bot.com/social-api/api/leads/webhook/netlify?tenant=josh&site=concreteliftinginsurance";
+  "https://josh.jam-bot.com/social-api/api/leads/webhook/netlify?tenant=josh&site=concreteliftinginsurance.com";
 
 export default function QuotePage() {
   const [formData, setFormData] = useState({
