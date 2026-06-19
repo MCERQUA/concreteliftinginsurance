@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-lowest": "#010e24",
+                        "on-error-container": "#ffdad6",
+                        "inverse-primary": "#904d00",
+                        "surface-bright": "#2c3951",
+                        "inverse-surface": "#d6e3ff",
+                        "on-background": "#d6e3ff",
+                        "on-primary-fixed-variant": "#6e3900",
+                        "on-error": "#690005",
+                        "primary": "#ffb77d",
+                        "primary-fixed-dim": "#ffb77d",
+                        "primary-fixed": "#ffdcc3",
+                        "on-primary-container": "#623200",
+                        "on-surface-variant": "#ddc1ae",
+                        "outline-variant": "#564334",
+                        "surface-dim": "#041329",
+                        "outline": "#a48c7a",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed-variant": "#004c69",
+                        "secondary": "#8bd5ff",
+                        "secondary-fixed-dim": "#7ad0ff",
+                        "on-tertiary-fixed-variant": "#004c6c",
+                        "on-tertiary-container": "#004360",
+                        "background": "#041329",
+                        "surface": "#041329",
+                        "tertiary-fixed": "#c7e7ff",
+                        "surface-container-high": "#1c2a41",
+                        "on-tertiary-fixed": "#001e2e",
+                        "surface-container-low": "#0d1c32",
+                        "tertiary": "#85cfff",
+                        "surface-tint": "#ffb77d",
+                        "secondary-container": "#00bdfd",
+                        "on-secondary": "#003549",
+                        "tertiary-container": "#00b5fc",
+                        "secondary-fixed": "#c3e8ff",
+                        "on-secondary-container": "#004964",
+                        "inverse-on-surface": "#233148",
+                        "on-primary-fixed": "#2f1500",
+                        "tertiary-fixed-dim": "#85cfff",
+                        "on-tertiary": "#00344c",
+                        "surface-container": "#112036",
+                        "on-primary": "#4d2600",
+                        "on-surface": "#d6e3ff",
+                        "surface-container-highest": "#27354c",
+                        "on-secondary-fixed": "#001e2c",
+                        "primary-container": "#ff8c00",
+                        "error-container": "#93000a",
+                        "surface-variant": "#27354c"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(39, 53, 76, 0.6);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-[#010e24]/60 backdrop-blur-xl bg-gradient-to-b from-[#1c2a41] to-transparent shadow-[0_32px_32px_rgba(0,30,44,0.08)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="text-2xl font-black tracking-tighter text-[#ff8c00]">LIFTGUARD</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-[#ffb77d] border-b-2 border-[#ff8c00] pb-1 font-bold tracking-tight text-sm uppercase font-['Inter']" href="#">Products</a>
+<a class="text-[#d6e3ff] hover:text-[#ffb77d] transition-colors font-bold tracking-tight text-sm uppercase font-['Inter']" href="#">Risk Assessment</a>
+<a class="text-[#d6e3ff] hover:text-[#ffb77d] transition-colors font-bold tracking-tight text-sm uppercase font-['Inter']" href="#">Claims</a>
+<a class="text-[#d6e3ff] hover:text-[#ffb77d] transition-colors font-bold tracking-tight text-sm uppercase font-['Inter']" href="#">Resources</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-[#d6e3ff] cursor-pointer hover:bg-[#1c2a41]/50 p-2 rounded-full transition-all">account_circle</span>
+<button class="bg-gradient-to-br from-primary-container to-primary text-on-primary-container px-6 py-2 rounded-lg font-bold text-sm uppercase tracking-wider hover:brightness-110 active:scale-95 transition-all">
+                    Get a Quote
+                </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-[614px] flex flex-col justify-center items-start px-8 md:px-24 pt-32 pb-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/80 to-transparent z-10"></div>
+<img alt="Industrial construction site" class="w-full h-full object-cover grayscale opacity-40" data-alt="dramatic industrial construction site at dusk with heavy machinery and steel structures under cinematic dark blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDxyZObYGr4XDLXFSLCKXIt6eIJpDJaF2KXxcXKYIWVOj3EhNViHyFJqwC97ds4pqGDo2CUcK0SDnzc76jOQehcKSmht26eEx5662DukWyUsdpXq2JkGErxCHYuHUxzDlXn3jfB7uW7b6ag_ZGZHEKSnpuzinV8mskdO2E_yOZBfLNBQnlSbdvOv8fnosPxqgd403m4D4Wv69gS_NSbmPBP2-R6TTxuthK_DZt5vFC5ozJgTv2Z3RvURNTjtyeB3ULCwBAj6QaLr-Q"/>
+</div>
+<div class="relative z-20 max-w-4xl">
+<span class="text-primary font-label text-sm tracking-[0.3em] uppercase mb-4 block">Precision Underwriting</span>
+<h1 class="text-6xl md:text-8xl font-black tracking-tighter leading-none mb-8">
+                Our Coverage <br/><span class="text-primary-container">Solutions</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed font-light">
+                Engineered for the lifting industry. We provide structural-grade protection for contractors who redefine stability.
+            </p>
+</div>
+</header>
+<!-- Main Section: Service Grid -->
+<main class="max-w-7xl mx-auto px-8 py-24">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1: Spray Foam Lifting -->
+<div class="glass-card p-8 flex flex-col justify-between group hover:bg-surface-container-highest transition-all duration-500 border-l-4 border-primary-container shadow-2xl">
+<div>
+<div class="w-12 h-12 flex items-center justify-center bg-surface-container-low mb-6 rounded">
+<span class="material-symbols-outlined text-primary-container text-3xl">precision_manufacturing</span>
+</div>
+<h3 class="text-2xl font-bold tracking-tight mb-4 group-hover:text-primary transition-colors">Spray Foam Lifting Insurance</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Coverage for polyurethane foam injection contractors.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-sm text-on-surface/80">
+<span class="w-1 h-1 bg-primary rounded-full"></span> Polymer Spillage Liability
+                        </li>
+<li class="flex items-center gap-3 text-sm text-on-surface/80">
+<span class="w-1 h-1 bg-primary rounded-full"></span> Chemical Storage Protection
+                        </li>
+<li class="flex items-center gap-3 text-sm text-on-surface/80">
+<span class="w-1 h-1 bg-primary rounded-full"></span> Injection Process Errors
+                        </li>
+</ul>
+</div>
+<button class="flex items-center gap-2 text-secondary font-bold text-xs uppercase tracking-widest hover:gap-4 transition-all">
+                    Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<!-- Card 2: Mud Jacking -->
+<div class="glass-card p-8 flex flex-col justify-between group hover:bg-surface-container-highest transition-all duration-500 shadow-2xl">
+<div>
+<div class="w-12 h-12 flex items-center justify-center bg-surface-container-low mb-6 rounded">
+<span class="material-symbols-outlined text-primary-container text-3xl">foundation</span>
+</div>
+<h3 class="text-2xl font-bold tracking-tight mb-4 group-hover:text-primary transition-colors">Mud Jacking Insurance</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Coverage for mud jacking and slab jacking contractors.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-sm text-on-surface/80">
+<span class="w-1 h-1 bg-primary rounded-full"></span> Slurry Pump Failures
+                        </li>
+<li class="flex items-center gap-3 text-sm text-on-surface/80">
+<span class="w-1 h-1 bg-primary rounded-full"></span> Structural Settlement Risks
+                        </li>
+<li class="flex items-center gap-3 text-sm text-on-surface/80">
+<span class="w-1 h-1 bg-primary rounded-full"></span> Finished Product Liability
+                        </li>
+</ul>
+</div>
+<button class="flex items-center gap-2 text-secondary font-bold text-xs uppercase tracking-widest hover:gap-4 transition-all">
+                    Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<!-- Card 3: General Liability -->
+<div class="glass-card p-8 flex flex-col justify-between group hover:bg-surface-container-highest transition-all duration-500 shadow-2xl">
+<div>
+<div class="w-12 h-12 flex items-center justify-center bg-surface-container-low mb-6 rounded">
+<span class="material-symbols-outlined text-primary-container text-3xl">shield</span>
+</div>
+<h3 class="text-2xl font-bold tracking-tight mb-4 group-hover:text-primary transition-colors">General Liability Insurance</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Property damage and bodily injury coverage.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-sm text-on-surface/80">
+<span class="w-1 h-1 bg-primary rounded-full"></span> Third-Party Injury
+                        </li>
+<li class="flex items-center gap-3 text-sm text-on-surface/80">
+<span class="w-1 h-1 bg-primary rounded-full"></span> Property Damage Protection
+                        </li>
+<li class="flex items-center gap-3 text-sm text-on-surface/80">
+<span class="w-1 h-1 bg-primary rounded-full"></span> Advertising Injury
+                        </li>
+</ul>
+</div>
+<button class="flex items-center gap-2 text-secondary font-bold text-xs uppercase tracking-widest hover:gap-4 transition-all">
+                    Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<!-- Card 4: Workers Compensation -->
+<div class="glass-card p-8 flex flex-col justify-between group hover:bg-surface-container-highest transition-all duration-500 shadow-2xl">
+<div>
+<div class="w-12 h-12 flex items-center justify-center bg-surface-container-low mb-6 rounded">
+<span class="material-symbols-outlined text-primary-container text-3xl">engineering</span>
+</div>
+<h3 class="text-2xl font-bold tracking-tight mb-4 group-hover:text-primary transition-colors">Workers Compensation</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Coverage for workplace injuries and OSHA compliance.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-sm text-on-surface/80">
+<span class="w-1 h-1 bg-primary rounded-full"></span> Medical Expense Coverage
+                        </li>
+<li class="flex items-center gap-3 text-sm text-on-surface/80">
+<span class="w-1 h-1 bg-primary rounded-full"></span> Lost Wage Reimbursement
+                        </li>
+<li class="flex items-center gap-3 text-sm text-on-surface/80">
+<span class="w-1 h-1 bg-primary rounded-full"></span> Disability Support
+                        </li>
+</ul>
+</div>
+<button class="flex items-center gap-2 text-secondary font-bold text-xs uppercase tracking-widest hover:gap-4 transition-all">
+                    Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<!-- Card 5: Commercial Auto -->
+<div class="glass-card p-8 flex flex-col justify-between group hover:bg-surface-container-highest transition-all duration-500 shadow-2xl">
+<div>
+<div class="w-12 h-12 flex items-center justify-center bg-surface-container-low mb-6 rounded">
+<span class="material-symbols-outlined text-primary-container text-3xl">door_front</span>
+</div>
+<h3 class="text-2xl font-bold tracking-tight mb-4 group-hover:text-primary transition-colors">Commercial Auto Insurance</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Fleet and contractor vehicle coverage.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-sm text-on-surface/80">
+<span class="w-1 h-1 bg-primary rounded-full"></span> Box Truck Protection
+                        </li>
+<li class="flex items-center gap-3 text-sm text-on-surface/80">
+<span class="w-1 h-1 bg-primary rounded-full"></span> Trailer &amp; Equipment Transit
+                        </li>
+<li class="flex items-center gap-3 text-sm text-on-surface/80">
+<span class="w-1 h-1 bg-primary rounded-full"></span> Hired &amp; Non-Owned Auto
+                        </li>
+</ul>
+</div>
+<button class="flex items-center gap-2 text-secondary font-bold text-xs uppercase tracking-widest hover:gap-4 transition-all">
+                    Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<!-- Card 6: Equipment Breakdown -->
+<div class="glass-card p-8 flex flex-col justify-between group hover:bg-surface-container-highest transition-all duration-500 border-r-4 border-secondary shadow-2xl">
+<div>
+<div class="w-12 h-12 flex items-center justify-center bg-surface-container-low mb-6 rounded">
+<span class="material-symbols-outlined text-primary-container text-3xl">build_circle</span>
+</div>
+<h3 class="text-2xl font-bold tracking-tight mb-4 group-hover:text-primary transition-colors">Equipment Breakdown</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Coverage for pumping equipment, drills, and hoses.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-sm text-on-surface/80">
+<span class="w-1 h-1 bg-primary rounded-full"></span> Hydraulic System Failure
+                        </li>
+<li class="flex items-center gap-3 text-sm text-on-surface/80">
+<span class="w-1 h-1 bg-primary rounded-full"></span> Compressor Breakdown
+                        </li>
+<li class="flex items-center gap-3 text-sm text-on-surface/80">
+<span class="w-1 h-1 bg-primary rounded-full"></span> Hose Burst Protection
+                        </li>
+</ul>
+</div>
+<button class="flex items-center gap-2 text-secondary font-bold text-xs uppercase tracking-widest hover:gap-4 transition-all">
+                    Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Bottom Action Section -->
+<section class="max-w-7xl mx-auto px-8 py-24 mb-24">
+<div class="bg-surface-container p-12 md:p-24 rounded-lg relative overflow-hidden flex flex-col items-center text-center">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary-container/20 to-transparent pointer-events-none"></div>
+<h2 class="text-4xl md:text-5xl font-black tracking-tighter mb-6 relative z-10">Ready to secure your operations?</h2>
+<p class="text-on-surface-variant max-w-xl mb-10 relative z-10">Our specialists understand the specific mechanical risks of concrete lifting. Get a customized quote that moves as fast as your business.</p>
+<div class="flex flex-col md:flex-row gap-4 relative z-10">
+<button class="bg-primary-container text-on-primary-container px-10 py-4 rounded-lg font-black text-sm uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all">
+                    Apply for Coverage
+                </button>
+<button class="bg-transparent border border-outline-variant text-on-surface px-10 py-4 rounded-lg font-black text-sm uppercase tracking-widest hover:bg-surface-container-highest transition-all">
+                    Consult an Underwriter
+                </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#010e24] w-full border-t border-[#564334]/15 flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full mt-24">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="text-lg font-bold text-[#ff8c00] mb-2">LIFTGUARD</div>
+<p class="text-xs font-['Inter'] tracking-widest uppercase text-[#d6e3ff]/60">© 2024 LIFTGUARD Insurance Solutions. All rights reserved. Precision Structuralism in Underwriting.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-xs font-['Inter'] tracking-widest uppercase text-[#d6e3ff]/50 hover:text-[#ff8c00] transition-colors" href="#">Privacy Policy</a>
+<a class="text-xs font-['Inter'] tracking-widest uppercase text-[#d6e3ff]/50 hover:text-[#ff8c00] transition-colors" href="#">Terms of Service</a>
+<a class="text-xs font-['Inter'] tracking-widest uppercase text-[#d6e3ff]/50 hover:text-[#ff8c00] transition-colors" href="#">Licensing</a>
+<a class="text-xs font-['Inter'] tracking-widest uppercase text-[#d6e3ff]/50 hover:text-[#ff8c00] transition-colors" href="#">Contact Support</a>
+</div>
+</footer>
+</body></html>
