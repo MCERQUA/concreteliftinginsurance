@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-low": "#0d1c32",
+              "surface-bright": "#2c3951",
+              "primary-fixed-dim": "#ffb77d",
+              "on-primary": "#4d2600",
+              "primary-fixed": "#ffdcc3",
+              "on-secondary-container": "#004964",
+              "error-container": "#93000a",
+              "on-tertiary-container": "#004360",
+              "secondary": "#8bd5ff",
+              "on-surface-variant": "#ddc1ae",
+              "primary": "#ffb77d",
+              "on-secondary-fixed": "#001e2c",
+              "error": "#ffb4ab",
+              "surface": "#041329",
+              "on-surface": "#d6e3ff",
+              "on-primary-container": "#623200",
+              "primary-container": "#ff8c00",
+              "inverse-primary": "#904d00",
+              "surface-container-high": "#1c2a41",
+              "inverse-surface": "#d6e3ff",
+              "tertiary": "#85cfff",
+              "on-primary-fixed": "#2f1500",
+              "on-secondary": "#003549",
+              "secondary-fixed": "#c3e8ff",
+              "on-error": "#690005",
+              "secondary-fixed-dim": "#7ad0ff",
+              "surface-tint": "#ffb77d",
+              "background": "#041329",
+              "surface-container-highest": "#27354c",
+              "tertiary-container": "#00b5fc",
+              "outline": "#a48c7a",
+              "secondary-container": "#00bdfd",
+              "inverse-on-surface": "#233148",
+              "on-error-container": "#ffdad6",
+              "on-secondary-fixed-variant": "#004c69",
+              "on-tertiary-fixed": "#001e2e",
+              "on-tertiary-fixed-variant": "#004c6c",
+              "on-primary-fixed-variant": "#6e3900",
+              "tertiary-fixed-dim": "#85cfff",
+              "surface-variant": "#27354c",
+              "surface-dim": "#041329",
+              "surface-container": "#112036",
+              "outline-variant": "#564334",
+              "surface-container-lowest": "#010e24",
+              "tertiary-fixed": "#c7e7ff",
+              "on-tertiary": "#00344c",
+              "on-background": "#d6e3ff"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(28, 42, 65, 0.6);
+        backdrop-filter: blur(20px);
+      }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body selection:bg-primary/30">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-950/60 backdrop-blur-xl shadow-2xl shadow-blue-900/20 flex justify-between items-center px-8 h-20 w-full max-w-none">
+<div class="text-2xl font-bold tracking-tighter text-orange-500 font-['Inter']">LiftSecure</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-300 hover:text-white transition-colors font-['Inter'] font-bold tracking-tight" href="#">Solutions</a>
+<a class="text-slate-300 hover:text-white transition-colors font-['Inter'] font-bold tracking-tight" href="#">Risk Guard</a>
+<a class="text-slate-300 hover:text-white transition-colors font-['Inter'] font-bold tracking-tight" href="#">Claims</a>
+<a class="text-slate-300 hover:text-white transition-colors font-['Inter'] font-bold tracking-tight" href="#">About</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-lg font-bold hover:brightness-110 active:scale-95 transition-all">Get Quote</button>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-24 text-center md:text-left relative">
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary/10 blur-[120px] rounded-full -z-10"></div>
+<h1 class="text-5xl md:text-7xl font-bold tracking-tight text-on-surface mb-8">
+                Get Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-fixed-dim">Free Quote</span> Today
+            </h1>
+<div class="flex flex-col md:flex-row gap-6 md:gap-12 mt-12">
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary border border-outline-variant/20">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="text-xs font-label uppercase tracking-widest text-secondary font-bold">Call Anytime</p>
+<p class="text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">1-800-LIFT-GUARD</p>
+</div>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary border border-outline-variant/20">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-xs font-label uppercase tracking-widest text-secondary font-bold">Email Our Team</p>
+<p class="text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">quotes@liftguard.com</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Two-Column Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Column: Form -->
+<div class="lg:col-span-7 glass-card p-8 md:p-10 rounded-xl border border-outline-variant/10">
+<h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
+<span class="w-1 h-8 bg-primary rounded-full"></span>
+                    Policy Assessment
+                </h2>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-label uppercase tracking-widest text-slate-400 font-bold px-1">Full Name</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg p-4 text-on-surface focus:ring-2 focus:ring-primary transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-label uppercase tracking-widest text-slate-400 font-bold px-1">Company Name</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg p-4 text-on-surface focus:ring-2 focus:ring-primary transition-all" placeholder="Industrial Lifting Inc." type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-label uppercase tracking-widest text-slate-400 font-bold px-1">Email Address</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg p-4 text-on-surface focus:ring-2 focus:ring-primary transition-all" placeholder="john@company.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-label uppercase tracking-widest text-slate-400 font-bold px-1">Phone Number</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg p-4 text-on-surface focus:ring-2 focus:ring-primary transition-all" placeholder="(555) 000-0000" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-label uppercase tracking-widest text-slate-400 font-bold px-1">Insurance Type</label>
+<select class="w-full bg-surface-container-highest border-none rounded-lg p-4 text-on-surface focus:ring-2 focus:ring-primary transition-all appearance-none">
+<option>Spray Foam Lifting</option>
+<option>Mud Jacking</option>
+<option>Both Methods</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-label uppercase tracking-widest text-slate-400 font-bold px-1">Message</label>
+<textarea class="w-full bg-surface-container-highest border-none rounded-lg p-4 text-on-surface focus:ring-2 focus:ring-primary transition-all" placeholder="Tell us about your coverage needs..." rows="4"></textarea>
+</div>
+<button class="w-full py-4 bg-gradient-to-r from-primary-container to-primary rounded-lg text-on-primary-container font-extrabold text-lg tracking-tight hover:brightness-110 active:scale-[0.98] transition-all shadow-lg shadow-primary/20" type="submit">
+                        Submit Quote Request
+                    </button>
+</form>
+</div>
+<!-- Right Column: Info & Map -->
+<div class="lg:col-span-5 space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
+<!-- Contact Cards -->
+<div class="bg-surface-container-high p-6 rounded-lg border-l-4 border-primary">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary">schedule</span>
+<div>
+<h3 class="font-bold text-on-surface">Office Hours</h3>
+<p class="text-slate-400 text-sm mt-1">Mon - Fri: 8am - 6pm EST</p>
+<p class="text-slate-400 text-sm">Emergency Support Available 24/7</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high p-6 rounded-lg border-l-4 border-secondary">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+<div>
+<h3 class="font-bold text-on-surface">Headquarters</h3>
+<p class="text-slate-400 text-sm mt-1">4521 Precision Way, Suite 400</p>
+<p class="text-slate-400 text-sm">Chicago, IL 60601</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Stylized Map Placeholder -->
+<div class="relative h-[400px] w-full bg-surface-container-low rounded-xl overflow-hidden group">
+<img alt="Location Map" class="w-full h-full object-cover opacity-40 grayscale group-hover:scale-105 transition-transform duration-700" data-alt="Dark stylized satellite map of a city grid with blue and orange highlights showing street density and locations" data-location="Chicago" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQAs1t3M5lraGJwACuiC-DAmCjWNM79iC_oGusaoJHCCJ4ARPkF-vdCY1xgCjleNc3Bo1AQ_2UEsMYd0BMUeCZ9iPzWzLe6byxDR_aAYRfWO09r0ccVf4kdjtZUstp4djONluk--djPMPEDD8nRCECz9j4FbRY3X8tZu_ZK_KM2bLtgemgOMgzBUszzSuHe0Fo3DfJkj6I9hlKQNmWqfBiXOECxei661FXfJwhJ_PUj4p8Lxzffm4EGq6UjfOSwgigfJi_053e1A6B"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="relative">
+<div class="absolute inset-0 bg-primary/40 blur-xl rounded-full scale-150 animate-pulse"></div>
+<span class="material-symbols-outlined text-primary text-5xl relative z-10" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+<div class="absolute bottom-6 left-6 right-6 glass-card p-4 rounded-lg border border-white/5">
+<p class="text-xs font-label uppercase tracking-widest text-primary font-bold">Network Reach</p>
+<p class="text-sm text-on-surface font-medium">Underwriting specialized risk across all North American territories.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Trust Signals -->
+<section class="mt-32 pt-16 border-t border-outline-variant/10">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 items-center opacity-70">
+<div class="flex flex-col items-center text-center space-y-4">
+<span class="material-symbols-outlined text-4xl text-primary">verified</span>
+<p class="text-sm font-bold tracking-tight">Licensed in all 50 States</p>
+</div>
+<div class="flex flex-col items-center text-center space-y-4">
+<div class="text-3xl font-black text-on-surface border-2 border-primary px-3 py-1 rounded">BBB A+</div>
+<p class="text-sm font-bold tracking-tight">Accredited Rating</p>
+</div>
+<div class="flex flex-col items-center text-center space-y-4">
+<span class="material-symbols-outlined text-4xl text-secondary">engineering</span>
+<p class="text-sm font-bold tracking-tight">Concrete Repair Assoc.</p>
+</div>
+<div class="flex flex-col items-center text-center space-y-4">
+<span class="material-symbols-outlined text-4xl text-primary">security</span>
+<p class="text-sm font-bold tracking-tight">ISO 9001 Certified</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-950 border-t border-slate-800/50 w-full">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-12 w-full max-w-7xl mx-auto">
+<div class="mb-8 md:mb-0">
+<div class="text-lg font-bold text-slate-200 mb-2">LiftSecure</div>
+<p class="font-['Inter'] text-sm text-slate-400">© 2024 LiftSecure Industrial Insurance. Precision Underwriting.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-slate-500 hover:text-orange-300 transition-colors font-['Inter'] text-sm" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-orange-300 transition-colors font-['Inter'] text-sm" href="#">Terms of Service</a>
+<a class="text-slate-500 hover:text-orange-300 transition-colors font-['Inter'] text-sm" href="#">Licensing</a>
+<a class="text-slate-500 hover:text-orange-300 transition-colors font-['Inter'] text-sm" href="#">Site Map</a>
+</div>
+</div>
+</footer>
+</body></html>
