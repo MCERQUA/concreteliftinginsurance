@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://concreteliftinginsurance.com/sitemap.xml
