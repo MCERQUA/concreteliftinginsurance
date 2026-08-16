@@ -12,9 +12,6 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: "20+", label: "Years in Business" },
-  { value: "2,400+", label: "Contractors Insured" },
-  { value: "$48M+", label: "Claims Paid Out" },
   { value: "24/7", label: "Claims Support" },
 ];
 
@@ -59,15 +56,15 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left: Story */}
             <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(30,64,175,0.1)] border border-[rgba(30,64,175,0.3)] mb-6">
-                <span className="text-xs font-bold text-[#1e40af] uppercase tracking-wider">Our Story</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(154, 52, 18,0.1)] border border-[rgba(154, 52, 18,0.3)] mb-6">
+                <span className="text-xs font-bold text-[#9a3412] uppercase tracking-wider">Our Story</span>
               </div>
-              <h1 className="text-5xl md:text-6xl font-black text-[#0f172a] mb-6">
+              <h1 className="text-5xl md:text-6xl font-black text-[#1c1917] mb-6">
                 Built for Concrete{" "}
                 <span className="gradient-text">Lifters</span>{" "}
                 By Insurance Experts
               </h1>
-              <div className="space-y-4 text-[#475569] leading-relaxed">
+              <div className="space-y-4 text-[#57534e] leading-relaxed">
                 <p>
                   Concrete Lifting Insurance is backed by Contractors Choice Agency, founded by Josh
                   Cotner—a former contractor who spent years watching concrete lifting pros get stuck
@@ -95,14 +92,14 @@ export default function AboutPage() {
               <div
                 className="rounded-3xl overflow-hidden aspect-[4/3]"
                 style={{
-                  background: "linear-gradient(135deg, rgba(30,64,175,0.1) 0%, rgba(59,130,246,0.1) 100%)",
-                  border: "1px solid rgba(30,64,175,0.2)",
+                  background: "linear-gradient(135deg, rgba(154, 52, 18,0.1) 0%, rgba(194, 65, 12,0.1) 100%)",
+                  border: "1px solid rgba(154, 52, 18,0.2)",
                 }}
               >
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
-                    <Shield className="w-24 h-24 text-[#1e40af]/30 mx-auto mb-4" />
-                    <p className="text-[#64748b] text-sm">Serving Contractors Since 2005</p>
+                    <Shield className="w-24 h-24 text-[#9a3412]/30 mx-auto mb-4" />
+                    <p className="text-[#78716c] text-sm">Serving Contractors Since 2005</p>
                   </div>
                 </div>
               </div>
@@ -110,14 +107,13 @@ export default function AboutPage() {
               <div
                 className="absolute -bottom-6 -left-6 px-6 py-4 rounded-2xl"
                 style={{
-                  background: "rgba(248,250,252,0.98)",
-                  border: "1px solid rgba(30,64,175,0.3)",
+                  background: "rgba(250, 250, 249,0.98)",
+                  border: "1px solid rgba(154, 52, 18,0.3)",
                   backdropFilter: "blur(20px)",
                   boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
                 }}
               >
-                <p className="text-3xl font-black text-[#1e40af]">2,400+</p>
-                <p className="text-sm text-[#64748b]">Contractors Insured</p>
+                <p className="text-sm text-[#78716c]">Concrete Lifting Contractors Insured</p>
               </div>
             </div>
           </div>
@@ -125,13 +121,13 @@ export default function AboutPage() {
       </section>
 
       {/* Stats */}
-      <section className="relative py-16 border-y border-[rgba(30,64,175,0.1)]" style={{ background: "rgba(248,250,252,0.8)" }}>
+      <section className="relative py-16 border-y border-[rgba(154, 52, 18,0.1)]" style={{ background: "rgba(250, 250, 249,0.8)" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 max-w-md mx-auto gap-8">
             {stats.map((stat, i) => (
               <div key={i} className="text-center">
-                <p className="text-4xl md:text-5xl font-black text-[#1e40af] mb-2">{stat.value}</p>
-                <p className="text-[#64748b] text-sm">{stat.label}</p>
+                <p className="text-4xl md:text-5xl font-black text-[#9a3412] mb-2">{stat.value}</p>
+                <p className="text-[#78716c] text-sm">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -142,7 +138,7 @@ export default function AboutPage() {
       <section className="relative py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-[#0f172a] mb-4">
+            <h2 className="text-4xl md:text-5xl font-black text-[#1c1917] mb-4">
               What We{" "}
               <span className="gradient-text">Stand For</span>
             </h2>
@@ -156,16 +152,16 @@ export default function AboutPage() {
                   key={i}
                   className="p-8 rounded-3xl text-center"
                   style={{
-                    background: "rgba(248,250,252,0.95)",
-                    border: "1px solid rgba(30,64,175,0.12)",
+                    background: "rgba(250, 250, 249,0.95)",
+                    border: "1px solid rgba(154, 52, 18,0.12)",
                     backdropFilter: "blur(10px)",
                   }}
                 >
-                  <div className="w-16 h-16 rounded-2xl bg-[rgba(30,64,175,0.1)] border border-[rgba(30,64,175,0.2)] flex items-center justify-center mx-auto mb-6">
-                    <Icon className="w-8 h-8 text-[#1e40af]" />
+                  <div className="w-16 h-16 rounded-2xl bg-[rgba(154, 52, 18,0.1)] border border-[rgba(154, 52, 18,0.2)] flex items-center justify-center mx-auto mb-6">
+                    <Icon className="w-8 h-8 text-[#9a3412]" />
                   </div>
-                  <h3 className="text-xl font-black text-[#0f172a] mb-4">{value.title}</h3>
-                  <p className="text-[#475569] text-sm leading-relaxed">{value.description}</p>
+                  <h3 className="text-xl font-black text-[#1c1917] mb-4">{value.title}</h3>
+                  <p className="text-[#57534e] text-sm leading-relaxed">{value.description}</p>
                 </div>
               );
             })}
@@ -174,14 +170,14 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="relative py-24 border-t border-[rgba(30,64,175,0.08)]">
+      <section className="relative py-24 border-t border-[rgba(154, 52, 18,0.08)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-[#0f172a] mb-4">
+            <h2 className="text-4xl md:text-5xl font-black text-[#1c1917] mb-4">
               The{" "}
               <span className="gradient-text">Team</span>
             </h2>
-            <p className="text-lg text-[#475569] max-w-2xl mx-auto">
+            <p className="text-lg text-[#57534e] max-w-2xl mx-auto">
               Led by a former contractor who knows the concrete lifting industry inside and out.
             </p>
           </div>
@@ -192,17 +188,17 @@ export default function AboutPage() {
                 key={i}
                 className="p-8 rounded-3xl"
                 style={{
-                  background: "rgba(248,250,252,0.95)",
-                  border: "1px solid rgba(30,64,175,0.12)",
+                  background: "rgba(250, 250, 249,0.95)",
+                  border: "1px solid rgba(154, 52, 18,0.12)",
                   backdropFilter: "blur(10px)",
                 }}
               >
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#1e40af]/30 to-[#3b82f6]/20 flex items-center justify-center mx-auto mb-6 border border-[rgba(30,64,175,0.2)]">
-                  <Users className="w-10 h-10 text-[#1e40af]" />
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#9a3412]/30 to-[#c2410c]/20 flex items-center justify-center mx-auto mb-6 border border-[rgba(154, 52, 18,0.2)]">
+                  <Users className="w-10 h-10 text-[#9a3412]" />
                 </div>
-                <h3 className="text-xl font-black text-[#0f172a] text-center mb-1">{member.name}</h3>
-                <p className="text-[#1e40af] font-semibold text-sm text-center mb-4">{member.role}</p>
-                <p className="text-[#475569] text-sm text-center leading-relaxed">{member.background}</p>
+                <h3 className="text-xl font-black text-[#1c1917] text-center mb-1">{member.name}</h3>
+                <p className="text-[#9a3412] font-semibold text-sm text-center mb-4">{member.role}</p>
+                <p className="text-[#57534e] text-sm text-center leading-relaxed">{member.background}</p>
               </div>
             ))}
           </div>
@@ -212,24 +208,24 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="relative py-24 overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <h2 className="text-4xl font-black text-[#0f172a] mb-6">
+          <h2 className="text-4xl font-black text-[#1c1917] mb-6">
             Want to Work{" "}
             <span className="gradient-text">With Us?</span>
           </h2>
-          <p className="text-lg text-[#475569] mb-10">
+          <p className="text-lg text-[#57534e] mb-10">
             Whether you need a quote or want to talk about your current coverage, we're here.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+18449675247"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-[#1e40af] to-[#3b82f6] text-white font-black text-lg rounded-2xl shadow-2xl shadow-[#1e40af]/40 hover:shadow-[#1e40af]/60 hover:scale-[1.02] transition-all"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-[#9a3412] to-[#c2410c] text-white font-black text-lg rounded-2xl shadow-2xl shadow-[#9a3412]/40 hover:shadow-[#9a3412]/60 hover:scale-[1.02] transition-all"
             >
               <Phone className="w-6 h-6" />
               Call 844-967-5247
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[rgba(30,64,175,0.05)] border-2 border-[rgba(30,64,175,0.4)] text-[#1e40af] font-black text-lg rounded-2xl hover:bg-[rgba(30,64,175,0.1)] transition-all"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[rgba(154, 52, 18,0.05)] border-2 border-[rgba(154, 52, 18,0.4)] text-[#9a3412] font-black text-lg rounded-2xl hover:bg-[rgba(154, 52, 18,0.1)] transition-all"
             >
               Get Free Quote
             </Link>

@@ -42,8 +42,8 @@ const services = [
       "Chemical liability coverage",
       "Subcontractor coverage options",
     ],
-    gradient: "from-[#1e40af]/20 via-[#3b82f6]/10 to-transparent",
-    iconColor: "text-[#1e40af]",
+    gradient: "from-[#9a3412]/20 via-[#c2410c]/10 to-transparent",
+    iconColor: "text-[#9a3412]",
     popular: true,
   },
   {
@@ -63,8 +63,8 @@ const services = [
       "Medical payments coverage",
       "Completed operations",
     ],
-    gradient: "from-[#3b82f6]/20 via-[#60a5fa]/10 to-transparent",
-    iconColor: "text-[#3b82f6]",
+    gradient: "from-[#c2410c]/20 via-[#f59e0b]/10 to-transparent",
+    iconColor: "text-[#c2410c]",
     popular: false,
   },
   {
@@ -105,8 +105,8 @@ const services = [
       "Death benefits coverage",
       "OSHA compliance support",
     ],
-    gradient: "from-[#8b5cf6]/20 via-[#a78bfa]/10 to-transparent",
-    iconColor: "text-[#8b5cf6]",
+    gradient: "from-[#b45309]/20 via-[#d97706]/10 to-transparent",
+    iconColor: "text-[#b45309]",
     popular: false,
   },
   {
@@ -127,7 +127,7 @@ const services = [
       "Mobile equipment haulage",
     ],
     gradient: "from-[#f59e0b]/20 via-[#fbbf24]/10 to-transparent",
-    iconColor: "text-[#f59e0b]",
+    iconColor: "text-[#a16207]",
     popular: false,
   },
   {
@@ -182,14 +182,14 @@ export default function ServicesPage() {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(30,64,175,0.1)] border border-[rgba(30,64,175,0.3)] mb-6">
-              <span className="text-xs font-bold text-[#1e40af] uppercase tracking-wider">Our Coverage</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(154, 52, 18,0.1)] border border-[rgba(154, 52, 18,0.3)] mb-6">
+              <span className="text-xs font-bold text-[#9a3412] uppercase tracking-wider">Our Coverage</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-black text-[#0f172a] mb-6">
+            <h1 className="text-5xl md:text-6xl font-black text-[#1c1917] mb-6">
               Insurance Built for{" "}
               <span className="gradient-text">Concrete Lifters</span>
             </h1>
-            <p className="text-xl text-[#475569] leading-relaxed">
+            <p className="text-xl text-[#57534e] leading-relaxed">
               Whether you use spray foam injection or mud jacking, we have specialized coverage that
               actually fits your work. No gaps. No guesswork.
             </p>
@@ -209,8 +209,8 @@ export default function ServicesPage() {
                   id={service.id}
                   className="rounded-3xl overflow-hidden"
                   style={{
-                    background: "rgba(248,250,252,0.95)",
-                    border: "1px solid rgba(30,64,175,0.15)",
+                    background: "rgba(250, 250, 249,0.95)",
+                    border: "1px solid rgba(154, 52, 18,0.15)",
                     backdropFilter: "blur(20px)",
                   }}
                 >
@@ -219,51 +219,51 @@ export default function ServicesPage() {
                     <div
                       className="p-8 md:p-10"
                       style={{
-                        background: `linear-gradient(135deg, ${service.gradient.includes("from-[#1e40af]") ? "rgba(30,64,175,0.1)" : service.gradient.includes("from-[#3b82f6]") ? "rgba(59,130,246,0.1)" : service.gradient.includes("from-[#10b981]") ? "rgba(16,185,129,0.1)" : service.gradient.includes("from-[#8b5cf6]") ? "rgba(139,92,246,0.1)" : service.gradient.includes("from-[#f59e0b]") ? "rgba(245,158,11,0.1)" : "rgba(239,68,68,0.1)"} 0%, transparent 100%)`,
-                        borderRight: "1px solid rgba(30,64,175,0.1)",
+                        background: `linear-gradient(135deg, ${service.gradient.includes("from-[#9a3412]") ? "rgba(154, 52, 18,0.1)" : service.gradient.includes("from-[#c2410c]") ? "rgba(194, 65, 12,0.1)" : service.gradient.includes("from-[#10b981]") ? "rgba(16,185,129,0.1)" : service.gradient.includes("from-[#b45309]") ? "rgba(180, 83, 9,0.1)" : service.gradient.includes("from-[#f59e0b]") ? "rgba(245,158,11,0.1)" : "rgba(239,68,68,0.1)"} 0%, transparent 100%)`,
+                        borderRight: "1px solid rgba(154, 52, 18,0.1)",
                       }}
                     >
                       {service.popular && (
-                        <div className="inline-block px-3 py-1 bg-[#1e40af] text-white text-xs font-bold rounded-full mb-4 shadow-lg shadow-[#1e40af]/30">
+                        <div className="inline-block px-3 py-1 bg-[#9a3412] text-white text-xs font-bold rounded-full mb-4 shadow-lg shadow-[#9a3412]/30">
                           MOST POPULAR
                         </div>
                       )}
                       <div
                         className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
                         style={{
-                          background: `linear-gradient(135deg, ${service.gradient.includes("from-[#1e40af]") ? "rgba(30,64,175,0.2)" : service.gradient.includes("from-[#3b82f6]") ? "rgba(59,130,246,0.2)" : service.gradient.includes("from-[#10b981]") ? "rgba(16,185,129,0.2)" : "rgba(139,92,246,0.2)"} 0%, transparent 100%)`,
+                          background: `linear-gradient(135deg, ${service.gradient.includes("from-[#9a3412]") ? "rgba(154, 52, 18,0.2)" : service.gradient.includes("from-[#c2410c]") ? "rgba(194, 65, 12,0.2)" : service.gradient.includes("from-[#10b981]") ? "rgba(16,185,129,0.2)" : "rgba(180, 83, 9,0.2)"} 0%, transparent 100%)`,
                           border: "1px solid rgba(255,255,255,0.1)",
                         }}
                       >
                         <Icon className={`w-8 h-8 ${service.iconColor}`} />
                       </div>
-                      <h2 className="text-2xl font-black text-[#0f172a] mb-2">{service.title}</h2>
+                      <h2 className="text-2xl font-black text-[#1c1917] mb-2">{service.title}</h2>
                       <p className={`font-semibold text-sm mb-4 ${service.iconColor}`}>{service.shortDesc}</p>
-                      <p className="text-2xl font-black text-[#1e40af] mb-1">{service.price}</p>
-                      <p className="text-xs text-[#64748b]">Typical cost for small contractors</p>
+                      <p className="text-2xl font-black text-[#9a3412] mb-1">{service.price}</p>
+                      <p className="text-xs text-[#78716c]">Typical cost for small contractors</p>
                     </div>
 
                     {/* Middle: Description & Features */}
                     <div className="lg:col-span-2 p-8 md:p-10">
-                      <p className="text-[#475569] leading-relaxed mb-6">{service.description}</p>
+                      <p className="text-[#57534e] leading-relaxed mb-6">{service.description}</p>
 
                       <div className="mb-6">
-                        <p className="text-sm font-bold text-[#0f172a] uppercase tracking-wider mb-2">Who This Is For</p>
-                        <p className="text-sm text-[#475569]">{service.whoFor}</p>
+                        <p className="text-sm font-bold text-[#1c1917] uppercase tracking-wider mb-2">Who This Is For</p>
+                        <p className="text-sm text-[#57534e]">{service.whoFor}</p>
                       </div>
 
                       <div className="grid sm:grid-cols-2 gap-3 mb-8">
                         {service.features.map((feature, i) => (
                           <div key={i} className="flex items-start gap-3">
                             <Check className="w-5 h-5 text-[#10b981] shrink-0 mt-0.5" />
-                            <span className="text-sm text-[#334155]">{feature}</span>
+                            <span className="text-sm text-[#44403c]">{feature}</span>
                           </div>
                         ))}
                       </div>
 
                       <Link
                         href="/contact"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#1e40af] to-[#3b82f6] text-white font-bold text-sm rounded-xl shadow-lg shadow-[#1e40af]/30 hover:shadow-[#1e40af]/50 transition-all"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#9a3412] to-[#c2410c] text-white font-bold text-sm rounded-xl shadow-lg shadow-[#9a3412]/30 hover:shadow-[#9a3412]/50 transition-all"
                       >
                         Get Quote for This Coverage
                         <ArrowRight className="w-4 h-4" />
@@ -278,10 +278,10 @@ export default function ServicesPage() {
       </section>
 
       {/* FAQ */}
-      <section className="relative py-24 border-t border-[rgba(30,64,175,0.08)]">
+      <section className="relative py-24 border-t border-[rgba(154, 52, 18,0.08)]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-black text-[#0f172a] mb-4">
+            <h2 className="text-4xl font-black text-[#1c1917] mb-4">
               Frequently Asked{" "}
               <span className="gradient-text">Questions</span>
             </h2>
@@ -293,13 +293,13 @@ export default function ServicesPage() {
                 key={i}
                 className="p-6 rounded-2xl"
                 style={{
-                  background: "rgba(248,250,252,0.95)",
-                  border: "1px solid rgba(30,64,175,0.12)",
+                  background: "rgba(250, 250, 249,0.95)",
+                  border: "1px solid rgba(154, 52, 18,0.12)",
                   backdropFilter: "blur(10px)",
                 }}
               >
-                <h3 className="text-lg font-bold text-[#0f172a] mb-3">{faq.q}</h3>
-                <p className="text-[#475569] text-sm leading-relaxed">{faq.a}</p>
+                <h3 className="text-lg font-bold text-[#1c1917] mb-3">{faq.q}</h3>
+                <p className="text-[#57534e] text-sm leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>
@@ -309,24 +309,24 @@ export default function ServicesPage() {
       {/* CTA */}
       <section className="relative py-24 overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <h2 className="text-4xl font-black text-[#0f172a] mb-6">
+          <h2 className="text-4xl font-black text-[#1c1917] mb-6">
             Ready to Get a{" "}
             <span className="gradient-text">Custom Quote?</span>
           </h2>
-          <p className="text-lg text-[#475569] mb-10">
+          <p className="text-lg text-[#57534e] mb-10">
             Our insurance specialists understand concrete lifting. Get coverage that actually fits.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+18449675247"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-[#1e40af] to-[#3b82f6] text-white font-black text-lg rounded-2xl shadow-2xl shadow-[#1e40af]/40 hover:shadow-[#1e40af]/60 hover:scale-[1.02] transition-all"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-[#9a3412] to-[#c2410c] text-white font-black text-lg rounded-2xl shadow-2xl shadow-[#9a3412]/40 hover:shadow-[#9a3412]/60 hover:scale-[1.02] transition-all"
             >
               <Phone className="w-6 h-6" />
               Call 844-967-5247
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[rgba(30,64,175,0.05)] border-2 border-[rgba(30,64,175,0.4)] text-[#1e40af] font-black text-lg rounded-2xl hover:bg-[rgba(30,64,175,0.1)] transition-all"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[rgba(154, 52, 18,0.05)] border-2 border-[rgba(154, 52, 18,0.4)] text-[#9a3412] font-black text-lg rounded-2xl hover:bg-[rgba(154, 52, 18,0.1)] transition-all"
             >
               Get Free Quote Online
               <ArrowRight className="w-5 h-5" />

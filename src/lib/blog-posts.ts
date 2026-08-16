@@ -177,7 +177,7 @@ export const blogPosts: BlogPost[] = [
     dateISO: "2026-03-08",
     featured: false,
     content: [
-      "Insurance premiums for concrete lifting contractors have been rising 8-12% annually for the past three years. Here's how smart contractors are beating the trend.",
+      "Insurance premiums for concrete lifting contractors have been rising. Here's how smart contractors are beating the trend.",
       "## Bundle Your Coverage",
       "The single most effective way to reduce your premium is to bundle multiple coverage types with the same carrier. Contractors who combine general liability, workers comp, and commercial auto typically save 12-18% versus buying each policy separately.",
       "## Raise Your Deductible",

@@ -4,20 +4,20 @@ export function AnimatedBackground() {
   return (
     <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
       {/* Base gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#f8fafc] via-[#eff6ff] to-[#f8fafc]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#fafaf9] via-[#fff7ed] to-[#fafaf9]" />
 
       {/* Animated orbs */}
       <div
         className="absolute top-1/4 -left-48 w-[600px] h-[600px] rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(30,64,175,0.15) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(154, 52, 18,0.15) 0%, transparent 70%)",
           animation: "float 8s ease-in-out infinite",
         }}
       />
       <div
         className="absolute bottom-1/4 -right-48 w-[500px] h-[500px] rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(194, 65, 12,0.12) 0%, transparent 70%)",
           animation: "float-slow 10s ease-in-out infinite",
           animationDelay: "2s",
         }}
@@ -36,7 +36,7 @@ export function AnimatedBackground() {
         className="absolute inset-0 opacity-40"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(30,64,175,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(30,64,175,0.03) 1px, transparent 1px)",
+            "linear-gradient(rgba(154, 52, 18,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(154, 52, 18,0.03) 1px, transparent 1px)",
           backgroundSize: "64px 64px",
         }}
       />

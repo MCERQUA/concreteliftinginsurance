@@ -14,11 +14,11 @@ export const metadata: Metadata = {
 };
 
 const iconMap: Record<string, React.ReactNode> = {
-  Shield: <Shield className="w-7 h-7 text-[#1e40af]" />,
-  Users: <Users className="w-7 h-7 text-[#1e40af]" />,
-  Truck: <Truck className="w-7 h-7 text-[#1e40af]" />,
-  AlertTriangle: <AlertTriangle className="w-7 h-7 text-[#1e40af]" />,
-  Wrench: <Wrench className="w-7 h-7 text-[#1e40af]" />,
+  Shield: <Shield className="w-7 h-7 text-[#9a3412]" />,
+  Users: <Users className="w-7 h-7 text-[#9a3412]" />,
+  Truck: <Truck className="w-7 h-7 text-[#9a3412]" />,
+  AlertTriangle: <AlertTriangle className="w-7 h-7 text-[#9a3412]" />,
+  Wrench: <Wrench className="w-7 h-7 text-[#9a3412]" />,
 };
 
 export default function CoveragesPage() {
@@ -31,20 +31,20 @@ export default function CoveragesPage() {
       <section className="relative pt-32 pb-16 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(30,64,175,0.1)] border border-[rgba(30,64,175,0.3)] mb-6">
-              <Shield className="w-4 h-4 text-[#1e40af]" />
-              <span className="text-xs font-bold text-[#1e40af] uppercase tracking-wider">Coverage Types</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(154, 52, 18,0.1)] border border-[rgba(154, 52, 18,0.3)] mb-6">
+              <Shield className="w-4 h-4 text-[#9a3412]" />
+              <span className="text-xs font-bold text-[#9a3412] uppercase tracking-wider">Coverage Types</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-black text-[#0f172a] mb-6">
+            <h1 className="text-5xl md:text-6xl font-black text-[#1c1917] mb-6">
               Coverage Built for{" "}
               <span
                 className="bg-clip-text text-transparent"
-                style={{ backgroundImage: "linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)" }}
+                style={{ backgroundImage: "linear-gradient(135deg, #9a3412 0%, #c2410c 100%)" }}
               >
                 Lifting Contractors
               </span>
             </h1>
-            <p className="text-xl text-[#475569] leading-relaxed">
+            <p className="text-xl text-[#57534e] leading-relaxed">
               Every coverage type below is endorsed specifically for spray foam lifting and mud jacking
               operations—not generic contractor policies with hidden exclusions.
             </p>
@@ -62,30 +62,30 @@ export default function CoveragesPage() {
                 href={`/coverages/${coverage.slug}`}
                 className="group rounded-2xl overflow-hidden flex flex-col hover:-translate-y-1 transition-transform"
                 style={{
-                  background: "rgba(248,250,252,0.95)",
-                  border: "1px solid rgba(30,64,175,0.12)",
+                  background: "rgba(250, 250, 249,0.95)",
+                  border: "1px solid rgba(154, 52, 18,0.12)",
                   backdropFilter: "blur(10px)",
                 }}
               >
                 <div className="p-8 flex flex-col flex-1">
-                  <div className="w-14 h-14 rounded-2xl bg-[#1e40af]/10 flex items-center justify-center mb-5">
-                    {iconMap[coverage.icon] ?? <Shield className="w-7 h-7 text-[#1e40af]" />}
+                  <div className="w-14 h-14 rounded-2xl bg-[#9a3412]/10 flex items-center justify-center mb-5">
+                    {iconMap[coverage.icon] ?? <Shield className="w-7 h-7 text-[#9a3412]" />}
                   </div>
-                  <h2 className="text-xl font-black text-[#0f172a] mb-3 group-hover:text-[#1e40af] transition-colors">
+                  <h2 className="text-xl font-black text-[#1c1917] mb-3 group-hover:text-[#9a3412] transition-colors">
                     {coverage.shortTitle}
                   </h2>
-                  <p className="text-[#475569] text-sm leading-relaxed mb-5 flex-1">
+                  <p className="text-[#57534e] text-sm leading-relaxed mb-5 flex-1">
                     {coverage.description}
                   </p>
                   <ul className="space-y-2 mb-6">
                     {coverage.features.slice(0, 3).map((f) => (
-                      <li key={f} className="flex items-start gap-2 text-xs text-[#475569]">
-                        <span className="text-[#1e40af] font-bold mt-0.5">✓</span>
+                      <li key={f} className="flex items-start gap-2 text-xs text-[#57534e]">
+                        <span className="text-[#9a3412] font-bold mt-0.5">✓</span>
                         {f}
                       </li>
                     ))}
                   </ul>
-                  <div className="flex items-center gap-2 text-[#1e40af] font-bold text-sm group-hover:gap-3 transition-all">
+                  <div className="flex items-center gap-2 text-[#9a3412] font-bold text-sm group-hover:gap-3 transition-all">
                     Learn more
                     <ArrowRight className="w-4 h-4" />
                   </div>
@@ -98,20 +98,20 @@ export default function CoveragesPage() {
           <div
             className="mt-16 p-10 rounded-3xl text-center"
             style={{
-              background: "linear-gradient(135deg, rgba(30,64,175,0.08) 0%, rgba(30,64,175,0.04) 100%)",
-              border: "1px solid rgba(30,64,175,0.2)",
+              background: "linear-gradient(135deg, rgba(154, 52, 18,0.08) 0%, rgba(154, 52, 18,0.04) 100%)",
+              border: "1px solid rgba(154, 52, 18,0.2)",
             }}
           >
-            <h2 className="text-3xl font-black text-[#0f172a] mb-4">
+            <h2 className="text-3xl font-black text-[#1c1917] mb-4">
               Not sure which coverages you need?
             </h2>
-            <p className="text-[#475569] mb-8 max-w-xl mx-auto">
+            <p className="text-[#57534e] mb-8 max-w-xl mx-auto">
               Our concrete lifting specialists will review your operation and recommend exactly the coverage you need—nothing
               more, nothing less.
             </p>
             <Link
               href="/quote"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#1e40af] to-[#3b82f6] text-white font-bold rounded-xl shadow-lg shadow-[#1e40af]/30 hover:shadow-[#1e40af]/50 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#9a3412] to-[#c2410c] text-white font-bold rounded-xl shadow-lg shadow-[#9a3412]/30 hover:shadow-[#9a3412]/50 transition-all"
             >
               Get a Free Quote
               <ArrowRight className="w-5 h-5" />

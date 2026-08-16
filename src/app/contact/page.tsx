@@ -75,14 +75,14 @@ export default function ContactPage() {
       <section className="relative pt-32 pb-16 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(30,64,175,0.1)] border border-[rgba(30,64,175,0.3)] mb-6">
-              <span className="text-xs font-bold text-[#1e40af] uppercase tracking-wider">Get Started</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(154, 52, 18,0.1)] border border-[rgba(154, 52, 18,0.3)] mb-6">
+              <span className="text-xs font-bold text-[#9a3412] uppercase tracking-wider">Get Started</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-black text-[#0f172a] mb-6">
+            <h1 className="text-5xl md:text-6xl font-black text-[#1c1917] mb-6">
               Get Your{" "}
               <span className="gradient-text">Free Quote</span>
             </h1>
-            <p className="text-xl text-[#475569] leading-relaxed">
+            <p className="text-xl text-[#57534e] leading-relaxed">
               Ready to get coverage that actually fits your concrete lifting business? Fill out the
               form or call us directly. No obligation, no pressure.
             </p>
@@ -98,8 +98,8 @@ export default function ContactPage() {
             <div
               className="lg:col-span-3 rounded-3xl p-8 md:p-10"
               style={{
-                background: "rgba(30,41,59,0.85)",
-                border: "1px solid rgba(30,64,175,0.25)",
+                background: "rgba(41, 37, 36,0.85)",
+                border: "1px solid rgba(154, 52, 18,0.25)",
                 backdropFilter: "blur(20px)",
               }}
             >
@@ -108,14 +108,14 @@ export default function ContactPage() {
                   <div className="w-20 h-20 rounded-full bg-[rgba(16,185,129,0.2)] flex items-center justify-center mx-auto mb-6">
                     <CheckCircle className="w-10 h-10 text-[#10b981]" />
                   </div>
-                  <h2 className="text-2xl font-black text-[#0f172a] mb-4">Quote Request Received!</h2>
-                  <p className="text-[#475569] mb-6">
+                  <h2 className="text-2xl font-black text-[#1c1917] mb-4">Quote Request Received!</h2>
+                  <p className="text-[#57534e] mb-6">
                     Thanks, {formData.name}. One of our insurance specialists will review your
                     information and reach out within 1 business day.
                   </p>
-                  <p className="text-[#64748b] text-sm">
+                  <p className="text-[#78716c] text-sm">
                     Need immediate help? Call us at{" "}
-                    <a href="tel:+18449675247" className="text-[#1e40af] font-semibold">
+                    <a href="tel:+18449675247" className="text-[#9a3412] font-semibold">
                       844-967-5247
                     </a>
                   </p>
@@ -124,8 +124,8 @@ export default function ContactPage() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-semibold text-[#0f172a] mb-2">
-                        Full Name <span className="text-[#1e40af]">*</span>
+                      <label className="block text-sm font-semibold text-[#1c1917] mb-2">
+                        Full Name <span className="text-[#9a3412]">*</span>
                       </label>
                       <input
                         type="text"
@@ -134,28 +134,28 @@ export default function ContactPage() {
                         onChange={handleChange}
                         placeholder="John Smith"
                         className={`w-full px-4 py-3 rounded-xl bg-white border ${
-                          errors.name ? "border-[#ef4444]" : "border-[rgba(30,64,175,0.3)]"
-                        } text-[#0f172a] placeholder-[#94a3b8] focus:border-[#1e40af] focus:outline-none transition-colors`}
+                          errors.name ? "border-[#ef4444]" : "border-[rgba(154, 52, 18,0.3)]"
+                        } text-[#1c1917] placeholder-[#78716c] focus:border-[#9a3412] focus:outline-none transition-colors`}
                       />
                       {errors.name && <p className="text-[#ef4444] text-xs mt-1">{errors.name}</p>}
                     </div>
                     <div>
-                      <label className="block text-sm font-semibold text-[#0f172a] mb-2">Company Name</label>
+                      <label className="block text-sm font-semibold text-[#1c1917] mb-2">Company Name</label>
                       <input
                         type="text"
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
                         placeholder="Smith Concrete Solutions"
-                        className="w-full px-4 py-3 rounded-xl bg-white border border-[rgba(30,64,175,0.3)] text-[#0f172a] placeholder-[#94a3b8] focus:border-[#1e40af] focus:outline-none transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-white border border-[rgba(154, 52, 18,0.3)] text-[#1c1917] placeholder-[#78716c] focus:border-[#9a3412] focus:outline-none transition-colors"
                       />
                     </div>
                   </div>
 
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-semibold text-[#0f172a] mb-2">
-                        Email <span className="text-[#1e40af]">*</span>
+                      <label className="block text-sm font-semibold text-[#1c1917] mb-2">
+                        Email <span className="text-[#9a3412]">*</span>
                       </label>
                       <input
                         type="email"
@@ -164,14 +164,14 @@ export default function ContactPage() {
                         onChange={handleChange}
                         placeholder="john@smithconcrete.com"
                         className={`w-full px-4 py-3 rounded-xl bg-white border ${
-                          errors.email ? "border-[#ef4444]" : "border-[rgba(30,64,175,0.3)]"
-                        } text-[#0f172a] placeholder-[#94a3b8] focus:border-[#1e40af] focus:outline-none transition-colors`}
+                          errors.email ? "border-[#ef4444]" : "border-[rgba(154, 52, 18,0.3)]"
+                        } text-[#1c1917] placeholder-[#78716c] focus:border-[#9a3412] focus:outline-none transition-colors`}
                       />
                       {errors.email && <p className="text-[#ef4444] text-xs mt-1">{errors.email}</p>}
                     </div>
                     <div>
-                      <label className="block text-sm font-semibold text-[#0f172a] mb-2">
-                        Phone <span className="text-[#1e40af]">*</span>
+                      <label className="block text-sm font-semibold text-[#1c1917] mb-2">
+                        Phone <span className="text-[#9a3412]">*</span>
                       </label>
                       <input
                         type="tel"
@@ -180,24 +180,24 @@ export default function ContactPage() {
                         onChange={handleChange}
                         placeholder="(555) 123-4567"
                         className={`w-full px-4 py-3 rounded-xl bg-white border ${
-                          errors.phone ? "border-[#ef4444]" : "border-[rgba(30,64,175,0.3)]"
-                        } text-[#0f172a] placeholder-[#94a3b8] focus:border-[#1e40af] focus:outline-none transition-colors`}
+                          errors.phone ? "border-[#ef4444]" : "border-[rgba(154, 52, 18,0.3)]"
+                        } text-[#1c1917] placeholder-[#78716c] focus:border-[#9a3412] focus:outline-none transition-colors`}
                       />
                       {errors.phone && <p className="text-[#ef4444] text-xs mt-1">{errors.phone}</p>}
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-[#0f172a] mb-2">
-                      Insurance Type <span className="text-[#1e40af]">*</span>
+                    <label className="block text-sm font-semibold text-[#1c1917] mb-2">
+                      Insurance Type <span className="text-[#9a3412]">*</span>
                     </label>
                     <select
                       name="insuranceType"
                       value={formData.insuranceType}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 rounded-xl bg-white border ${
-                        errors.insuranceType ? "border-[#ef4444]" : "border-[rgba(30,64,175,0.3)]"
-                      } text-[#0f172a] focus:border-[#1e40af] focus:outline-none transition-colors`}
+                        errors.insuranceType ? "border-[#ef4444]" : "border-[rgba(154, 52, 18,0.3)]"
+                      } text-[#1c1917] focus:border-[#9a3412] focus:outline-none transition-colors`}
                     >
                       <option value="" className="bg-white">Select insurance type...</option>
                       {insuranceTypes.map((type) => (
@@ -210,8 +210,8 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-[#0f172a] mb-2">
-                      Annual Gross Sales <span className="text-[#64748b] font-normal">(for last 12 months)</span>
+                    <label className="block text-sm font-semibold text-[#1c1917] mb-2">
+                      Annual Gross Sales <span className="text-[#78716c] font-normal">(for last 12 months)</span>
                     </label>
                     <input
                       type="text"
@@ -219,32 +219,32 @@ export default function ContactPage() {
                       value={formData.grossSales}
                       onChange={handleChange}
                       placeholder="$0 — $500,000"
-                      className="w-full px-4 py-3 rounded-xl bg-white border border-[rgba(30,64,175,0.3)] text-[#0f172a] placeholder-[#94a3b8] focus:border-[#1e40af] focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-white border border-[rgba(154, 52, 18,0.3)] text-[#1c1917] placeholder-[#78716c] focus:border-[#9a3412] focus:outline-none transition-colors"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-[#0f172a] mb-2">Message</label>
+                    <label className="block text-sm font-semibold text-[#1c1917] mb-2">Message</label>
                     <textarea
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
                       rows={4}
                       placeholder="Tell us about your business—annual revenue, years in business, current coverage, any specific questions..."
-                      className="w-full px-4 py-3 rounded-xl bg-white border border-[rgba(30,64,175,0.3)] text-[#0f172a] placeholder-[#94a3b8] focus:border-[#1e40af] focus:outline-none transition-colors resize-none"
+                      className="w-full px-4 py-3 rounded-xl bg-white border border-[rgba(154, 52, 18,0.3)] text-[#1c1917] placeholder-[#78716c] focus:border-[#9a3412] focus:outline-none transition-colors resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#1e40af] to-[#3b82f6] text-white font-bold text-lg rounded-xl shadow-2xl shadow-[#1e40af]/40 hover:shadow-[#1e40af]/60 hover:scale-[1.01] transition-all"
+                    className="w-full inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#9a3412] to-[#c2410c] text-white font-bold text-lg rounded-xl shadow-2xl shadow-[#9a3412]/40 hover:shadow-[#9a3412]/60 hover:scale-[1.01] transition-all"
                   >
                     <Send className="w-5 h-5" />
                     Request Free Quote
                     <ArrowRight className="w-5 h-5" />
                   </button>
 
-                  <p className="text-xs text-[#64748b] text-center">
+                  <p className="text-xs text-[#78716c] text-center">
                     By submitting, you agree to be contacted by our team. We never sell your information.
                   </p>
                 </form>
@@ -257,21 +257,21 @@ export default function ContactPage() {
               <div
                 className="p-6 rounded-2xl"
                 style={{
-                  background: "rgba(248,250,252,0.95)",
-                  border: "1px solid rgba(30,64,175,0.12)",
+                  background: "rgba(250, 250, 249,0.95)",
+                  border: "1px solid rgba(154, 52, 18,0.12)",
                   backdropFilter: "blur(10px)",
                 }}
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-[rgba(30,64,175,0.1)] flex items-center justify-center shrink-0">
-                    <Phone className="w-6 h-6 text-[#1e40af]" />
+                  <div className="w-12 h-12 rounded-xl bg-[rgba(154, 52, 18,0.1)] flex items-center justify-center shrink-0">
+                    <Phone className="w-6 h-6 text-[#9a3412]" />
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-[#0f172a] mb-1">Call Us</p>
-                    <a href="tel:+18449675247" className="text-xl font-black text-[#1e40af] hover:underline">
+                    <p className="text-sm font-bold text-[#1c1917] mb-1">Call Us</p>
+                    <a href="tel:+18449675247" className="text-xl font-black text-[#9a3412] hover:underline">
                       844-967-5247
                     </a>
-                    <p className="text-xs text-[#64748b] mt-1">Toll-free, no obligation</p>
+                    <p className="text-xs text-[#78716c] mt-1">Toll-free, no obligation</p>
                   </div>
                 </div>
               </div>
@@ -280,21 +280,21 @@ export default function ContactPage() {
               <div
                 className="p-6 rounded-2xl"
                 style={{
-                  background: "rgba(248,250,252,0.95)",
-                  border: "1px solid rgba(30,64,175,0.12)",
+                  background: "rgba(250, 250, 249,0.95)",
+                  border: "1px solid rgba(154, 52, 18,0.12)",
                   backdropFilter: "blur(10px)",
                 }}
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-[rgba(30,64,175,0.1)] flex items-center justify-center shrink-0">
-                    <Mail className="w-6 h-6 text-[#1e40af]" />
+                  <div className="w-12 h-12 rounded-xl bg-[rgba(154, 52, 18,0.1)] flex items-center justify-center shrink-0">
+                    <Mail className="w-6 h-6 text-[#9a3412]" />
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-[#0f172a] mb-1">Email Us</p>
-                    <a href="mailto:josh@contractorschoiceagency.com" className="text-[#475569] hover:text-[#1e40af] transition-colors text-sm">
+                    <p className="text-sm font-bold text-[#1c1917] mb-1">Email Us</p>
+                    <a href="mailto:josh@contractorschoiceagency.com" className="text-[#57534e] hover:text-[#9a3412] transition-colors text-sm">
                       josh@contractorschoiceagency.com
                     </a>
-                    <p className="text-xs text-[#64748b] mt-1">Responded within 1 business day</p>
+                    <p className="text-xs text-[#78716c] mt-1">Responded within 1 business day</p>
                   </div>
                 </div>
               </div>
@@ -303,19 +303,19 @@ export default function ContactPage() {
               <div
                 className="p-6 rounded-2xl"
                 style={{
-                  background: "rgba(248,250,252,0.95)",
-                  border: "1px solid rgba(30,64,175,0.12)",
+                  background: "rgba(250, 250, 249,0.95)",
+                  border: "1px solid rgba(154, 52, 18,0.12)",
                   backdropFilter: "blur(10px)",
                 }}
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-[rgba(30,64,175,0.1)] flex items-center justify-center shrink-0">
-                    <Clock className="w-6 h-6 text-[#1e40af]" />
+                  <div className="w-12 h-12 rounded-xl bg-[rgba(154, 52, 18,0.1)] flex items-center justify-center shrink-0">
+                    <Clock className="w-6 h-6 text-[#9a3412]" />
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-[#0f172a] mb-1">Business Hours</p>
-                    <p className="text-[#475569] text-sm">Mon-Fri: 8am - 5pm Arizona (MST)</p>
-                    <p className="text-[#64748b] text-xs mt-2">24/7 claims hotline available</p>
+                    <p className="text-sm font-bold text-[#1c1917] mb-1">Business Hours</p>
+                    <p className="text-[#57534e] text-sm">Mon-Fri: 8am - 5pm Arizona (MST)</p>
+                    <p className="text-[#78716c] text-xs mt-2">24/7 claims hotline available</p>
                   </div>
                 </div>
               </div>
@@ -324,29 +324,29 @@ export default function ContactPage() {
               <div
                 className="p-6 rounded-2xl"
                 style={{
-                  background: "rgba(248,250,252,0.95)",
-                  border: "1px solid rgba(30,64,175,0.12)",
+                  background: "rgba(250, 250, 249,0.95)",
+                  border: "1px solid rgba(154, 52, 18,0.12)",
                   backdropFilter: "blur(10px)",
                 }}
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-[rgba(30,64,175,0.1)] flex items-center justify-center shrink-0">
-                    <Shield className="w-6 h-6 text-[#1e40af]" />
+                  <div className="w-12 h-12 rounded-xl bg-[rgba(154, 52, 18,0.1)] flex items-center justify-center shrink-0">
+                    <Shield className="w-6 h-6 text-[#9a3412]" />
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-[#0f172a] mb-2">Trust Signals</p>
+                    <p className="text-sm font-bold text-[#1c1917] mb-2">Trust Signals</p>
                     <div className="space-y-2">
                       <div className="flex items-center gap-2">
                         <CheckCircle className="w-4 h-4 text-[#10b981]" />
-                        <span className="text-xs text-[#475569]">Licensed in all 50 states</span>
+                        <span className="text-xs text-[#57534e]">Licensed in all 50 states</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <CheckCircle className="w-4 h-4 text-[#10b981]" />
-                        <span className="text-xs text-[#475569]">NPN #8608479</span>
+                        <span className="text-xs text-[#57534e]">NPN #8608479</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <CheckCircle className="w-4 h-4 text-[#10b981]" />
-                        <span className="text-xs text-[#475569]">No obligation quote</span>
+                        <span className="text-xs text-[#57534e]">No obligation quote</span>
                       </div>
                     </div>
                   </div>

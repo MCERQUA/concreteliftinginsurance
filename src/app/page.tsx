@@ -39,8 +39,8 @@ const services = [
       "Completed operations",
       "Tools and equipment",
     ],
-    gradient: "from-[#1e40af]/20 via-[#3b82f6]/10 to-transparent",
-    iconColor: "text-[#1e40af]",
+    gradient: "from-[#9a3412]/20 via-[#c2410c]/10 to-transparent",
+    iconColor: "text-[#9a3412]",
     popular: true,
   },
   {
@@ -56,8 +56,8 @@ const services = [
       "Property damage",
       "Legal defense costs",
     ],
-    gradient: "from-[#3b82f6]/20 via-[#60a5fa]/10 to-transparent",
-    iconColor: "text-[#3b82f6]",
+    gradient: "from-[#c2410c]/20 via-[#f59e0b]/10 to-transparent",
+    iconColor: "text-[#c2410c]",
     popular: false,
   },
   {
@@ -90,16 +90,13 @@ const services = [
       "Disability benefits",
       "Rehabilitation costs",
     ],
-    gradient: "from-[#8b5cf6]/20 via-[#a78bfa]/10 to-transparent",
-    iconColor: "text-[#8b5cf6]",
+    gradient: "from-[#b45309]/20 via-[#d97706]/10 to-transparent",
+    iconColor: "text-[#b45309]",
     popular: false,
   },
 ];
 
 const trustStats = [
-  { value: "20+", label: "Years in Business" },
-  { value: "2,400+", label: "Contractors Insured" },
-  { value: "$48M+", label: "Claims Paid Out" },
   { value: "24/7", label: "Claims Support" },
 ];
 
@@ -161,10 +158,10 @@ export default function HomePage() {
             {/* Left Column */}
             <div className="space-y-8">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(30,64,175,0.1)] border border-[rgba(30,64,175,0.3)] backdrop-blur-sm">
-                <span className="w-2 h-2 rounded-full bg-[#1e40af] animate-pulse" />
-                <span className="text-xs font-bold text-[#1e40af] uppercase tracking-wider">
-                  Trusted by 2,400+ Contractors
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(154, 52, 18,0.1)] border border-[rgba(154, 52, 18,0.3)] backdrop-blur-sm">
+                <span className="w-2 h-2 rounded-full bg-[#9a3412] animate-pulse" />
+                <span className="text-xs font-bold text-[#9a3412] uppercase tracking-wider">
+                  Trusted by Concrete Lifting Contractors
                 </span>
               </div>
 
@@ -172,16 +169,16 @@ export default function HomePage() {
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05]">
                 <span className="gradient-text">Insurance Built</span>
                 <br />
-                <span className="text-[#0f172a]">for Concrete</span>
+                <span className="text-[#1c1917]">for Concrete</span>
                 <br />
-                <span className="text-[#0f172a]">Lifting Pros</span>
+                <span className="text-[#1c1917]">Lifting Pros</span>
               </h1>
 
               {/* Subheadline */}
-              <p className="text-lg md:text-xl text-[#475569] leading-relaxed max-w-xl">
+              <p className="text-lg md:text-xl text-[#57534e] leading-relaxed max-w-xl">
                 Whether you use{" "}
-                <span className="text-[#1e40af] font-semibold">spray foam injection</span> or{" "}
-                <span className="text-[#3b82f6] font-semibold">mud jacking</span>, we have
+                <span className="text-[#9a3412] font-semibold">spray foam injection</span> or{" "}
+                <span className="text-[#c2410c] font-semibold">mud jacking</span>, we have
                 specialized coverage that actually makes sense for your work.
               </p>
 
@@ -189,7 +186,7 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact"
-                  className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#1e40af] to-[#3b82f6] text-white font-bold text-lg rounded-2xl shadow-2xl shadow-[#1e40af]/30 hover:shadow-[#1e40af]/50 hover:scale-[1.02] transition-all"
+                  className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#9a3412] to-[#c2410c] text-white font-bold text-lg rounded-2xl shadow-2xl shadow-[#9a3412]/30 hover:shadow-[#9a3412]/50 hover:scale-[1.02] transition-all"
                 >
                   <Phone className="w-5 h-5" />
                   Get Free Quote
@@ -197,7 +194,7 @@ export default function HomePage() {
                 </Link>
                 <Link
                   href="/services"
-                  className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-[rgba(30,64,175,0.05)] border border-[rgba(30,64,175,0.3)] text-[#1e40af] font-bold text-lg rounded-2xl hover:bg-[rgba(30,64,175,0.1)] transition-all"
+                  className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-[rgba(154, 52, 18,0.05)] border border-[rgba(154, 52, 18,0.3)] text-[#9a3412] font-bold text-lg rounded-2xl hover:bg-[rgba(154, 52, 18,0.1)] transition-all"
                 >
                   View Coverage Options
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -206,15 +203,15 @@ export default function HomePage() {
 
               {/* Trust badges */}
               <div className="flex flex-wrap items-center gap-6 pt-4">
-                <div className="flex items-center gap-2 text-sm text-[#64748b]">
+                <div className="flex items-center gap-2 text-sm text-[#78716c]">
                   <CheckCircle className="w-4 h-4 text-[#10b981]" />
                   <span>Free quote</span>
                 </div>
-                <div className="flex items-center gap-2 text-sm text-[#64748b]">
+                <div className="flex items-center gap-2 text-sm text-[#78716c]">
                   <CheckCircle className="w-4 h-4 text-[#10b981]" />
                   <span>No obligation</span>
                 </div>
-                <div className="flex items-center gap-2 text-sm text-[#64748b]">
+                <div className="flex items-center gap-2 text-sm text-[#78716c]">
                   <CheckCircle className="w-4 h-4 text-[#10b981]" />
                   <span>15-min decision</span>
                 </div>
@@ -229,27 +226,27 @@ export default function HomePage() {
                 <div
                   className="absolute top-12 right-0 w-[420px] h-[280px] rounded-3xl"
                   style={{
-                    background: "linear-gradient(135deg, rgba(59,130,246,0.15) 0%, rgba(59,130,246,0.05) 100%)",
-                    border: "1px solid rgba(59,130,246,0.2)",
+                    background: "linear-gradient(135deg, rgba(194, 65, 12,0.15) 0%, rgba(194, 65, 12,0.05) 100%)",
+                    border: "1px solid rgba(194, 65, 12,0.2)",
                     backdropFilter: "blur(20px)",
                   }}
                 >
                   <div className="p-8 h-full flex flex-col justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-xl bg-[rgba(59,130,246,0.2)] flex items-center justify-center">
-                        <Truck className="w-6 h-6 text-[#3b82f6]" />
+                      <div className="w-12 h-12 rounded-xl bg-[rgba(194, 65, 12,0.2)] flex items-center justify-center">
+                        <Truck className="w-6 h-6 text-[#c2410c]" />
                       </div>
                       <div>
-                        <p className="text-[#0f172a] font-bold">Commercial Auto</p>
-                        <p className="text-[#64748b] text-sm">Fleet & contractor vehicles</p>
+                        <p className="text-[#1c1917] font-bold">Commercial Auto</p>
+                        <p className="text-[#78716c] text-sm">Fleet & contractor vehicles</p>
                       </div>
                     </div>
                     <div className="flex items-end justify-between">
                       <div>
-                        <p className="text-3xl font-black text-[#0f172a]">$2.5M</p>
-                        <p className="text-[#64748b] text-sm">Coverage limit</p>
+                        <p className="text-3xl font-black text-[#1c1917]">$2.5M</p>
+                        <p className="text-[#78716c] text-sm">Coverage limit</p>
                       </div>
-                      <Check className="w-8 h-8 text-[#3b82f6]" />
+                      <Check className="w-8 h-8 text-[#c2410c]" />
                     </div>
                   </div>
                 </div>
@@ -258,25 +255,25 @@ export default function HomePage() {
                 <div
                   className="absolute top-6 right-12 w-[420px] h-[280px] rounded-3xl"
                   style={{
-                    background: "linear-gradient(135deg, rgba(30,64,175,0.15) 0%, rgba(30,64,175,0.05) 100%)",
-                    border: "1px solid rgba(30,64,175,0.25)",
+                    background: "linear-gradient(135deg, rgba(154, 52, 18,0.15) 0%, rgba(154, 52, 18,0.05) 100%)",
+                    border: "1px solid rgba(154, 52, 18,0.25)",
                     backdropFilter: "blur(20px)",
                   }}
                 >
                   <div className="p-8 h-full flex flex-col justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-xl bg-[rgba(30,64,175,0.2)] flex items-center justify-center">
-                        <Wrench className="w-6 h-6 text-[#1e40af]" />
+                      <div className="w-12 h-12 rounded-xl bg-[rgba(154, 52, 18,0.2)] flex items-center justify-center">
+                        <Wrench className="w-6 h-6 text-[#9a3412]" />
                       </div>
                       <div>
-                        <p className="text-[#0f172a] font-bold">Spray Foam Lifting</p>
-                        <p className="text-[#64748b] text-sm">Polyurethane injection</p>
+                        <p className="text-[#1c1917] font-bold">Spray Foam Lifting</p>
+                        <p className="text-[#78716c] text-sm">Polyurethane injection</p>
                       </div>
                     </div>
                     <div className="flex items-end justify-between">
                       <div>
-                        <p className="text-3xl font-black text-[#0f172a]">$1M+</p>
-                        <p className="text-[#64748b] text-sm">Starting coverage</p>
+                        <p className="text-3xl font-black text-[#1c1917]">$1M+</p>
+                        <p className="text-[#78716c] text-sm">Starting coverage</p>
                       </div>
                       <div className="px-3 py-1 bg-[#10b981]/20 text-[#10b981] text-xs font-bold rounded-full">
                         MOST POPULAR
@@ -289,44 +286,44 @@ export default function HomePage() {
                 <div
                   className="absolute top-0 right-4 w-[420px] h-[320px] rounded-3xl p-8"
                   style={{
-                    background: "rgba(248,250,252,0.98)",
-                    border: "1px solid rgba(30,64,175,0.35)",
+                    background: "rgba(250, 250, 249,0.98)",
+                    border: "1px solid rgba(154, 52, 18,0.35)",
                     backdropFilter: "blur(20px)",
-                    boxShadow: "0 40px 80px rgba(0,0,0,0.4), 0 0 60px rgba(30,64,175,0.1)",
+                    boxShadow: "0 40px 80px rgba(0,0,0,0.4), 0 0 60px rgba(154, 52, 18,0.1)",
                   }}
                 >
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#1e40af] to-[#3b82f6] flex items-center justify-center shadow-lg shadow-[#1e40af]/30">
+                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#9a3412] to-[#c2410c] flex items-center justify-center shadow-lg shadow-[#9a3412]/30">
                       <Shield className="w-7 h-7 text-white" />
                     </div>
                     <div>
-                      <p className="text-[#0f172a] font-black text-lg">Your Business Protected</p>
-                      <p className="text-[#64748b] text-sm">Active policy</p>
+                      <p className="text-[#1c1917] font-black text-lg">Your Business Protected</p>
+                      <p className="text-[#78716c] text-sm">Active policy</p>
                     </div>
                   </div>
 
                   <div className="space-y-4 mb-6">
                     <div className="flex items-center gap-3">
                       <Check className="w-5 h-5 text-[#10b981]" />
-                      <span className="text-[#475569] text-sm">General Liability Coverage</span>
+                      <span className="text-[#57534e] text-sm">General Liability Coverage</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Check className="w-5 h-5 text-[#10b981]" />
-                      <span className="text-[#475569] text-sm">Workers Compensation</span>
+                      <span className="text-[#57534e] text-sm">Workers Compensation</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Check className="w-5 h-5 text-[#10b981]" />
-                      <span className="text-[#475569] text-sm">Equipment Breakdown</span>
+                      <span className="text-[#57534e] text-sm">Equipment Breakdown</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Check className="w-5 h-5 text-[#10b981]" />
-                      <span className="text-[#475569] text-sm">24/7 Claims Support</span>
+                      <span className="text-[#57534e] text-sm">24/7 Claims Support</span>
                     </div>
                   </div>
 
-                  <div className="pt-4 border-t border-[rgba(30,64,175,0.15)]">
-                    <p className="text-xs text-[#64748b] mb-1">Quote valid for 30 days</p>
-                    <p className="text-sm text-[#1e40af] font-bold">Terms and conditions apply</p>
+                  <div className="pt-4 border-t border-[rgba(154, 52, 18,0.15)]">
+                    <p className="text-xs text-[#78716c] mb-1">Quote valid for 30 days</p>
+                    <p className="text-sm text-[#9a3412] font-bold">Terms and conditions apply</p>
                   </div>
                 </div>
               </div>
@@ -339,13 +336,13 @@ export default function HomePage() {
       </section>
 
       {/* Trust Stats Bar */}
-      <section className="relative py-12 border-y border-[rgba(30,64,175,0.1)]" style={{ background: "rgba(248,250,252,0.7)" }}>
+      <section className="relative py-12 border-y border-[rgba(154, 52, 18,0.1)]" style={{ background: "rgba(250, 250, 249,0.7)" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 max-w-md mx-auto gap-8">
             {trustStats.map((stat, i) => (
               <div key={i} className="text-center">
-                <p className="text-3xl md:text-4xl font-black text-[#1e40af] mb-1">{stat.value}</p>
-                <p className="text-sm text-[#64748b]">{stat.label}</p>
+                <p className="text-3xl md:text-4xl font-black text-[#9a3412] mb-1">{stat.value}</p>
+                <p className="text-sm text-[#78716c]">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -357,14 +354,14 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(30,64,175,0.1)] border border-[rgba(30,64,175,0.3)] mb-6">
-              <span className="text-xs font-bold text-[#1e40af] uppercase tracking-wider">Our Coverage</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(154, 52, 18,0.1)] border border-[rgba(154, 52, 18,0.3)] mb-6">
+              <span className="text-xs font-bold text-[#9a3412] uppercase tracking-wider">Our Coverage</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-[#0f172a] mb-4">
+            <h2 className="text-4xl md:text-5xl font-black text-[#1c1917] mb-4">
               Protection for Every Aspect of{" "}
               <span className="gradient-text">Your Business</span>
             </h2>
-            <p className="text-lg text-[#475569] max-w-2xl mx-auto">
+            <p className="text-lg text-[#57534e] max-w-2xl mx-auto">
               From spray foam injection to mud jacking, we understand the unique risks concrete lifting
               contractors face. Get coverage that actually fits your work.
             </p>
@@ -380,13 +377,13 @@ export default function HomePage() {
                   href={`/services#${service.id}`}
                   className="group relative rounded-3xl overflow-hidden p-8 md:p-10 transition-all duration-500 hover:scale-[1.02] hover:z-10"
                   style={{
-                    background: `linear-gradient(135deg, ${service.gradient.includes("from-[#1e40af]") ? "rgba(30,64,175,0.08)" : service.gradient.includes("from-[#3b82f6]") ? "rgba(59,130,246,0.08)" : service.gradient.includes("from-[#10b981]") ? "rgba(16,185,129,0.08)" : "rgba(139,92,246,0.08)"} 0%, transparent 100%)`,
-                    border: "1px solid rgba(30,64,175,0.15)",
+                    background: `linear-gradient(135deg, ${service.gradient.includes("from-[#9a3412]") ? "rgba(154, 52, 18,0.08)" : service.gradient.includes("from-[#c2410c]") ? "rgba(194, 65, 12,0.08)" : service.gradient.includes("from-[#10b981]") ? "rgba(16,185,129,0.08)" : "rgba(180, 83, 9,0.08)"} 0%, transparent 100%)`,
+                    border: "1px solid rgba(154, 52, 18,0.15)",
                   }}
                 >
                   {/* Popular badge */}
                   {service.popular && (
-                    <div className="absolute top-6 right-6 px-3 py-1 bg-[#1e40af] text-white text-xs font-bold rounded-full shadow-lg shadow-[#1e40af]/30">
+                    <div className="absolute top-6 right-6 px-3 py-1 bg-[#9a3412] text-white text-xs font-bold rounded-full shadow-lg shadow-[#9a3412]/30">
                       MOST POPULAR
                     </div>
                   )}
@@ -395,30 +392,30 @@ export default function HomePage() {
                   <div
                     className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6`}
                     style={{
-                      background: `linear-gradient(135deg, ${service.gradient.includes("from-[#1e40af]") ? "rgba(30,64,175,0.2)" : service.gradient.includes("from-[#3b82f6]") ? "rgba(59,130,246,0.2)" : service.gradient.includes("from-[#10b981]") ? "rgba(16,185,129,0.2)" : "rgba(139,92,246,0.2)"} 0%, transparent 100%)`,
-                      border: "1px solid rgba(30,64,175,0.2)",
+                      background: `linear-gradient(135deg, ${service.gradient.includes("from-[#9a3412]") ? "rgba(154, 52, 18,0.2)" : service.gradient.includes("from-[#c2410c]") ? "rgba(194, 65, 12,0.2)" : service.gradient.includes("from-[#10b981]") ? "rgba(16,185,129,0.2)" : "rgba(180, 83, 9,0.2)"} 0%, transparent 100%)`,
+                      border: "1px solid rgba(154, 52, 18,0.2)",
                     }}
                   >
                     <Icon className={`w-8 h-8 ${service.iconColor}`} />
                   </div>
 
-                  <h3 className="text-2xl font-black text-[#0f172a] mb-2">{service.title}</h3>
-                  <p className="text-[#1e40af] font-semibold text-sm mb-4">{service.shortDesc}</p>
-                  <p className="text-[#475569] text-sm leading-relaxed mb-6">{service.description}</p>
+                  <h3 className="text-2xl font-black text-[#1c1917] mb-2">{service.title}</h3>
+                  <p className="text-[#9a3412] font-semibold text-sm mb-4">{service.shortDesc}</p>
+                  <p className="text-[#57534e] text-sm leading-relaxed mb-6">{service.description}</p>
 
                   {/* Features */}
                   <div className="space-y-2">
                     {service.features.map((feature, i) => (
                       <div key={i} className="flex items-center gap-2">
                         <Check className="w-4 h-4 text-[#10b981]" />
-                        <span className="text-sm text-[#475569]">{feature}</span>
+                        <span className="text-sm text-[#57534e]">{feature}</span>
                       </div>
                     ))}
                   </div>
 
                   {/* Arrow */}
                   <div className="absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <ArrowRight className="w-5 h-5 text-[#1e40af]" />
+                    <ArrowRight className="w-5 h-5 text-[#9a3412]" />
                   </div>
                 </Link>
               );
@@ -428,10 +425,10 @@ export default function HomePage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="relative py-24 border-t border-[rgba(30,64,175,0.08)]">
+      <section className="relative py-24 border-t border-[rgba(154, 52, 18,0.08)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-[#0f172a] mb-4">
+            <h2 className="text-4xl md:text-5xl font-black text-[#1c1917] mb-4">
               Why Contractors{" "}
               <span className="gradient-text">Choose Us</span>
             </h2>
@@ -445,16 +442,16 @@ export default function HomePage() {
                   key={i}
                   className="text-center p-8 rounded-3xl"
                   style={{
-                    background: "rgba(248,250,252,0.95)",
-                    border: "1px solid rgba(30,64,175,0.12)",
+                    background: "rgba(250, 250, 249,0.95)",
+                    border: "1px solid rgba(154, 52, 18,0.12)",
                     backdropFilter: "blur(10px)",
                   }}
                 >
-                  <div className="w-16 h-16 rounded-2xl bg-[rgba(30,64,175,0.1)] border border-[rgba(30,64,175,0.2)] flex items-center justify-center mx-auto mb-6">
-                    <Icon className="w-8 h-8 text-[#1e40af]" />
+                  <div className="w-16 h-16 rounded-2xl bg-[rgba(154, 52, 18,0.1)] border border-[rgba(154, 52, 18,0.2)] flex items-center justify-center mx-auto mb-6">
+                    <Icon className="w-8 h-8 text-[#9a3412]" />
                   </div>
-                  <h3 className="text-xl font-black text-[#0f172a] mb-3">{item.title}</h3>
-                  <p className="text-[#475569] text-sm leading-relaxed">{item.description}</p>
+                  <h3 className="text-xl font-black text-[#1c1917] mb-3">{item.title}</h3>
+                  <p className="text-[#57534e] text-sm leading-relaxed">{item.description}</p>
                 </div>
               );
             })}
@@ -466,13 +463,13 @@ export default function HomePage() {
       <section className="relative py-24 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(30,64,175,0.1)] border border-[rgba(30,64,175,0.3)] mb-6">
-              <Star className="w-4 h-4 text-[#3b82f6]" />
-              <span className="text-xs font-bold text-[#1e40af] uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(154, 52, 18,0.1)] border border-[rgba(154, 52, 18,0.3)] mb-6">
+              <Star className="w-4 h-4 text-[#c2410c]" />
+              <span className="text-xs font-bold text-[#9a3412] uppercase tracking-wider">
                 What Contractors Say
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-[#0f172a]">
+            <h2 className="text-4xl md:text-5xl font-black text-[#1c1917]">
               Trusted by Pros{" "}
               <span className="gradient-text">Nationwide</span>
             </h2>
@@ -484,27 +481,27 @@ export default function HomePage() {
                 key={i}
                 className="p-8 rounded-3xl"
                 style={{
-                  background: "rgba(248,250,252,0.95)",
-                  border: "1px solid rgba(30,64,175,0.15)",
+                  background: "rgba(250, 250, 249,0.95)",
+                  border: "1px solid rgba(154, 52, 18,0.15)",
                   backdropFilter: "blur(20px)",
                 }}
               >
                 {/* Stars */}
                 <div className="flex gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, j) => (
-                    <Star key={j} className="w-4 h-4 text-[#3b82f6] fill-[#3b82f6]" />
+                    <Star key={j} className="w-4 h-4 text-[#c2410c] fill-[#c2410c]" />
                   ))}
                 </div>
 
                 {/* Quote */}
-                <p className="text-[#334155] leading-relaxed mb-6 italic">
+                <p className="text-[#44403c] leading-relaxed mb-6 italic">
                   &ldquo;{testimonial.quote}&rdquo;
                 </p>
 
                 {/* Author */}
-                <div className="pt-4 border-t border-[rgba(30,64,175,0.1)]">
-                  <p className="text-[#0f172a] font-bold">{testimonial.author}</p>
-                  <p className="text-[#64748b] text-sm">
+                <div className="pt-4 border-t border-[rgba(154, 52, 18,0.1)]">
+                  <p className="text-[#1c1917] font-bold">{testimonial.author}</p>
+                  <p className="text-[#78716c] text-sm">
                     {testimonial.company} &middot; {testimonial.location}
                   </p>
                 </div>
@@ -520,16 +517,16 @@ export default function HomePage() {
           <div
             className="rounded-3xl p-12 md:p-16"
             style={{
-              background: "linear-gradient(135deg, rgba(30,64,175,0.1) 0%, rgba(30,64,175,0.05) 50%, rgba(59,130,246,0.05) 100%)",
-              border: "1px solid rgba(30,64,175,0.25)",
+              background: "linear-gradient(135deg, rgba(154, 52, 18,0.1) 0%, rgba(154, 52, 18,0.05) 50%, rgba(194, 65, 12,0.05) 100%)",
+              border: "1px solid rgba(154, 52, 18,0.25)",
               backdropFilter: "blur(20px)",
             }}
           >
-            <h2 className="text-4xl md:text-5xl font-black text-[#0f172a] mb-6">
+            <h2 className="text-4xl md:text-5xl font-black text-[#1c1917] mb-6">
               Ready to Get{" "}
               <span className="gradient-text">Protected?</span>
             </h2>
-            <p className="text-lg text-[#475569] mb-10 max-w-2xl mx-auto">
+            <p className="text-lg text-[#57534e] mb-10 max-w-2xl mx-auto">
               Get your free, no-obligation quote in under 15 minutes. We&apos;ll have you covered before
               your next job starts.
             </p>
@@ -537,23 +534,23 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+18449675247"
-                className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-[#1e40af] to-[#3b82f6] text-white font-black text-lg rounded-2xl shadow-2xl shadow-[#1e40af]/40 hover:shadow-[#1e40af]/60 hover:scale-[1.02] transition-all"
+                className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-[#9a3412] to-[#c2410c] text-white font-black text-lg rounded-2xl shadow-2xl shadow-[#9a3412]/40 hover:shadow-[#9a3412]/60 hover:scale-[1.02] transition-all"
               >
                 <Phone className="w-6 h-6" />
                 Call 844-967-5247
               </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[rgba(30,64,175,0.05)] border-2 border-[rgba(30,64,175,0.4)] text-[#1e40af] font-black text-lg rounded-2xl hover:bg-[rgba(30,64,175,0.1)] transition-all"
+                className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[rgba(154, 52, 18,0.05)] border-2 border-[rgba(154, 52, 18,0.4)] text-[#9a3412] font-black text-lg rounded-2xl hover:bg-[rgba(154, 52, 18,0.1)] transition-all"
               >
                 Get Free Quote Online
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
 
-            <p className="mt-8 text-sm text-[#64748b]">
+            <p className="mt-8 text-sm text-[#78716c]">
               Or email{" "}
-              <a href="mailto:josh@contractorschoiceagency.com" className="text-[#1e40af] hover:underline">
+              <a href="mailto:josh@contractorschoiceagency.com" className="text-[#9a3412] hover:underline">
                 josh@contractorschoiceagency.com
               </a>
             </p>

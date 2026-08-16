@@ -25,38 +25,38 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="bg-[#ffffff] border-t border-[rgba(30,64,175,0.15)]">
+    <footer className="bg-[#ffffff] border-t border-[rgba(154, 52, 18,0.15)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#1e40af] to-[#3b82f6] flex items-center justify-center shadow-lg shadow-[#1e40af]/30">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#9a3412] to-[#c2410c] flex items-center justify-center shadow-lg shadow-[#9a3412]/30">
                 <Shield className="w-6 h-6 text-white" />
               </div>
               <div className="flex flex-col">
-                <span className="text-lg font-black text-[#0f172a] leading-tight">CONCRETE</span>
-                <span className="text-[10px] font-bold tracking-[0.2em] text-[#1e40af] leading-tight">LIFTING INSURANCE</span>
+                <span className="text-lg font-black text-[#1c1917] leading-tight">CONCRETE</span>
+                <span className="text-[10px] font-bold tracking-[0.2em] text-[#9a3412] leading-tight">LIFTING INSURANCE</span>
               </div>
             </Link>
-            <p className="text-[#475569] text-sm leading-relaxed mb-6 max-w-sm">
+            <p className="text-[#57534e] text-sm leading-relaxed mb-6 max-w-sm">
               Specialized insurance coverage for concrete lifting contractors. Whether you use spray foam injection or traditional mud jacking, we have you covered.
             </p>
-            <div className="space-y-3 text-sm text-[#475569]">
+            <div className="space-y-3 text-sm text-[#57534e]">
               <div className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-[#1e40af]" />
-                <a href="tel:+18449675247" className="hover:text-[#1e40af] transition-colors">844-967-5247</a>
+                <Phone className="w-4 h-4 text-[#9a3412]" />
+                <a href="tel:+18449675247" className="hover:text-[#9a3412] transition-colors">844-967-5247</a>
               </div>
               <div className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-[#1e40af]" />
-                <a href="mailto:josh@contractorschoiceagency.com" className="hover:text-[#1e40af] transition-colors">josh@contractorschoiceagency.com</a>
+                <Mail className="w-4 h-4 text-[#9a3412]" />
+                <a href="mailto:josh@contractorschoiceagency.com" className="hover:text-[#9a3412] transition-colors">josh@contractorschoiceagency.com</a>
               </div>
               <div className="flex items-center gap-3">
-                <MapPin className="w-4 h-4 text-[#1e40af]" />
+                <MapPin className="w-4 h-4 text-[#9a3412]" />
                 <span>12220 E Riggs Road, Suite #105, Chandler, AZ 85249</span>
               </div>
               <div className="flex items-center gap-3">
-                <Clock className="w-4 h-4 text-[#1e40af]" />
+                <Clock className="w-4 h-4 text-[#9a3412]" />
                 <span>Mon-Fri 8am-5pm Arizona (MST)</span>
               </div>
             </div>
@@ -64,11 +64,11 @@ export function Footer() {
 
           {/* Coverage Links */}
           <div>
-            <h3 className="text-[#0f172a] font-bold text-sm uppercase tracking-wider mb-4">Coverage</h3>
+            <h3 className="text-[#1c1917] font-bold text-sm uppercase tracking-wider mb-4">Coverage</h3>
             <ul className="space-y-3">
               {footerLinks.coverage.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-[#475569] hover:text-[#1e40af] transition-colors">
+                  <Link href={link.href} className="text-sm text-[#57534e] hover:text-[#9a3412] transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -78,11 +78,11 @@ export function Footer() {
 
           {/* Company Links */}
           <div>
-            <h3 className="text-[#0f172a] font-bold text-sm uppercase tracking-wider mb-4">Company</h3>
+            <h3 className="text-[#1c1917] font-bold text-sm uppercase tracking-wider mb-4">Company</h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-[#475569] hover:text-[#1e40af] transition-colors">
+                  <Link href={link.href} className="text-sm text-[#57534e] hover:text-[#9a3412] transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -92,11 +92,11 @@ export function Footer() {
 
           {/* Legal Links */}
           <div>
-            <h3 className="text-[#0f172a] font-bold text-sm uppercase tracking-wider mb-4">Legal</h3>
+            <h3 className="text-[#1c1917] font-bold text-sm uppercase tracking-wider mb-4">Legal</h3>
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-[#475569] hover:text-[#1e40af] transition-colors">
+                  <Link href={link.href} className="text-sm text-[#57534e] hover:text-[#9a3412] transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -106,14 +106,14 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-[rgba(30,64,175,0.1)] flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-[#64748b]">
+        <div className="mt-12 pt-8 border-t border-[rgba(154, 52, 18,0.1)] flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-xs text-[#78716c]">
             &copy; {new Date().getFullYear()} Concrete Lifting Insurance. All rights reserved. Licensed in all 50 states.
           </p>
           <div className="flex items-center gap-4">
-            <span className="text-xs text-[#64748b]">Licensed in all 50 states</span>
-            <span className="text-xs text-[#64748b]">|</span>
-            <span className="text-xs text-[#64748b]">NPN #8608479</span>
+            <span className="text-xs text-[#78716c]">Licensed in all 50 states</span>
+            <span className="text-xs text-[#78716c]">|</span>
+            <span className="text-xs text-[#78716c]">NPN #8608479</span>
           </div>
         </div>
       </div>

@@ -84,8 +84,8 @@ export default function QuotePage() {
   };
 
   const inputClass =
-    "w-full px-4 py-3 rounded-xl border border-[rgba(30,64,175,0.2)] bg-white/80 text-[#0f172a] placeholder-[#94a3b8] focus:outline-none focus:border-[#1e40af] focus:ring-2 focus:ring-[#1e40af]/20 transition-all text-sm";
-  const labelClass = "block text-sm font-semibold text-[#0f172a] mb-1.5";
+    "w-full px-4 py-3 rounded-xl border border-[rgba(154, 52, 18,0.2)] bg-white/80 text-[#1c1917] placeholder-[#78716c] focus:outline-none focus:border-[#9a3412] focus:ring-2 focus:ring-[#9a3412]/20 transition-all text-sm";
+  const labelClass = "block text-sm font-semibold text-[#1c1917] mb-1.5";
 
   return (
     <div className="relative min-h-screen">
@@ -96,20 +96,20 @@ export default function QuotePage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Header */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(30,64,175,0.1)] border border-[rgba(30,64,175,0.3)] mb-6">
-              <Shield className="w-4 h-4 text-[#1e40af]" />
-              <span className="text-xs font-bold text-[#1e40af] uppercase tracking-wider">Free Quote</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(154, 52, 18,0.1)] border border-[rgba(154, 52, 18,0.3)] mb-6">
+              <Shield className="w-4 h-4 text-[#9a3412]" />
+              <span className="text-xs font-bold text-[#9a3412] uppercase tracking-wider">Free Quote</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-black text-[#0f172a] mb-4">
+            <h1 className="text-4xl md:text-5xl font-black text-[#1c1917] mb-4">
               Get Your{" "}
               <span
                 className="bg-clip-text text-transparent"
-                style={{ backgroundImage: "linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)" }}
+                style={{ backgroundImage: "linear-gradient(135deg, #9a3412 0%, #c2410c 100%)" }}
               >
                 Free Coverage Quote
               </span>
             </h1>
-            <p className="text-lg text-[#475569] max-w-xl mx-auto">
+            <p className="text-lg text-[#57534e] max-w-xl mx-auto">
               Tell us about your concrete lifting operation and we'll get back to you within one business day
               with a personalized quote.
             </p>
@@ -128,31 +128,31 @@ export default function QuotePage() {
                   key={item.title}
                   className="flex gap-3 p-4 rounded-2xl"
                   style={{
-                    background: "rgba(248,250,252,0.9)",
-                    border: "1px solid rgba(30,64,175,0.12)",
+                    background: "rgba(250, 250, 249,0.9)",
+                    border: "1px solid rgba(154, 52, 18,0.12)",
                   }}
                 >
-                  <CheckCircle className="w-5 h-5 text-[#1e40af] flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-[#9a3412] flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-bold text-[#0f172a] text-sm">{item.title}</p>
-                    <p className="text-[#475569] text-xs leading-relaxed">{item.desc}</p>
+                    <p className="font-bold text-[#1c1917] text-sm">{item.title}</p>
+                    <p className="text-[#57534e] text-xs leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               ))}
 
               <div
                 className="p-5 rounded-2xl text-center"
-                style={{ background: "rgba(30,64,175,0.06)", border: "1px solid rgba(30,64,175,0.15)" }}
+                style={{ background: "rgba(154, 52, 18,0.06)", border: "1px solid rgba(154, 52, 18,0.15)" }}
               >
-                <p className="text-xs font-bold text-[#1e40af] uppercase tracking-wider mb-2">Prefer to call?</p>
+                <p className="text-xs font-bold text-[#9a3412] uppercase tracking-wider mb-2">Prefer to call?</p>
                 <a
                   href="tel:+18449675247"
-                  className="flex items-center justify-center gap-2 text-[#0f172a] font-black text-lg hover:text-[#1e40af] transition-colors"
+                  className="flex items-center justify-center gap-2 text-[#1c1917] font-black text-lg hover:text-[#9a3412] transition-colors"
                 >
                   <Phone className="w-5 h-5" />
                   844-967-5247
                 </a>
-                <p className="text-xs text-[#64748b] mt-1">Mon–Fri 8am–5pm AZ (MST)</p>
+                <p className="text-xs text-[#78716c] mt-1">Mon–Fri 8am–5pm AZ (MST)</p>
               </div>
             </div>
 
@@ -162,21 +162,21 @@ export default function QuotePage() {
                 <div
                   className="p-10 rounded-3xl text-center"
                   style={{
-                    background: "rgba(248,250,252,0.95)",
-                    border: "1px solid rgba(30,64,175,0.15)",
+                    background: "rgba(250, 250, 249,0.95)",
+                    border: "1px solid rgba(154, 52, 18,0.15)",
                   }}
                 >
-                  <div className="w-16 h-16 rounded-full bg-[#1e40af]/10 flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="w-8 h-8 text-[#1e40af]" />
+                  <div className="w-16 h-16 rounded-full bg-[#9a3412]/10 flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="w-8 h-8 text-[#9a3412]" />
                   </div>
-                  <h2 className="text-2xl font-black text-[#0f172a] mb-3">Quote Request Received</h2>
-                  <p className="text-[#475569] mb-2">
+                  <h2 className="text-2xl font-black text-[#1c1917] mb-3">Quote Request Received</h2>
+                  <p className="text-[#57534e] mb-2">
                     Thank you! We'll review your information and reach out within one business day with a
                     personalized quote.
                   </p>
-                  <p className="text-sm text-[#64748b]">
+                  <p className="text-sm text-[#78716c]">
                     Questions in the meantime? Call{" "}
-                    <a href="tel:+18449675247" className="text-[#1e40af] font-semibold">
+                    <a href="tel:+18449675247" className="text-[#9a3412] font-semibold">
                       844-967-5247
                     </a>
                   </p>
@@ -189,8 +189,8 @@ export default function QuotePage() {
                   onSubmit={handleSubmit}
                   className="rounded-3xl p-8 md:p-10 space-y-6"
                   style={{
-                    background: "rgba(248,250,252,0.95)",
-                    border: "1px solid rgba(30,64,175,0.15)",
+                    background: "rgba(250, 250, 249,0.95)",
+                    border: "1px solid rgba(154, 52, 18,0.15)",
                     backdropFilter: "blur(10px)",
                   }}
                 >
@@ -315,7 +315,7 @@ export default function QuotePage() {
                   <div>
                     <label htmlFor="message" className={labelClass}>
                       Tell us about your operation{" "}
-                      <span className="text-[#94a3b8] font-normal">(optional)</span>
+                      <span className="text-[#78716c] font-normal">(optional)</span>
                     </label>
                     <textarea
                       id="message"
@@ -335,13 +335,13 @@ export default function QuotePage() {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-[#1e40af] to-[#3b82f6] text-white font-bold rounded-xl shadow-lg shadow-[#1e40af]/30 hover:shadow-[#1e40af]/50 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
+                    className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-[#9a3412] to-[#c2410c] text-white font-bold rounded-xl shadow-lg shadow-[#9a3412]/30 hover:shadow-[#9a3412]/50 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     {submitting ? "Sending…" : "Request My Free Quote"}
                     {!submitting && <ArrowRight className="w-5 h-5" />}
                   </button>
 
-                  <p className="text-xs text-center text-[#94a3b8]">
+                  <p className="text-xs text-center text-[#78716c]">
                     No spam. No commitment. We'll contact you to discuss your specific needs.
                   </p>
                 </form>
