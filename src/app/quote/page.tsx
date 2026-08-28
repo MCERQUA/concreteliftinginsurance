@@ -26,6 +26,12 @@ const SERVICE_TYPES = [
   "Other / Not Sure",
 ];
 
+const COVERAGE_OPTIONS = [
+  "General Liability",
+  "Commercial Auto",
+  "Workers Compensation",
+];
+
 const YEARS_OPTIONS = [
   "Less than 1 year",
   "1–2 years",
@@ -43,7 +49,11 @@ export default function QuotePage() {
     businessName: "",
     email: "",
     phone: "",
+    street: "",
+    city: "",
     state: "",
+    zip: "",
+    coverage: [] as string[],
     serviceType: "",
     yearsInBusiness: "",
     message: "",
@@ -59,9 +69,23 @@ export default function QuotePage() {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
+  const handleCoverageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { value, checked } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      coverage: checked
+        ? [...prev.coverage, value]
+        : prev.coverage.filter((c) => c !== value),
+    }));
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (formData["bot-field"]) return; // honeypot triggered
+    if (formData.coverage.length === 0) {
+      setError("Please select at least one coverage.");
+      return;
+    }
     setSubmitting(true);
     setError("");
 
@@ -73,6 +97,7 @@ export default function QuotePage() {
           form_name: "quote",
           source: "concreteliftinginsurance.com",
           ...formData,
+          coverage: formData.coverage.join(", "),
         }),
       });
       setSubmitted(true);
@@ -261,23 +286,94 @@ export default function QuotePage() {
                     </div>
                   </div>
 
-                  <div className="grid sm:grid-cols-2 gap-4">
+                  <fieldset className="space-y-4">
+                    <legend className={`${labelClass} mb-0`}>Business Address *</legend>
                     <div>
-                      <label htmlFor="state" className={labelClass}>Primary State *</label>
-                      <select
-                        id="state"
-                        name="state"
+                      <label htmlFor="street" className="sr-only">Street Address</label>
+                      <input
+                        id="street"
+                        name="street"
+                        type="text"
                         required
-                        value={formData.state}
+                        value={formData.street}
                         onChange={handleChange}
+                        placeholder="Street address"
                         className={inputClass}
-                      >
-                        <option value="">Select a state…</option>
-                        {US_STATES.map((s) => (
-                          <option key={s} value={s}>{s}</option>
-                        ))}
-                      </select>
+                      />
                     </div>
+                    <div className="grid sm:grid-cols-3 gap-4">
+                      <div>
+                        <label htmlFor="city" className="sr-only">City</label>
+                        <input
+                          id="city"
+                          name="city"
+                          type="text"
+                          required
+                          value={formData.city}
+                          onChange={handleChange}
+                          placeholder="City"
+                          className={inputClass}
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="state" className="sr-only">State</label>
+                        <select
+                          id="state"
+                          name="state"
+                          required
+                          value={formData.state}
+                          onChange={handleChange}
+                          className={inputClass}
+                        >
+                          <option value="">State…</option>
+                          {US_STATES.map((s) => (
+                            <option key={s} value={s}>{s}</option>
+                          ))}
+                        </select>
+                      </div>
+                      <div>
+                        <label htmlFor="zip" className="sr-only">ZIP Code</label>
+                        <input
+                          id="zip"
+                          name="zip"
+                          type="text"
+                          required
+                          inputMode="numeric"
+                          pattern="[0-9]{5}(-[0-9]{4})?"
+                          value={formData.zip}
+                          onChange={handleChange}
+                          placeholder="ZIP"
+                          className={inputClass}
+                        />
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <fieldset>
+                    <legend className={labelClass}>Coverage Needed *</legend>
+                    <div className="grid sm:grid-cols-3 gap-3">
+                      {COVERAGE_OPTIONS.map((c) => (
+                        <label
+                          key={c}
+                          htmlFor={`coverage-${c}`}
+                          className="flex items-center gap-2.5 px-4 py-3 rounded-xl border border-[rgba(154,52,18,0.2)] bg-white/80 cursor-pointer hover:border-[#9a3412] transition-colors"
+                        >
+                          <input
+                            id={`coverage-${c}`}
+                            type="checkbox"
+                            name="coverage"
+                            value={c}
+                            checked={formData.coverage.includes(c)}
+                            onChange={handleCoverageChange}
+                            className="w-4 h-4 accent-[#9a3412] flex-shrink-0"
+                          />
+                          <span className="text-sm font-medium text-[#1c1917]">{c}</span>
+                        </label>
+                      ))}
+                    </div>
+                  </fieldset>
+
+                  <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="serviceType" className={labelClass}>Service Type *</label>
                       <select
@@ -294,22 +390,21 @@ export default function QuotePage() {
                         ))}
                       </select>
                     </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="yearsInBusiness" className={labelClass}>Years in Business</label>
-                    <select
-                      id="yearsInBusiness"
-                      name="yearsInBusiness"
-                      value={formData.yearsInBusiness}
-                      onChange={handleChange}
-                      className={inputClass}
-                    >
-                      <option value="">Select…</option>
-                      {YEARS_OPTIONS.map((y) => (
-                        <option key={y} value={y}>{y}</option>
-                      ))}
-                    </select>
+                    <div>
+                      <label htmlFor="yearsInBusiness" className={labelClass}>Years in Business</label>
+                      <select
+                        id="yearsInBusiness"
+                        name="yearsInBusiness"
+                        value={formData.yearsInBusiness}
+                        onChange={handleChange}
+                        className={inputClass}
+                      >
+                        <option value="">Select…</option>
+                        {YEARS_OPTIONS.map((y) => (
+                          <option key={y} value={y}>{y}</option>
+                        ))}
+                      </select>
+                    </div>
                   </div>
 
                   <div>
