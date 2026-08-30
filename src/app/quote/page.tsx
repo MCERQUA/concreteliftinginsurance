@@ -30,6 +30,9 @@ const COVERAGE_OPTIONS = [
   "General Liability",
   "Commercial Auto",
   "Workers Compensation",
+  "Umbrella / Excess",
+  "Pollution Liability",
+  "Professional Liability",
 ];
 
 const YEARS_OPTIONS = [
