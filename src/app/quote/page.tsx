@@ -59,6 +59,7 @@ export default function QuotePage() {
     coverage: [] as string[],
     serviceType: "",
     yearsInBusiness: "",
+    annualGrossSales: "",
     message: "",
     "bot-field": "",
   });
@@ -408,6 +409,22 @@ export default function QuotePage() {
                         ))}
                       </select>
                     </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="annualGrossSales" className={labelClass}>
+                      Annual Gross Sales <span className="font-normal text-[#78716c]">(last 12 months)</span>
+                    </label>
+                    <input
+                      id="annualGrossSales"
+                      name="annualGrossSales"
+                      type="text"
+                      inputMode="numeric"
+                      value={formData.annualGrossSales}
+                      onChange={handleChange}
+                      placeholder="$0 — $500,000"
+                      className={inputClass}
+                    />
                   </div>
 
                   <div>
