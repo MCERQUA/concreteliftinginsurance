@@ -459,58 +459,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgba(154, 52, 18,0.1)] border border-[rgba(154, 52, 18,0.3)] mb-6">
-              <Star className="w-4 h-4 text-[#c2410c]" />
-              <span className="text-xs font-bold text-[#9a3412] uppercase tracking-wider">
-                What Contractors Say
-              </span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-black text-[#1c1917]">
-              Trusted by Pros{" "}
-              <span className="gradient-text">Nationwide</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, i) => (
-              <div
-                key={i}
-                className="p-8 rounded-3xl"
-                style={{
-                  background: "rgba(250, 250, 249,0.95)",
-                  border: "1px solid rgba(154, 52, 18,0.15)",
-                  backdropFilter: "blur(20px)",
-                }}
-              >
-                {/* Stars */}
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, j) => (
-                    <Star key={j} className="w-4 h-4 text-[#c2410c] fill-[#c2410c]" />
-                  ))}
-                </div>
-
-                {/* Quote */}
-                <p className="text-[#44403c] leading-relaxed mb-6 italic">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </p>
-
-                {/* Author */}
-                <div className="pt-4 border-t border-[rgba(154, 52, 18,0.1)]">
-                  <p className="text-[#1c1917] font-bold">{testimonial.author}</p>
-                  <p className="text-[#78716c] text-sm">
-                    {testimonial.company} &middot; {testimonial.location}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
