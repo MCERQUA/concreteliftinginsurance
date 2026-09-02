@@ -64,6 +64,7 @@ export default function QuotePage() {
     "bot-field": "",
     estimated_employee_count: "", estimated_employee_payroll: "", estimated_material_costs: "", estimated_subcontractor_expenses: "", percent_subcontractors_insured: "", prior_policy_expiration: "", prior_policy_number: "", prior_year_employee_count: "", prior_year_employee_payroll: "", prior_year_subcontractor_expenses: "", subcontractors_have_insurance: "",
     prior_year_gross_sales: "", estimated_gross_sales: "", coverage_for_uninsured_subcontractors: "", business_description: "", class_code_1: "", class_code_2: "", class_code_3: "", class_code_4: "", class_code_5: "", residential_vs_commercial: "", new_vs_existing_construction: "", largest_projects: "", prior_carrier_name: "",
+    year_business_started: "",
   });
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -568,6 +569,12 @@ export default function QuotePage() {
         <div>
           <label className="block text-sm font-bold mb-1.5">Prior insurance carrier name</label>
           <input type="text" name="prior_carrier_name" value={formData.prior_carrier_name} onChange={(e) => setFormData({ ...formData, prior_carrier_name: e.target.value })} className="w-full px-4 py-2.5 border rounded-lg" />
+        </div>
+
+        {/* complete contractor field set — forms-required-fields.json */}
+        <div>
+          <label className="block text-sm font-bold mb-1.5">Year business started</label>
+          <input type="number" name="year_business_started" value={formData.year_business_started} onChange={(e) => setFormData({ ...formData, year_business_started: e.target.value })} className="w-full px-4 py-2.5 border rounded-lg" />
         </div>
 </form>
               )}
