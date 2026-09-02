@@ -63,6 +63,7 @@ export default function QuotePage() {
     message: "",
     "bot-field": "",
     estimated_employee_count: "", estimated_employee_payroll: "", estimated_material_costs: "", estimated_subcontractor_expenses: "", percent_subcontractors_insured: "", prior_policy_expiration: "", prior_policy_number: "", prior_year_employee_count: "", prior_year_employee_payroll: "", prior_year_subcontractor_expenses: "", subcontractors_have_insurance: "",
+    prior_year_gross_sales: "", estimated_gross_sales: "", coverage_for_uninsured_subcontractors: "", business_description: "", class_code_1: "", class_code_2: "", class_code_3: "", class_code_4: "", class_code_5: "", residential_vs_commercial: "", new_vs_existing_construction: "", largest_projects: "", prior_carrier_name: "",
   });
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -509,6 +510,64 @@ export default function QuotePage() {
             <option value="Yes">Yes</option>
             <option value="No">No</option>
           </select>
+        </div>
+
+        {/* complete contractor field set — forms-required-fields.json */}
+        <div>
+          <label className="block text-sm font-bold mb-1.5">Prior year gross sales</label>
+          <input type="text" name="prior_year_gross_sales" value={formData.prior_year_gross_sales} onChange={(e) => setFormData({ ...formData, prior_year_gross_sales: e.target.value })} className="w-full px-4 py-2.5 border rounded-lg" />
+        </div>
+        <div>
+          <label className="block text-sm font-bold mb-1.5">Estimated gross sales (next 12 months)</label>
+          <input type="text" name="estimated_gross_sales" value={formData.estimated_gross_sales} onChange={(e) => setFormData({ ...formData, estimated_gross_sales: e.target.value })} className="w-full px-4 py-2.5 border rounded-lg" />
+        </div>
+        <div>
+          <label className="block text-sm font-bold mb-1.5">Do you need coverage for uninsured subcontractors?</label>
+          <select name="coverage_for_uninsured_subcontractors" value={formData.coverage_for_uninsured_subcontractors} onChange={(e) => setFormData({ ...formData, coverage_for_uninsured_subcontractors: e.target.value })} className="w-full px-4 py-2.5 border rounded-lg">
+            <option value="">Select...</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        <div>
+          <label className="block text-sm font-bold mb-1.5">Description of business</label>
+          <textarea name="business_description" rows={3} value={formData.business_description} onChange={(e) => setFormData({ ...formData, business_description: e.target.value })} className="w-full px-4 py-2.5 border rounded-lg" />
+        </div>
+        <div>
+          <label className="block text-sm font-bold mb-1.5">Class code 1 (+ % of operations)</label>
+          <input type="text" name="class_code_1" value={formData.class_code_1} onChange={(e) => setFormData({ ...formData, class_code_1: e.target.value })} className="w-full px-4 py-2.5 border rounded-lg" />
+        </div>
+        <div>
+          <label className="block text-sm font-bold mb-1.5">Class code 2 (+ % of operations)</label>
+          <input type="text" name="class_code_2" value={formData.class_code_2} onChange={(e) => setFormData({ ...formData, class_code_2: e.target.value })} className="w-full px-4 py-2.5 border rounded-lg" />
+        </div>
+        <div>
+          <label className="block text-sm font-bold mb-1.5">Class code 3 (+ % of operations)</label>
+          <input type="text" name="class_code_3" value={formData.class_code_3} onChange={(e) => setFormData({ ...formData, class_code_3: e.target.value })} className="w-full px-4 py-2.5 border rounded-lg" />
+        </div>
+        <div>
+          <label className="block text-sm font-bold mb-1.5">Class code 4 (+ % of operations)</label>
+          <input type="text" name="class_code_4" value={formData.class_code_4} onChange={(e) => setFormData({ ...formData, class_code_4: e.target.value })} className="w-full px-4 py-2.5 border rounded-lg" />
+        </div>
+        <div>
+          <label className="block text-sm font-bold mb-1.5">Class code 5 (+ % of operations)</label>
+          <input type="text" name="class_code_5" value={formData.class_code_5} onChange={(e) => setFormData({ ...formData, class_code_5: e.target.value })} className="w-full px-4 py-2.5 border rounded-lg" />
+        </div>
+        <div>
+          <label className="block text-sm font-bold mb-1.5">Residential vs commercial split</label>
+          <input type="text" name="residential_vs_commercial" value={formData.residential_vs_commercial} onChange={(e) => setFormData({ ...formData, residential_vs_commercial: e.target.value })} className="w-full px-4 py-2.5 border rounded-lg" />
+        </div>
+        <div>
+          <label className="block text-sm font-bold mb-1.5">New construction vs existing / remodel</label>
+          <input type="text" name="new_vs_existing_construction" value={formData.new_vs_existing_construction} onChange={(e) => setFormData({ ...formData, new_vs_existing_construction: e.target.value })} className="w-full px-4 py-2.5 border rounded-lg" />
+        </div>
+        <div>
+          <label className="block text-sm font-bold mb-1.5">5 largest projects ever (description + dollar amount)</label>
+          <textarea name="largest_projects" rows={3} value={formData.largest_projects} onChange={(e) => setFormData({ ...formData, largest_projects: e.target.value })} placeholder="Description and dollar amount for each" className="w-full px-4 py-2.5 border rounded-lg" />
+        </div>
+        <div>
+          <label className="block text-sm font-bold mb-1.5">Prior insurance carrier name</label>
+          <input type="text" name="prior_carrier_name" value={formData.prior_carrier_name} onChange={(e) => setFormData({ ...formData, prior_carrier_name: e.target.value })} className="w-full px-4 py-2.5 border rounded-lg" />
         </div>
 </form>
               )}
