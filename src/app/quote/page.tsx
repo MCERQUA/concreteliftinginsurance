@@ -62,6 +62,7 @@ export default function QuotePage() {
     annualGrossSales: "",
     message: "",
     "bot-field": "",
+    estimated_employee_count: "", estimated_employee_payroll: "", estimated_material_costs: "", estimated_subcontractor_expenses: "", percent_subcontractors_insured: "", prior_policy_expiration: "", prior_policy_number: "", prior_year_employee_count: "", prior_year_employee_payroll: "", prior_year_subcontractor_expenses: "", subcontractors_have_insurance: "",
   });
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -459,7 +460,57 @@ export default function QuotePage() {
                   <p className="text-xs text-center text-[#78716c]">
                     No spam. No commitment. We'll contact you to discuss your specific needs.
                   </p>
-                </form>
+                
+        {/* complete contractor field set — forms-required-fields.json */}
+        <div>
+          <label className="block text-sm font-bold mb-1.5">Estimated employee count (year total)</label>
+          <input type="number" name="estimated_employee_count" value={formData.estimated_employee_count} onChange={(e) => setFormData({ ...formData, estimated_employee_count: e.target.value })} className="w-full px-4 py-2.5 border rounded-lg" />
+        </div>
+        <div>
+          <label className="block text-sm font-bold mb-1.5">Estimated employee annual payroll</label>
+          <input type="text" name="estimated_employee_payroll" value={formData.estimated_employee_payroll} onChange={(e) => setFormData({ ...formData, estimated_employee_payroll: e.target.value })} className="w-full px-4 py-2.5 border rounded-lg" />
+        </div>
+        <div>
+          <label className="block text-sm font-bold mb-1.5">Estimated material costs</label>
+          <input type="text" name="estimated_material_costs" value={formData.estimated_material_costs} onChange={(e) => setFormData({ ...formData, estimated_material_costs: e.target.value })} className="w-full px-4 py-2.5 border rounded-lg" />
+        </div>
+        <div>
+          <label className="block text-sm font-bold mb-1.5">Estimated subcontractor expenses (next 12 months)</label>
+          <input type="text" name="estimated_subcontractor_expenses" value={formData.estimated_subcontractor_expenses} onChange={(e) => setFormData({ ...formData, estimated_subcontractor_expenses: e.target.value })} className="w-full px-4 py-2.5 border rounded-lg" />
+        </div>
+        <div>
+          <label className="block text-sm font-bold mb-1.5">What percent of your subcontractors have insurance?</label>
+          <input type="number" name="percent_subcontractors_insured" value={formData.percent_subcontractors_insured} onChange={(e) => setFormData({ ...formData, percent_subcontractors_insured: e.target.value })} className="w-full px-4 py-2.5 border rounded-lg" />
+        </div>
+        <div>
+          <label className="block text-sm font-bold mb-1.5">Prior policy expiration date</label>
+          <input type="date" name="prior_policy_expiration" value={formData.prior_policy_expiration} onChange={(e) => setFormData({ ...formData, prior_policy_expiration: e.target.value })} className="w-full px-4 py-2.5 border rounded-lg" />
+        </div>
+        <div>
+          <label className="block text-sm font-bold mb-1.5">Prior policy number</label>
+          <input type="text" name="prior_policy_number" value={formData.prior_policy_number} onChange={(e) => setFormData({ ...formData, prior_policy_number: e.target.value })} className="w-full px-4 py-2.5 border rounded-lg" />
+        </div>
+        <div>
+          <label className="block text-sm font-bold mb-1.5">Prior year employee count</label>
+          <input type="number" name="prior_year_employee_count" value={formData.prior_year_employee_count} onChange={(e) => setFormData({ ...formData, prior_year_employee_count: e.target.value })} className="w-full px-4 py-2.5 border rounded-lg" />
+        </div>
+        <div>
+          <label className="block text-sm font-bold mb-1.5">Prior year employee payroll</label>
+          <input type="text" name="prior_year_employee_payroll" value={formData.prior_year_employee_payroll} onChange={(e) => setFormData({ ...formData, prior_year_employee_payroll: e.target.value })} className="w-full px-4 py-2.5 border rounded-lg" />
+        </div>
+        <div>
+          <label className="block text-sm font-bold mb-1.5">Prior year subcontractor expenses</label>
+          <input type="text" name="prior_year_subcontractor_expenses" value={formData.prior_year_subcontractor_expenses} onChange={(e) => setFormData({ ...formData, prior_year_subcontractor_expenses: e.target.value })} className="w-full px-4 py-2.5 border rounded-lg" />
+        </div>
+        <div>
+          <label className="block text-sm font-bold mb-1.5">Do your subcontractors have insurance?</label>
+          <select name="subcontractors_have_insurance" value={formData.subcontractors_have_insurance} onChange={(e) => setFormData({ ...formData, subcontractors_have_insurance: e.target.value })} className="w-full px-4 py-2.5 border rounded-lg">
+            <option value="">Select...</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+</form>
               )}
             </div>
           </div>
