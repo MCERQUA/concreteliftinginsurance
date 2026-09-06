@@ -53,7 +53,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="w-4 h-4 text-[#9a3412]" />
-                <span>12220 E Riggs Road, Suite #105, Chandler, AZ 85249</span>
+                <span>12220 E Riggs Road, Suite #104, Chandler, AZ 85249</span>
               </div>
               <div className="flex items-center gap-3">
                 <Clock className="w-4 h-4 text-[#9a3412]" />
