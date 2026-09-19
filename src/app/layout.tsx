@@ -44,20 +44,11 @@ export const metadata: Metadata = {
     siteName: "Concrete Lifting Insurance",
     title: "Concrete Lifting Insurance | Spray Foam & Mud Jacking Coverage",
     description: "Specialized insurance for concrete lifting contractors. Coverage for spray foam lifting, mud jacking, general liability, workers comp, and equipment.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Concrete Lifting Insurance - Specialized Coverage for Contractors",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Concrete Lifting Insurance | Spray Foam & Mud Jacking Coverage",
     description: "Specialized insurance for concrete lifting contractors. Get a free quote in minutes.",
-    images: ["/og-image.png"],
   },
   robots: {
     index: true,
