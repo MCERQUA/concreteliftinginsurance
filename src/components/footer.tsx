@@ -108,7 +108,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-[rgba(154, 52, 18,0.1)] flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-[#78716c]">
-            &copy; {new Date().getFullYear()} Concrete Lifting Insurance. All rights reserved. Licensed in all 50 states.
+            &copy; {new Date().getFullYear()} Concrete Lifting Insurance · A Contractors Choice Agency Brand · NPN #8608479 · Licensed in all 50 states. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <span className="text-xs text-[#78716c]">Licensed in all 50 states</span>
