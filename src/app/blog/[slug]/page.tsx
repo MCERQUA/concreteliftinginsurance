@@ -60,11 +60,17 @@ export default async function BlogPostPage({ params }: Props) {
     description,
     datePublished: post.dateISO,
     dateModified: post.dateISO,
-    author: {
-      "@type": "Person",
-      name: "Josh Cotner",
-      url: "https://contractorschoiceagency.com/about-us",
-    },
+    author: post.author
+      ? {
+          "@type": post.author.type,
+          name: post.author.name,
+          ...(post.author.url ? { url: post.author.url } : {}),
+        }
+      : {
+          "@type": "Person",
+          name: "Josh Cotner",
+          url: "https://contractorschoiceagency.com/about-us",
+        },
     publisher: {
       "@id": "https://concreteliftinginsurance.com/#organization",
     },
@@ -148,6 +154,41 @@ export default async function BlogPostPage({ params }: Props) {
                       <strong className="text-[#1c1917]">{parts[0]}</strong>
                       {parts.slice(1).join("")}
                     </p>
+                  );
+                }
+                // comparison table, encoded as "||TABLE||\nheader1|header2\nrow1col1|row1col2\n..."
+                if (paragraph.startsWith("||TABLE||")) {
+                  const lines = paragraph.replace(/^\|\|TABLE\|\|\n?/, "").split("\n").filter(Boolean);
+                  const [headerLine, ...bodyLines] = lines;
+                  const headers = headerLine.split("|");
+                  return (
+                    <div key={i} className="overflow-x-auto -mx-2">
+                      <table className="w-full text-sm border-collapse">
+                        <thead>
+                          <tr className="border-b-2 border-[#9a3412]/30">
+                            {headers.map((h, hi) => (
+                              <th
+                                key={hi}
+                                className="text-left py-3 px-3 font-black text-[#1c1917]"
+                              >
+                                {h}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {bodyLines.map((row, ri) => (
+                            <tr key={ri} className="border-b border-[#9a3412]/10">
+                              {row.split("|").map((cell, ci) => (
+                                <td key={ci} className="py-3 px-3 text-[#57534e] align-top">
+                                  {cell}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
                   );
                 }
                 return (
