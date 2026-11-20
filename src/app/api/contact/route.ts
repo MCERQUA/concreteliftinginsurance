@@ -6,12 +6,12 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
 
-    const { name, email, phone, company, insuranceType, message } = body;
+    const { name, email, phone, company, insuranceType, grossSales, message } = body;
 
     // Validate required fields
-    if (!name || !email || !message) {
+    if (!name || !email) {
       return NextResponse.json(
-        { error: "Missing required fields: name, email, and message are required." },
+        { error: "Missing required fields: name and email are required." },
         { status: 400 }
       );
     }
@@ -25,27 +25,40 @@ export async function POST(request: Request) {
       );
     }
 
-    // Forward to Jambot
+    // Forward to Jambot. A failed delivery is reported as a failure (502), never as success,
+    // so the client can try its Netlify Forms fallback and only then show an error.
+    let delivered = false;
     try {
-      await fetch(JAMBOT_WEBHOOK_URL, {
+      const upstream = await fetch(JAMBOT_WEBHOOK_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          form_name: "contact",
           name,
           email,
           phone: phone || "",
           company: company || "",
           insuranceType: insuranceType || "",
-          message,
+          grossSales: grossSales || "",
+          message: message || "",
           source: "concreteliftinginsurance.com",
           timestamp: new Date().toISOString(),
         }),
       });
+      // fetch() resolves on 4xx/5xx; only a 2xx means the lead was taken.
+      delivered = upstream.ok;
+      if (!delivered) console.error("Jambot webhook rejected contact lead:", upstream.status);
     } catch (webhookError) {
       console.error("Jambot webhook error:", webhookError);
-      // Continue even if webhook fails - don't block the user
+    }
+
+    if (!delivered) {
+      return NextResponse.json(
+        { error: "We could not deliver your message. Please try again or call 844-967-5247." },
+        { status: 502 }
+      );
     }
 
     // Log the contact submission

@@ -6,6 +6,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { AnimatedBackground } from "@/components/animated-background";
 import { CheckCircle, Shield, ArrowRight, Phone } from "lucide-react";
+import { QuoteExtraFields, EXTRA_DEFAULTS, pruneEmpty, deliverLead, type QValues } from "@/lib/quote-extra";
 
 const US_STATES = [
   "Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut",
@@ -62,10 +63,12 @@ export default function QuotePage() {
     annualGrossSales: "",
     message: "",
     "bot-field": "",
-    estimated_employee_count: "", estimated_employee_payroll: "", estimated_material_costs: "", estimated_subcontractor_expenses: "", percent_subcontractors_insured: "", prior_policy_expiration: "", prior_policy_number: "", prior_year_employee_count: "", prior_year_employee_payroll: "", prior_year_subcontractor_expenses: "", subcontractors_have_insurance: "",
+    estimated_employee_count: "", estimated_employee_payroll: "", estimated_material_costs: "", estimated_subcontractor_expenses: "", percent_subcontractors_insured: "", prior_policy_expiration: "", prior_year_employee_count: "", prior_year_employee_payroll: "", prior_year_subcontractor_expenses: "", subcontractors_have_insurance: "",
     prior_year_gross_sales: "", estimated_gross_sales: "", coverage_for_uninsured_subcontractors: "", business_description: "", class_code_1: "", class_code_2: "", class_code_3: "", class_code_4: "", class_code_5: "", residential_vs_commercial: "", new_vs_existing_construction: "", largest_projects: "", prior_carrier_name: "",
     year_business_started: "",
   });
+  const [extra, setExtra] = useState<QValues>(EXTRA_DEFAULTS);
+  const setExtraValue = (name: string, value: string) => setExtra((prev) => ({ ...prev, [name]: value }));
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
@@ -97,18 +100,16 @@ export default function QuotePage() {
     setError("");
 
     try {
-      const res = await fetch(WEBHOOK_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          form_name: "quote",
-          source: "concreteliftinginsurance.com",
-          ...formData,
-          coverage: formData.coverage.join(", "),
-        }),
+      const { "bot-field": _hp, ...legacy } = formData;
+      void _hp;
+      // Webhook first, then the Netlify Forms fallback; an error shows only if BOTH fail.
+      const ok = await deliverLead({
+        webhookUrl: WEBHOOK_URL,
+        formName: "quote",
+        source: "concreteliftinginsurance.com",
+        data: { ...(legacy as unknown as Record<string, string>), coverage: formData.coverage.join(", "), ...pruneEmpty(extra) },
       });
-      // fetch() resolves on a 4xx/5xx, so the status is what says the lead was taken.
-      if (!res.ok) throw new Error(String(res.status));
+      if (!ok) throw new Error("both delivery channels failed");
       setSubmitted(true);
     } catch {
       setError("Something went wrong. Please call us at 844-967-5247 or try again.");
@@ -448,9 +449,7 @@ export default function QuotePage() {
                     />
                   </div>
 
-                  {error && (
-                    <p className="text-red-500 text-sm font-medium">{error}</p>
-                  )}
+                  <QuoteExtraFields values={extra} onChange={setExtraValue} inputClass={inputClass} labelClass={labelClass} />
 
                   {/* insurance-contractor complete field set — forms-required-fields.json */}
                   <div>
@@ -476,10 +475,6 @@ export default function QuotePage() {
                   <div>
                     <label className={labelClass}>Prior policy expiration date</label>
                     <input type="date" name="prior_policy_expiration" value={formData.prior_policy_expiration} onChange={(e) => setFormData({ ...formData, prior_policy_expiration: e.target.value })} className={inputClass} />
-                  </div>
-                  <div>
-                    <label className={labelClass}>Prior policy number</label>
-                    <input type="text" name="prior_policy_number" value={formData.prior_policy_number} onChange={(e) => setFormData({ ...formData, prior_policy_number: e.target.value })} className={inputClass} />
                   </div>
                   <div>
                     <label className={labelClass}>Prior year employee count</label>
@@ -561,6 +556,10 @@ export default function QuotePage() {
                     <label className={labelClass}>Year business started</label>
                     <input type="number" name="year_business_started" value={formData.year_business_started} onChange={(e) => setFormData({ ...formData, year_business_started: e.target.value })} className={inputClass} />
                   </div>
+
+                  {error && (
+                    <p role="alert" className="text-red-500 text-sm font-medium">{error}</p>
+                  )}
 
                   <button
                     type="submit"

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { AnimatedBackground } from "@/components/animated-background";
+import { deliverLead } from "@/lib/quote-extra";
 import { Phone, Mail, Clock, MapPin, Shield, CheckCircle, ArrowRight, Send } from "lucide-react";
 
 const insuranceTypes = [
@@ -43,12 +44,23 @@ export default function ContactPage() {
 
     // Submit to API (which forwards to Jambot)
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-      if (res.ok) {
+      let ok = false;
+      try {
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+        ok = res.ok;
+      } catch {
+        ok = false;
+      }
+      // /api/contact failed (it now returns non-2xx when the lead was not delivered):
+      // try the Netlify Forms fallback and show an error only if that fails too.
+      if (!ok) {
+        ok = await deliverLead({ webhookUrl: "", formName: "contact", source: "concreteliftinginsurance.com", data: { ...formData }, skipWebhook: true });
+      }
+      if (ok) {
         setSubmitted(true);
       } else {
         setErrors({ submit: "Something went wrong. Please try again." });
@@ -234,6 +246,12 @@ export default function ContactPage() {
                       className="w-full px-4 py-3 rounded-xl bg-white border border-[rgba(154, 52, 18,0.3)] text-[#1c1917] placeholder-[#78716c] focus:border-[#9a3412] focus:outline-none transition-colors resize-none"
                     />
                   </div>
+
+                  {errors.submit && (
+                    <p role="alert" className="text-[#ef4444] text-sm font-medium">
+                      {errors.submit} You can also call us at 844-967-5247.
+                    </p>
+                  )}
 
                   <button
                     type="submit"
