@@ -639,7 +639,12 @@ const enc = (o: Record<string, string>) => new URLSearchParams(o).toString();
 export async function deliverLead(opts: { webhookUrl: string; formName: string; source: string; data: Record<string, string>; formsPath?: string; skipWebhook?: boolean }): Promise<boolean> {
   if (!opts.skipWebhook) try {
     const r = await fetch(opts.webhookUrl, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ form_name: opts.formName, source: opts.source, ...opts.data }) });
-    if (r.ok) return true;
+    // The leads webhook answers 200 {ok:true,stored:false} when it drops a body, so a 2xx alone is not
+    // acceptance: require ok:true and stored!==false (an unparseable body counts as a failure).
+    if (r.ok) {
+      const j = await r.json().catch(() => null);
+      if (j && j.ok === true && j.stored !== false) return true;
+    }
   } catch { /* fall through to the Netlify Forms fallback */ }
   try {
     const r = await fetch(opts.formsPath || "/__forms.html", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: enc({ "form-name": opts.formName, ...opts.data }) });

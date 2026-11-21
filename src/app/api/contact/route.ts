@@ -48,7 +48,11 @@ export async function POST(request: Request) {
         }),
       });
       // fetch() resolves on 4xx/5xx; only a 2xx means the lead was taken.
-      delivered = upstream.ok;
+      // 200 with {ok:true,stored:false} means the webhook dropped it: require stored.
+      if (upstream.ok) {
+        const j = await upstream.json().catch(() => null);
+        delivered = !!j && j.ok === true && j.stored !== false;
+      }
       if (!delivered) console.error("Jambot webhook rejected contact lead:", upstream.status);
     } catch (webhookError) {
       console.error("Jambot webhook error:", webhookError);
