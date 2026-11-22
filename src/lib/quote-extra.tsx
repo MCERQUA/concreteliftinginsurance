@@ -285,8 +285,75 @@ export const EXTRA_SECTIONS: QSection[] = [
   ]
  },
  {
+  "title": "Policy and premises details (all optional)",
+  "fields": [
+   {
+    "name": "glTrigger",
+    "label": "Occurrence or claims-made",
+    "type": "select",
+    "options": [
+     "Occurrence",
+     "Claims Made"
+    ]
+   },
+   {
+    "name": "glAggregateAppliesTo",
+    "label": "How the aggregate applies",
+    "type": "select",
+    "options": [
+     "Per Policy",
+     "Per Project",
+     "Per Location",
+     "Other"
+    ]
+   },
+   {
+    "name": "premisesCityLimits",
+    "label": "Premises inside or outside city limits",
+    "type": "select",
+    "options": [
+     "Inside City Limits",
+     "Outside City Limits"
+    ]
+   },
+   {
+    "name": "premisesInterest",
+    "label": "Owner or tenant of the premises",
+    "type": "select",
+    "options": [
+     "Owner",
+     "Tenant"
+    ]
+   },
+   {
+    "name": "locationDescription",
+    "label": "Describe the premises / location operations",
+    "type": "text",
+    "maxLength": 54
+   },
+   {
+    "name": "billingPlan",
+    "label": "Billing plan",
+    "type": "select",
+    "options": [
+     "Direct Bill",
+     "Agency Bill"
+    ]
+   }
+  ]
+ },
+ {
   "title": "Loss history, last 3 years (all optional, leave blank if none)",
   "fields": [
+   {
+    "name": "lossesLast3Years",
+    "label": "Any losses or claims in the last 3 years?",
+    "type": "select",
+    "options": [
+     "Yes",
+     "No"
+    ]
+   },
    {
     "name": "loss1Date",
     "label": "Loss 1: date",
